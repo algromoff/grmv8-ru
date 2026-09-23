@@ -21,7 +21,7 @@
 <meta property="profile:username" content="grmv8">
 <meta name="twitter:card" content="summary_large_image">
 
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cstyle%3E@keyframes rot { 0%25, 20%25 { transform: rotate(0deg); } 40%25, 70%25 { transform: rotate(90deg); } 90%25, 100%25 { transform: rotate(0deg); } } .sym { font-family: sans-serif; font-size: 80px; font-weight: bold; fill: %23c9a84c; transform-origin: 50px 50px; animation: rot 4s infinite ease-in-out; }%3C/style%3E%3Crect width='100' height='100' fill='%231a1a2e' rx='20'/%3E%3Ctext x='50' y='76' text-anchor='middle' class='sym'%3E∞%3C/text%3E%3C/svg%3E">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cstyle%3E@keyframes rot { 0%25, 20%25 { transform: rotate(0deg); } 40%25, 70%25 { transform: rotate(90deg); } 90%25, 100%25 { transform: rotate(0deg); } } .sym { font-family: sans-serif; font-size: 80px; font-weight: bold; fill: %23c9a84c; transform-origin: 50px 50px; animation: rot 4s infinite ease-in-out; }%3C/style%3E%3Crect width='100' height='100' fill='%230f1f4a' rx='20'/%3E%3Ctext x='50' y='76' text-anchor='middle' class='sym'%3E∞%3C/text%3E%3C/svg%3E">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -117,8 +117,8 @@
 
 <style>
 :root{
-  --ink:#0f0f1a; --ink2:#1a1a2e; --card:#17172a; --line:rgba(255,255,255,.09);
-  --gold:#c9a84c; --gold2:#e0bf5e; --text:#ececf2; --muted:#a0a0b0;
+  --ink:#0a1636; --ink2:#0f1f4a; --card:#11234f; --line:rgba(160,185,255,.13);
+  --gold:#c9a84c; --gold2:#e0bf5e; --text:#eef1f8; --muted:#a7b1cc;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -130,7 +130,7 @@ h1,h2,h3{font-family:Unbounded,Manrope,sans-serif;font-weight:700;line-height:1.
 .gold{color:var(--gold)}
 
 /* hero */
-.hero{padding:clamp(56px,10vw,120px) 0 64px;background:radial-gradient(1000px 500px at 80% -10%,rgba(201,168,76,.14),transparent 60%),radial-gradient(800px 400px at -10% 110%,rgba(90,90,180,.12),transparent 60%)}
+.hero{padding:clamp(56px,10vw,120px) 0 64px;background:radial-gradient(1000px 500px at 80% -10%,rgba(201,168,76,.14),transparent 60%),radial-gradient(800px 400px at -10% 110%,rgba(60,110,255,.16),transparent 60%)}
 .nick{display:inline-flex;align-items:center;gap:10px;font:500 15px Unbounded,sans-serif;color:var(--gold);border:1px solid rgba(201,168,76,.35);border-radius:999px;padding:6px 14px}
 .nick .inf{display:inline-block;animation:rot 5s infinite ease-in-out}
 @keyframes rot{0%,25%{transform:rotate(0)}45%,75%{transform:rotate(90deg)}95%,100%{transform:rotate(0)}}
@@ -188,6 +188,14 @@ a.card:hover{border-color:rgba(201,168,76,.55);transform:translateY(-2px)}
 .certs img{width:100%;aspect-ratio:1.414;object-fit:cover;border-radius:10px;border:1px solid var(--line);display:block;background:#fff;transition:.2s}
 .certs a:hover img{border-color:var(--gold);transform:translateY(-2px)}
 @media (max-width:720px){.edu{grid-template-columns:1fr;gap:28px}.certs{grid-template-columns:repeat(2,1fr)}}
+
+/* blog teaser */
+.post-teaser{display:grid!important;grid-template-columns:minmax(0,1.1fr) 1fr;gap:28px;align-items:center;padding:18px!important}
+.post-teaser img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:14px;display:block}
+.post-teaser h3{font-size:clamp(19px,2.4vw,24px)}
+.blog-all{margin:18px 0 0}
+.blog-all a{color:var(--gold);font-weight:700;text-decoration:none}
+@media (max-width:720px){.post-teaser{grid-template-columns:1fr;gap:16px}}
 
 /* contacts */
 .contacts{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px}
@@ -247,7 +255,7 @@ footer p{margin:0 0 6px}
 .certs a:hover{transform:rotate(0) translateY(-18px) scale(1.12);z-index:5}
 .certs a:hover img{transform:none}
 @media (max-width:980px){.certs{flex-wrap:wrap!important;gap:12px}.certs a,.certs a:first-child,.certs:hover a{flex:0 0 calc(50% - 6px);margin:0;transform:none}}
-.lb{position:fixed;inset:0;background:rgba(8,8,14,.92);display:flex;align-items:center;justify-content:center;z-index:50;padding:20px;cursor:zoom-out}
+.lb{position:fixed;inset:0;background:rgba(5,10,28,.92);display:flex;align-items:center;justify-content:center;z-index:50;padding:20px;cursor:zoom-out}
 .lb img{max-width:100%;max-height:90vh;border-radius:8px;box-shadow:0 20px 60px rgba(0,0,0,.6)}
 
 @media (prefers-reduced-motion:reduce){.sign .draw{animation:none;stroke-dashoffset:0}.rv{opacity:1;transform:none;transition:none}.sign .dot{display:none}}
@@ -258,7 +266,7 @@ body::after{content:"";position:fixed;inset:0;z-index:60;pointer-events:none;opa
 @keyframes drift{to{transform:translate(-140px,90px) scale(1.15)}}
 .dust{position:absolute;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
 .pic{transition:transform .8s cubic-bezier(.2,.7,.2,1)}
-.hero h1.shine{background:linear-gradient(100deg,#ececf2 0%,#ececf2 42%,#f6e3a1 50%,#ececf2 58%,#ececf2 100%);background-size:250% 100%;background-position:100% 0;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 8s 1.5s ease-in-out infinite}
+.hero h1.shine{background:linear-gradient(100deg,#eef1f8 0%,#eef1f8 42%,#f6e3a1 50%,#eef1f8 58%,#eef1f8 100%);background-size:250% 100%;background-position:100% 0;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 8s 1.5s ease-in-out infinite}
 @keyframes shine{0%{background-position:100% 0}30%,100%{background-position:0 0}}
 .btn-gold{position:relative;overflow:hidden;box-shadow:0 12px 32px -12px rgba(224,191,94,.6)}
 .btn-gold::after{content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.55),transparent);transform:skewX(-20deg);animation:sweep 5s 2.5s infinite;pointer-events:none}
@@ -413,6 +421,22 @@ section.seen h2::before{width:72px}
     </div>
   </section>
 
+  <section id="blog">
+    <div class="wrap">
+      <h2>Блог</h2>
+      <a class="card post-teaser" href="/blog/diskretnye-i-nepreryvnye/">
+        <img src="/img/blog/diskretnye-i-nepreryvnye.jpg" alt="Золотой микрофон в пустом караоке-баре" width="1600" height="900" loading="lazy">
+        <div>
+          <div class="tag">Мышление · 2 февраля 2022</div>
+          <h3>Процессники и результатники - кривое деление</h3>
+          <p>Все - результатники, просто результаты разные. Делить людей стоит на дискретных и непрерывных.</p>
+          <span class="go">Читать статью →</span>
+        </div>
+      </a>
+      <p class="blog-all"><a href="/blog/">Все статьи блога →</a></p>
+    </div>
+  </section>
+
   <section id="kontakty">
     <div class="wrap">
       <h2>Контакты</h2>
@@ -454,7 +478,7 @@ section.seen h2::before{width:72px}
 
 <footer>
   <div class="wrap">
-    <p>© Александр Громов, grmv8.ru</p>
+    <p>© Александр Громов, grmv8.ru · <a href="/blog/" class="gold">Блог</a></p>
     <p>* Instagram и Facebook принадлежат компании Meta Platforms Inc., деятельность которой запрещена на территории РФ.</p>
   </div>
 </footer>

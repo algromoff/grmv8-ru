@@ -18,7 +18,7 @@
     <meta property="og:locale" content="ru_RU">
 
     <!-- Dynamic Animated Favicon (Infinity <-> 8) -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cstyle%3E@keyframes rot { 0%25, 20%25 { transform: rotate(0deg); } 40%25, 70%25 { transform: rotate(90deg); } 90%25, 100%25 { transform: rotate(0deg); } } .sym { font-family: sans-serif; font-size: 80px; font-weight: bold; fill: %23c9a84c; transform-origin: 50px 50px; animation: rot 4s infinite ease-in-out; }%3C/style%3E%3Crect width='100' height='100' fill='%231a1a2e' rx='20'/%3E%3Ctext x='50' y='76' text-anchor='middle' class='sym'%3E∞%3C/text%3E%3C/svg%3E">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cstyle%3E@keyframes rot { 0%25, 20%25 { transform: rotate(0deg); } 40%25, 70%25 { transform: rotate(90deg); } 90%25, 100%25 { transform: rotate(0deg); } } .sym { font-family: sans-serif; font-size: 80px; font-weight: bold; fill: %23c9a84c; transform-origin: 50px 50px; animation: rot 4s infinite ease-in-out; }%3C/style%3E%3Crect width='100' height='100' fill='%230f1f4a' rx='20'/%3E%3Ctext x='50' y='76' text-anchor='middle' class='sym'%3E∞%3C/text%3E%3C/svg%3E">
 
     <!-- Fonts: Manrope, Space Grotesk, Unbounded -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -32,7 +32,7 @@
             theme: {
                 extend: {
                     colors: {
-                        ink: '#1a1a2e',
+                        ink: '#0f1f4a',
                         gold: '#c9a84c',
                         goldHover: '#e0bf5e',
                         graySec: '#a0a0b0'
@@ -74,7 +74,7 @@
         }
 
         .bg-depth {
-            background: radial-gradient(circle at center, #22223b 0%, #1a1a2e 100%);
+            background: radial-gradient(circle at center, #16295c 0%, #0f1f4a 100%);
         }
 
         @keyframes fadeIn {
@@ -113,7 +113,7 @@
     <canvas id="bg-canvas" class="absolute inset-0 z-0 w-full h-full pointer-events-auto"></canvas>
 
     <!-- Main Wrapper (Стеклянная плашка) -->
-    <main class="main-wrapper w-full max-w-[600px] h-full sm:h-auto sm:max-h-[95vh] overflow-y-auto overflow-x-hidden scrollbar-hide relative z-10 animate-fade-in bg-[#1a1a2e]/40 backdrop-blur-2xl sm:border border-white/10 sm:rounded-3xl shadow-[0_0_80px_rgba(0,0,0,0.6)]">
+    <main class="main-wrapper w-full max-w-[600px] h-full sm:h-auto sm:max-h-[95vh] overflow-y-auto overflow-x-hidden scrollbar-hide relative z-10 animate-fade-in bg-[#0f1f4a]/40 backdrop-blur-2xl sm:border border-white/10 sm:rounded-3xl shadow-[0_0_80px_rgba(0,0,0,0.6)]">
         
         <!-- ================= VIEW 1: PRODUCT SPECS ================= -->
         <div id="view-product" class="flex flex-col min-h-full transition-all duration-500 ease-in-out opacity-100">
@@ -174,7 +174,7 @@
             </div>
 
             <!-- Sticky Bottom Area (Кнопка всегда прилеплена к низу) -->
-            <div class="sticky bottom-0 w-full px-6 pb-6 pt-4 sm:px-8 sm:pb-8 sm:pt-6 bg-[#1a1a2e]/80 backdrop-blur-xl border-t border-white/5 z-[60] mt-auto shadow-[0_-10px_30px_rgba(0,0,0,0.3)]">
+            <div class="sticky bottom-0 w-full px-6 pb-6 pt-4 sm:px-8 sm:pb-8 sm:pt-6 bg-[#0f1f4a]/80 backdrop-blur-xl border-t border-white/5 z-[60] mt-auto shadow-[0_-10px_30px_rgba(0,0,0,0.3)]">
                 <div id="widget-container" class="relative w-full">
                     <button id="btn-to-checkout" class="btn-pay w-full bg-gold text-ink py-4 px-6 font-semibold text-lg uppercase tracking-wide transition-colors duration-300 hover:bg-goldHover flex items-center justify-center gap-2 group relative z-20 shadow-[0_0_40px_rgba(201,168,76,0.15)]">
                         <span>Забронировать слот</span>
@@ -188,9 +188,9 @@
 
     <!-- ================= MODAL 1: ОПЛАТА (ВИДЖЕТ IDX) ================= -->
     <div id="booking-modal" class="fixed inset-0 z-[100] flex items-center justify-center bg-[#0a0a10]/80 backdrop-blur-md opacity-0 pointer-events-none transition-all duration-300 p-0 sm:p-6">
-        <div id="booking-modal-content" class="relative w-full h-full sm:h-[85vh] max-w-[600px] bg-[#1a1a2e] sm:rounded-3xl shadow-[0_0_80px_rgba(201,168,76,0.15)] sm:border border-white/10 flex flex-col overflow-hidden transform scale-95 transition-transform duration-300">
+        <div id="booking-modal-content" class="relative w-full h-full sm:h-[85vh] max-w-[600px] bg-[#0f1f4a] sm:rounded-3xl shadow-[0_0_80px_rgba(201,168,76,0.15)] sm:border border-white/10 flex flex-col overflow-hidden transform scale-95 transition-transform duration-300">
             
-            <div class="flex justify-between items-center p-4 sm:p-5 border-b border-white/10 bg-[#1a1a2e] z-10 shrink-0">
+            <div class="flex justify-between items-center p-4 sm:p-5 border-b border-white/10 bg-[#0f1f4a] z-10 shrink-0">
                 <span class="text-white font-sans font-semibold text-lg">Забронировать слот</span>
                 <button id="btn-close-modal" class="text-graySec hover:text-white transition-colors p-1 rounded-md hover:bg-white/5">
                     <i data-lucide="x" class="w-6 h-6"></i>
@@ -208,9 +208,9 @@
 
     <!-- ================= MODAL 2: КАЛЕНДАРЬ (PLANERKA) ================= -->
     <div id="planerka-modal" class="fixed inset-0 z-[110] flex items-center justify-center bg-[#0a0a10]/80 backdrop-blur-md opacity-0 pointer-events-none transition-all duration-300 p-0 sm:p-6">
-        <div id="planerka-modal-content" class="relative w-full h-full sm:h-[90vh] max-w-[800px] bg-[#1a1a2e] sm:rounded-3xl shadow-[0_0_80px_rgba(38,114,201,0.15)] sm:border border-white/10 flex flex-col overflow-hidden transform scale-95 transition-transform duration-300">
+        <div id="planerka-modal-content" class="relative w-full h-full sm:h-[90vh] max-w-[800px] bg-[#0f1f4a] sm:rounded-3xl shadow-[0_0_80px_rgba(38,114,201,0.15)] sm:border border-white/10 flex flex-col overflow-hidden transform scale-95 transition-transform duration-300">
             
-            <div class="flex justify-between items-center p-4 sm:p-5 border-b border-white/10 bg-[#1a1a2e] z-10 shrink-0">
+            <div class="flex justify-between items-center p-4 sm:p-5 border-b border-white/10 bg-[#0f1f4a] z-10 shrink-0">
                 <span class="text-white font-sans font-semibold text-lg">Выберите время сессии</span>
                 <button id="btn-close-planerka" class="text-graySec hover:text-white transition-colors p-1 rounded-md hover:bg-white/5">
                     <i data-lucide="x" class="w-6 h-6"></i>

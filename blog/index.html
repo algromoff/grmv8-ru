@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Блог Александра Громова - мышление, управление, ИИ</title>
+<meta name="description" content="Заметки Александра Громова (grmv8) о мышлении, управлении командами и ИИ в бизнесе. Из опыта топ-менеджера и трекера.">
+<link rel="canonical" href="https://grmv8.ru/blog/">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://grmv8.ru/blog/">
+<meta property="og:title" content="Блог Александра Громова">
+<meta property="og:description" content="Заметки о мышлении, управлении командами и ИИ в бизнесе.">
+<meta property="og:image" content="https://grmv8.ru/img/blog/diskretnye-i-nepreryvnye-og.jpg">
+<meta property="og:locale" content="ru_RU">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cstyle%3E@keyframes rot { 0%25, 20%25 { transform: rotate(0deg); } 40%25, 70%25 { transform: rotate(90deg); } 90%25, 100%25 { transform: rotate(0deg); } } .sym { font-family: sans-serif; font-size: 80px; font-weight: bold; fill: %23c9a84c; transform-origin: 50px 50px; animation: rot 4s infinite ease-in-out; }%3C/style%3E%3Crect width='100' height='100' fill='%230f1f4a' rx='20'/%3E%3Ctext x='50' y='76' text-anchor='middle' class='sym'%3E∞%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Unbounded:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/blog/blog.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "Блог Александра Громова",
+  "url": "https://grmv8.ru/blog/",
+  "inLanguage": "ru-RU",
+  "author": {"@type": "Person", "@id": "https://grmv8.ru/#person", "name": "Александр Громов", "url": "https://grmv8.ru/"},
+  "blogPost": [
+    {"@type": "BlogPosting", "headline": "Процессники и результатники - кривое деление", "url": "https://grmv8.ru/blog/diskretnye-i-nepreryvnye/", "datePublished": "2022-02-02", "image": "https://grmv8.ru/img/blog/diskretnye-i-nepreryvnye.jpg"}
+  ]
+}
+</script>
+</head>
+<body>
+<div class="prog" aria-hidden="true"></div>
+
+<div class="top">
+  <div class="wrap">
+    <a class="logo" href="/">∞ grmv8</a>
+    <nav class="nav">
+      <a href="/#kto">Обо мне</a>
+      <a href="/#napravleniya">Чем полезен</a>
+      <a class="on" href="/blog/">Блог</a>
+      <a class="tg" href="https://t.me/grmv8">Написать</a>
+    </nav>
+  </div>
+</div>
+
+<header class="bhead">
+  <div class="wrap">
+    <div class="kicker">Дневник grmv8</div>
+    <h1>Блог</h1>
+    <p>Заметки о мышлении, управлении командами и ИИ в бизнесе. Пишу сам, из своего опыта.</p>
+  </div>
+</header>
+
+<main class="fresh">
+  <div class="wrap">
+    <div class="kicker">Свежее</div>
+    <div class="plist">
+      <a class="pcard rv" href="/blog/diskretnye-i-nepreryvnye/">
+        <img src="/img/blog/diskretnye-i-nepreryvnye.jpg" alt="Золотой микрофон в пустом караоке-баре" width="1600" height="900" loading="lazy">
+        <div class="in">
+          <div class="pmeta"><b>Мышление</b>2 февраля 2022 · 2 минуты</div>
+          <h2>Процессники и результатники - кривое деление</h2>
+          <p>Все - результатники, просто результаты разные. Делить людей стоит на дискретных и непрерывных. Что про это объясняют караоке и прогулка без маршрута.</p>
+          <span class="go">Читать →</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>© Александр Громов, <a href="/">grmv8.ru</a> · <a href="/blog/">Блог</a></p>
+    <p>* Instagram и Facebook принадлежат компании Meta Platforms Inc., деятельность которой запрещена на территории РФ.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var prog=document.querySelector('.prog');
+  function onScroll(){var h=document.documentElement,m=h.scrollHeight-h.clientHeight;prog.style.transform='scaleX('+(m>0?h.scrollTop/m:0)+')'}
+  addEventListener('scroll',onScroll,{passive:true});onScroll();
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}})},{threshold:.15});
+  document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+})();
+</script>
+</body>
+</html>
