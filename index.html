@@ -251,15 +251,37 @@ footer p{margin:0 0 6px}
 .lb img{max-width:100%;max-height:90vh;border-radius:8px;box-shadow:0 20px 60px rgba(0,0,0,.6)}
 
 @media (prefers-reduced-motion:reduce){.sign .draw{animation:none;stroke-dashoffset:0}.rv{opacity:1;transform:none;transition:none}.sign .dot{display:none}}
+/* premium effects */
+.prog{position:fixed;top:0;left:0;right:0;height:2px;z-index:70;background:linear-gradient(90deg,#8a6d2a,#f0d27a,#c9a84c);transform-origin:0 50%;transform:scaleX(0);box-shadow:0 0 12px rgba(240,210,122,.6);pointer-events:none}
+body::after{content:"";position:fixed;inset:0;z-index:60;pointer-events:none;opacity:.07;mix-blend-mode:overlay;background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
+.hero::before{content:"";position:absolute;width:760px;height:760px;right:-12%;top:-35%;background:radial-gradient(circle,rgba(201,168,76,.16),transparent 62%);animation:drift 18s ease-in-out infinite alternate;pointer-events:none}
+@keyframes drift{to{transform:translate(-140px,90px) scale(1.15)}}
+.dust{position:absolute;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
+.pic{transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.hero h1.shine{background:linear-gradient(100deg,#ececf2 0%,#ececf2 42%,#f6e3a1 50%,#ececf2 58%,#ececf2 100%);background-size:250% 100%;background-position:100% 0;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 8s 1.5s ease-in-out infinite}
+@keyframes shine{0%{background-position:100% 0}30%,100%{background-position:0 0}}
+.btn-gold{position:relative;overflow:hidden;box-shadow:0 12px 32px -12px rgba(224,191,94,.6)}
+.btn-gold::after{content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.55),transparent);transform:skewX(-20deg);animation:sweep 5s 2.5s infinite;pointer-events:none}
+@keyframes sweep{0%{left:-60%}28%,100%{left:130%}}
+section h2::before{content:"";display:block;width:0;height:2px;margin-bottom:16px;background:linear-gradient(90deg,var(--gold2),rgba(201,168,76,0));transition:width 1.3s cubic-bezier(.6,0,.2,1) .15s}
+section.seen h2::before{width:72px}
+.spot{position:relative;isolation:isolate}
+.spot::before,.spot::after{content:"";position:absolute;border-radius:inherit;opacity:0;transition:opacity .35s;pointer-events:none}
+.spot::before{inset:0;z-index:-1;background:radial-gradient(380px circle at var(--mx,50%) var(--my,50%),rgba(224,191,94,.13),transparent 45%)}
+.spot::after{inset:-1px;padding:1px;background:radial-gradient(240px circle at var(--mx,50%) var(--my,50%),rgba(240,210,122,.95),transparent 55%);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask:linear-gradient(#000 0 0) content-box exclude,linear-gradient(#000 0 0)}
+.spot:hover::before,.spot:hover::after{opacity:1}
+@media (prefers-reduced-motion:reduce){.hero::before,.hero h1.shine,.btn-gold::after{animation:none}.hero h1.shine{color:var(--text);background:none}.btn-gold::after{display:none}section h2::before{width:72px;transition:none}.dust{display:none}}
 </style>
 </head>
 <body>
 
+<div class="prog" aria-hidden="true"></div>
 <header class="hero">
+  <canvas class="dust" aria-hidden="true"></canvas>
   <div class="wrap hero-grid">
    <div>
     <span class="nick"><span class="inf">∞</span> grmv8</span>
-    <h1>Александр Громов</h1>
+    <h1 class="shine">Александр Громов</h1>
     <p class="lead">Траблшутер и трекер: сдвигаю с мёртвой точки и помогаю встать на рельсы. Сегодня - с помощью ИИ-агентов, которые работают на бизнес круглые сутки. За плечами более 20 лет топ-менеджером, из них десять - во главе медиа.</p>
     <div class="btns">
       <a class="btn btn-gold" href="https://t.me/grmv8">Написать в Telegram</a>
@@ -457,6 +479,42 @@ footer p{margin:0 0 6px}
     d.onclick=function(){d.remove()};document.body.appendChild(d);
   })});
   document.addEventListener('keydown',function(e){if(e.key==='Escape'){var l=document.querySelector('.lb');if(l)l.remove()}});
+  // premium effects
+  var prog=document.querySelector('.prog');
+  function onScroll(){var h=document.documentElement,m=h.scrollHeight-h.clientHeight;prog.style.transform='scaleX('+(m>0?h.scrollTop/m:0)+')'}
+  addEventListener('scroll',onScroll,{passive:true});onScroll();
+  var so=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('seen');so.unobserve(e.target)}})},{threshold:.2});
+  document.querySelectorAll('main section').forEach(function(el){so.observe(el)});
+  var fine=matchMedia('(hover:hover) and (pointer:fine)').matches;
+  if(fine){
+    document.querySelectorAll('.card,.fact,.facts li,.contact').forEach(function(el){
+      el.classList.add('spot');
+      el.addEventListener('pointermove',function(e){var r=el.getBoundingClientRect();el.style.setProperty('--mx',(e.clientX-r.left)+'px');el.style.setProperty('--my',(e.clientY-r.top)+'px')});
+    });
+  }
+  var hero=document.querySelector('.hero'),pic=document.querySelector('.pic');
+  if(fine&&!still){
+    hero.addEventListener('pointermove',function(e){var r=hero.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;pic.style.transform='translate('+(x*-18)+'px,'+(y*-12)+'px)'});
+    hero.addEventListener('pointerleave',function(){pic.style.transform=''});
+  }
+  var cv=document.querySelector('.dust');
+  if(cv&&!still){
+    var cx=cv.getContext('2d'),dpr=Math.min(devicePixelRatio||1,2),W,H,ps=[],run=true;
+    function size(){W=hero.clientWidth;H=hero.clientHeight;cv.width=W*dpr;cv.height=H*dpr;cx.setTransform(dpr,0,0,dpr,0,0)}
+    size();addEventListener('resize',size);
+    var n=W<700?22:46;
+    for(var i=0;i<n;i++)ps.push({x:Math.random()*W,y:Math.random()*H,r:.5+Math.random()*1.4,v:.12+Math.random()*.35,a:Math.random()*6.28,w:.004+Math.random()*.012});
+    new IntersectionObserver(function(es){run=es[0].isIntersecting;if(run)requestAnimationFrame(tick)}).observe(hero);
+    function tick(){
+      if(!run)return;cx.clearRect(0,0,W,H);
+      ps.forEach(function(p){
+        p.y-=p.v;p.x+=Math.sin(p.a)*.25;p.a+=p.w;if(p.y<-5){p.y=H+5;p.x=Math.random()*W}
+        var o=.25+.55*Math.abs(Math.sin(p.a*1.7));
+        cx.beginPath();cx.arc(p.x,p.y,p.r,0,6.28);cx.fillStyle='rgba(240,210,122,'+o+')';cx.shadowColor='rgba(240,210,122,.9)';cx.shadowBlur=6;cx.fill();
+      });
+      requestAnimationFrame(tick);
+    }
+  }
 })();
 </script>
 </body>
