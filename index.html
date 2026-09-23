@@ -1,438 +1,437 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-    
-    <!-- SEO & Meta -->
-    <title>Распаковка смыслов и оцифровка личности | Александр Громов</title>
-    <meta name="description" content="Глубинное интервью, аналитический отчет и системный ИИ-промпт. Оцифровка вашей личности за одну сессию.">
-    <meta name="keywords" content="распаковка смыслов, оцифровка личности, коучинг, ИИ-промпт, стратегия">
-    
-    <!-- OpenGraph (для красивых ссылок в Telegram/VK/FB) -->
-    <meta property="og:title" content="Распаковка смыслов и оцифровка личности">
-    <meta property="og:description" content="Глубинное интервью, аналитический отчет и системный ИИ-промпт. Оцифровка вашей личности за одну сессию.">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1634152962476-4b8a00e1915c?q=80&w=1200&auto=format&fit=crop">
-    <meta property="og:locale" content="ru_RU">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Александр Громов (grmv8) - внедрение ИИ в бизнес, нейросети, рилс</title>
+<meta name="description" content="Александр Громов, ник grmv8 в Telegram, WhatsApp и Facebook. Экс-гендиректор медиахолдинга, более 20 лет топ-менеджером, сейчас внедряет ИИ-отделы в бизнес и учит экспертов продавать через нейросети и рилс.">
+<link rel="canonical" href="https://grmv8.ru/">
+<meta name="robots" content="index, follow">
 
-    <!-- Dynamic Animated Favicon (Infinity <-> 8) -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cstyle%3E@keyframes rot { 0%25, 20%25 { transform: rotate(0deg); } 40%25, 70%25 { transform: rotate(90deg); } 90%25, 100%25 { transform: rotate(0deg); } } .sym { font-family: sans-serif; font-size: 80px; font-weight: bold; fill: %23c9a84c; transform-origin: 50px 50px; animation: rot 4s infinite ease-in-out; }%3C/style%3E%3Crect width='100' height='100' fill='%231a1a2e' rx='20'/%3E%3Ctext x='50' y='76' text-anchor='middle' class='sym'%3E∞%3C/text%3E%3C/svg%3E">
+<meta property="og:type" content="profile">
+<meta property="og:url" content="https://grmv8.ru/">
+<meta property="og:title" content="Александр Громов - grmv8">
+<meta property="og:description" content="Внедряю ИИ в бизнес. Более 20 лет топ-менеджером, 10 лет во главе медиа. Ник grmv8 - в Telegram, WhatsApp и Facebook.">
+<meta property="og:image" content="https://grmv8.ru/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="ru_RU">
+<meta property="profile:first_name" content="Александр">
+<meta property="profile:last_name" content="Громов">
+<meta property="profile:username" content="grmv8">
+<meta name="twitter:card" content="summary_large_image">
 
-    <!-- Fonts: Manrope, Space Grotesk, Unbounded -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;800&family=Space+Grotesk:wght@500;700&family=Unbounded:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cstyle%3E@keyframes rot { 0%25, 20%25 { transform: rotate(0deg); } 40%25, 70%25 { transform: rotate(90deg); } 90%25, 100%25 { transform: rotate(0deg); } } .sym { font-family: sans-serif; font-size: 80px; font-weight: bold; fill: %23c9a84c; transform-origin: 50px 50px; animation: rot 4s infinite ease-in-out; }%3C/style%3E%3Crect width='100' height='100' fill='%231a1a2e' rx='20'/%3E%3Ctext x='50' y='76' text-anchor='middle' class='sym'%3E∞%3C/text%3E%3C/svg%3E">
 
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        ink: '#1a1a2e',
-                        gold: '#c9a84c',
-                        goldHover: '#e0bf5e',
-                        graySec: '#a0a0b0'
-                    },
-                    fontFamily: {
-                        sans: ['Manrope', 'sans-serif'],
-                        display: ['Unbounded', 'sans-serif'],
-                        mono: ['Space Grotesk', 'sans-serif'],
-                    },
-                    boxShadow: {
-                        'glow': '0 0 40px rgba(201, 168, 76, 0.1)',
-                    }
-                }
-            }
-        }
-    </script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&family=Unbounded:wght@500;700&display=swap" rel="stylesheet">
 
-    <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
-
-    <style>
-        body {
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
-        
-        .scrollbar-hide::-webkit-scrollbar {
-            display: none;
-        }
-        .scrollbar-hide {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-        }
-
-        input:focus {
-            outline: none;
-            border-color: #c9a84c;
-            box-shadow: 0 0 0 1px #c9a84c;
-        }
-
-        .bg-depth {
-            background: radial-gradient(circle at center, #22223b 0%, #1a1a2e 100%);
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .animate-fade-in {
-            animation: fadeIn 0.8s ease-out forwards;
-        }
-    </style>
-
-    <script type="application/ld+json">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
-      "@type": "Product",
-      "name": "Распаковка смыслов и оцифровка личности",
-      "description": "Глубинное интервью, аналитический отчет и системный ИИ-промпт.",
-      "brand": {
-        "@type": "Brand",
-        "name": "Александр Громов"
-      },
-      "offers": {
-        "@type": "Offer",
-        "price": "25000",
-        "priceCurrency": "RUB",
-        "availability": "https://schema.org/InStock",
-        "url": "https://yourwebsite.com"
-      }
+      "@type": "Person",
+      "@id": "https://grmv8.ru/#person",
+      "name": "Александр Громов",
+      "givenName": "Александр",
+      "familyName": "Громов",
+      "additionalName": "Юрьевич",
+      "alternateName": ["grmv8", "Громов Александр Юрьевич"],
+      "url": "https://grmv8.ru/",
+      "image": "https://grmv8.ru/photo.jpg",
+      "email": "mailto:grmv8@ya.ru",
+      "jobTitle": "Консультант по внедрению ИИ в бизнес",
+      "description": "Бывший генеральный директор медиахолдинга РИА «Верхневолжье», более 20 лет топ-менеджером, с 2011 по 2021 год руководил медиа. Внедряет ИИ-отделы в бизнес, учит экспертов продавать через нейросети и рилс.",
+      "alumniOf": [
+        {"@type": "CollegeOrUniversity", "name": "ТвГУ"},
+        {"@type": "CollegeOrUniversity", "name": "РАНХиГС при Президенте РФ"},
+        {"@type": "CollegeOrUniversity", "name": "Университет Иннополис"}
+      ],
+      "award": [
+        "Лучшая проектная команда, II место, «Лидеры производительности», 2022",
+        "Лучшая проектная команда, III место, «Лидеры производительности», 2022",
+        "Благодарности Университета Иннополис, CDO и «Кадры для цифровой экономики», 2021-2022",
+        "Благодарность Ворлдскиллс Россия, 2022"
+      ],
+      "knowsAbout": ["искусственный интеллект", "ИИ-агенты", "внедрение ИИ в бизнес", "маркетинг", "рилс", "монетизация медиа", "профайлинг"],
+      "sameAs": [
+        "https://t.me/grmv8",
+        "https://wa.me/qr/2PC434GC3PRFO1",
+        "https://www.facebook.com/grmv8",
+        "https://t.me/ai_gromov8",
+        "https://t.me/gromov_dzen",
+        "https://www.instagram.com/ai_gromov/",
+        "https://tr6.ru/"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://grmv8.ru/#site",
+      "url": "https://grmv8.ru/",
+      "name": "grmv8 - Александр Громов",
+      "inLanguage": "ru",
+      "publisher": {"@id": "https://grmv8.ru/#person"}
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Кто такой Александр Громов?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Александр Юрьевич Громов - математик-программист и управленец. В 2019-2021 годах генеральный директор медиахолдинга РИА «Верхневолжье» (100 сотрудников, шесть редакций, включая «Московский комсомолец»), до этого исполнительный директор медиагруппы «Оазис» (14 FM-станций). С 2021 года ведёт программы Университета Иннополис и Академии внешней торговли. Сейчас внедряет ИИ в бизнес."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Что значит grmv8?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Это мой ник: «Громов» без гласных и восьмёрка. Положите её набок - получится знак бесконечности. Под этим ником я в Telegram, WhatsApp и Facebook*, почта - grmv8@ya.ru."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "С какими задачами к вам приходят?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Бизнес - когда нужно снять рутину с людей: ответы клиентам, контент, отчёты, первичные продажи. Эксперты - когда нужно понять, что и кому продавать, и научить нейросеть писать их голосом."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Как связаться?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Проще всего написать в Telegram: t.me/grmv8."
+          }
+        }
+      ]
     }
-    </script>
+  ]
+}
+</script>
+
+<style>
+:root{
+  --ink:#0f0f1a; --ink2:#1a1a2e; --card:#17172a; --line:rgba(255,255,255,.09);
+  --gold:#c9a84c; --gold2:#e0bf5e; --text:#ececf2; --muted:#a0a0b0;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--ink);color:var(--text);font:400 17px/1.6 Manrope,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:960px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:Unbounded,Manrope,sans-serif;font-weight:700;line-height:1.15;margin:0}
+.muted{color:var(--muted)}
+.gold{color:var(--gold)}
+
+/* hero */
+.hero{padding:clamp(56px,10vw,120px) 0 64px;background:radial-gradient(1000px 500px at 80% -10%,rgba(201,168,76,.14),transparent 60%),radial-gradient(800px 400px at -10% 110%,rgba(90,90,180,.12),transparent 60%)}
+.nick{display:inline-flex;align-items:center;gap:10px;font:500 15px Unbounded,sans-serif;color:var(--gold);border:1px solid rgba(201,168,76,.35);border-radius:999px;padding:6px 14px}
+.nick .inf{display:inline-block;animation:rot 5s infinite ease-in-out}
+@keyframes rot{0%,25%{transform:rotate(0)}45%,75%{transform:rotate(90deg)}95%,100%{transform:rotate(0)}}
+.who{display:flex;align-items:center;gap:28px;margin:22px 0 18px}
+.who img{width:132px;height:132px;border-radius:50%;object-fit:cover;border:3px solid rgba(201,168,76,.55);flex:none}
+.who h1{margin:0!important}
+@media (max-width:720px){.who{gap:16px}.who img{width:84px;height:84px}}
+.hero h1{font-size:clamp(40px,7vw,80px);margin:22px 0 18px;letter-spacing:-.01em}
+.lead{font-size:clamp(18px,2.4vw,22px);max-width:640px;margin:0 0 30px}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 22px;border-radius:14px;font-weight:700;text-decoration:none;transition:.2s}
+.btn-gold{background:var(--gold);color:#16130a}
+.btn-gold:hover{background:var(--gold2)}
+.btn-line{border:1px solid var(--line);color:var(--text)}
+.btn-line:hover{border-color:var(--gold);color:var(--gold)}
+
+section{padding:64px 0;border-top:1px solid var(--line)}
+section h2{font-size:clamp(24px,3.6vw,34px);margin-bottom:28px}
+
+/* bio */
+.bio{display:grid;grid-template-columns:1.4fr 1fr;gap:40px;align-items:start}
+.bio p{margin:0 0 16px}
+.facts{list-style:none;margin:0;padding:0;display:grid;gap:14px}
+.facts li{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px 18px}
+.facts i{font-style:normal}
+.facts b{display:block;font:700 26px Unbounded,sans-serif;color:var(--gold);margin-bottom:2px}
+.facts span{color:var(--muted);font-size:15px}
+
+/* directions */
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.card{display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:26px;text-decoration:none;transition:.2s}
+a.card:hover{border-color:rgba(201,168,76,.55);transform:translateY(-2px)}
+.card h3{font-size:19px;margin-bottom:10px}
+.card p{margin:0 0 16px;color:var(--muted);font-size:16px}
+.card .go{margin-top:auto;color:var(--gold);font-weight:700;font-size:15px}
+.tag{font-size:13px;color:var(--gold);text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px}
+
+/* education */
+.edu{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.sub{font-size:17px;color:var(--gold);margin-bottom:14px}
+.timeline{list-style:none;margin:0;padding:0}
+.timeline li{padding:10px 0 10px 104px;position:relative;border-bottom:1px solid var(--line);font-size:16px}
+.timeline b{position:absolute;left:0;top:10px;color:var(--gold);font:700 14px Unbounded,sans-serif}
+.certs{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:36px}
+.certs img{width:100%;aspect-ratio:1.414;object-fit:cover;border-radius:10px;border:1px solid var(--line);display:block;background:#fff;transition:.2s}
+.certs a:hover img{border-color:var(--gold);transform:translateY(-2px)}
+@media (max-width:720px){.edu{grid-template-columns:1fr;gap:28px}.certs{grid-template-columns:repeat(2,1fr)}}
+
+/* contacts */
+.contacts{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px}
+.contact{display:flex;flex-direction:column;gap:2px;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px 18px;text-decoration:none;transition:.2s}
+.contact:hover{border-color:var(--gold)}
+.contact small{color:var(--muted);font-size:13px}
+.contact strong{font-size:17px}
+.one-nick{font-size:clamp(20px,3vw,26px);margin:0 0 24px}
+
+/* faq */
+details{border-bottom:1px solid var(--line);padding:18px 0}
+summary{cursor:pointer;font-weight:700;font-size:18px;list-style:none}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";float:right;color:var(--gold);font-size:22px;line-height:1}
+details[open] summary::after{content:"-"}
+details p{margin:12px 0 0;color:var(--muted)}
+
+footer{padding:36px 0 48px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+footer p{margin:0 0 6px}
+
+@media (max-width:720px){
+  .bio,.grid{grid-template-columns:1fr}
+  body{font-size:16px}
+}
+
+/* hero sign */
+.hero{position:relative;overflow:hidden}
+.hero .wrap{position:relative;z-index:1}
+.hero-grid{max-width:1180px;display:grid;grid-template-columns:1fr minmax(0,460px);gap:40px;align-items:center}
+.pic{position:relative}
+.pic img{position:relative;z-index:1;display:block;width:100%;height:auto;-webkit-mask-image:linear-gradient(to right,transparent 0,#000 16%,#000 80%,transparent 100%),linear-gradient(to bottom,transparent 0,#000 16%,#000 66%,transparent 100%);-webkit-mask-composite:source-in;mask-image:linear-gradient(to right,transparent 0,#000 16%,#000 80%,transparent 100%),linear-gradient(to bottom,transparent 0,#000 16%,#000 66%,transparent 100%);mask-composite:intersect}
+.sign{position:absolute;left:-22%;top:50%;transform:translateY(-50%);width:144%;z-index:0;pointer-events:none}
+.sign .base{fill:none;stroke:rgba(201,168,76,.12);stroke-width:2}
+.sign .draw{fill:none;stroke:url(#g);stroke-width:3;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:1;animation:draw 3.2s .3s cubic-bezier(.6,0,.2,1) forwards;filter:drop-shadow(0 0 10px rgba(224,191,94,.45))}
+.sign .dot{fill:#fff3c4;filter:drop-shadow(0 0 8px #e0bf5e)}
+@keyframes draw{to{stroke-dashoffset:0}}
+.hero .lead,.who{max-width:600px}
+@media (max-width:980px){.hero-grid{grid-template-columns:1fr}.pic{order:-1;max-width:420px;width:100%;margin:0 auto -30px}.sign{left:-8%;width:116%}}
+
+/* organisations strip */
+.orgs{border-top:1px solid var(--line);padding:26px 0}
+.orgs .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:14px 38px}
+.orgs small{width:100%;text-align:center;color:var(--muted);font-size:13px;letter-spacing:.12em;text-transform:uppercase}
+.orgs span{font:600 clamp(14px,1.8vw,17px) Unbounded,sans-serif;color:rgba(236,236,242,.38);transition:.3s;white-space:nowrap}
+.orgs span:hover{color:var(--gold)}
+
+/* reveal on scroll */
+.rv{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease}
+.rv.on{opacity:1;transform:none}
+
+/* certificates fan */
+.certs{display:flex!important;justify-content:center;padding:30px 0 10px;flex-wrap:nowrap}
+.certs a{flex:0 0 170px;margin-left:-80px;transform:rotate(var(--rot)) translateY(var(--dy));transition:transform .35s ease,margin .35s ease;box-shadow:0 14px 30px rgba(0,0,0,.45);border-radius:10px;position:relative}
+.certs a:first-child{margin-left:0}
+.certs:hover a{margin-left:-60px}
+.certs:hover a:first-child{margin-left:0}
+.certs a:hover{transform:rotate(0) translateY(-18px) scale(1.12);z-index:5}
+.certs a:hover img{transform:none}
+@media (max-width:980px){.certs{flex-wrap:wrap!important;gap:12px}.certs a,.certs a:first-child,.certs:hover a{flex:0 0 calc(50% - 6px);margin:0;transform:none}}
+.lb{position:fixed;inset:0;background:rgba(8,8,14,.92);display:flex;align-items:center;justify-content:center;z-index:50;padding:20px;cursor:zoom-out}
+.lb img{max-width:100%;max-height:90vh;border-radius:8px;box-shadow:0 20px 60px rgba(0,0,0,.6)}
+
+@media (prefers-reduced-motion:reduce){.sign .draw{animation:none;stroke-dashoffset:0}.rv{opacity:1;transform:none;transition:none}.sign .dot{display:none}}
+</style>
 </head>
-<body class="bg-[#0a0a10] text-white font-sans h-dvh w-full flex items-center justify-center overflow-hidden relative">
+<body>
 
-    <!-- Интерактивный фон (Canvas) -->
-    <canvas id="bg-canvas" class="absolute inset-0 z-0 w-full h-full pointer-events-auto"></canvas>
-
-    <!-- Main Wrapper (Стеклянная плашка) -->
-    <main class="main-wrapper w-full max-w-[600px] h-full sm:h-auto sm:max-h-[95vh] overflow-y-auto overflow-x-hidden scrollbar-hide relative z-10 animate-fade-in bg-[#1a1a2e]/40 backdrop-blur-2xl sm:border border-white/10 sm:rounded-3xl shadow-[0_0_80px_rgba(0,0,0,0.6)]">
-        
-        <!-- ================= VIEW 1: PRODUCT SPECS ================= -->
-        <div id="view-product" class="flex flex-col min-h-full transition-all duration-500 ease-in-out opacity-100">
-            
-            <!-- Контентная часть -->
-            <div class="px-6 pt-8 pb-8 sm:px-8 sm:pt-8 flex-grow">
-                <header class="mb-10 mt-4 sm:mt-0">
-                    <h1 class="header-title font-display text-gold text-3xl sm:text-4xl font-semibold text-center leading-tight tracking-tight">
-                        Стратегический профайлинг<br>и оцифровка личности
-                    </h1>
-                </header>
-
-                <section class="product-specs space-y-8">
-                    <!-- Spec Item 1 -->
-                    <article class="spec-item grid grid-cols-[3rem_1fr] gap-4 sm:gap-6 items-start">
-                        <div class="text-gold font-mono text-4xl leading-none text-right pt-1">1</div>
-                        <div>
-                            <strong class="block mb-2 text-white text-lg">Глубинное интервью (120 минут).</strong>
-                            <p class="text-graySec text-sm sm:text-base leading-relaxed">
-                                Декомпозиция вашего опыта. Вытаскиваем фундаментальные активы, слепые зоны, паттерны и ядро вашей экспертности.
-                            </p>
-                        </div>
-                    </article>
-
-                    <!-- Spec Item 2 -->
-                    <article class="spec-item grid grid-cols-[3rem_1fr] gap-4 sm:gap-6 items-start">
-                        <div class="text-gold font-mono text-4xl leading-none text-right pt-1">2</div>
-                        <div>
-                            <strong class="block mb-2 text-white text-lg">Аналитический отчет (12 модулей).</strong>
-                            <p class="text-graySec text-sm sm:text-base leading-relaxed">
-                                Увеличительное зеркало ваших смыслов. Отчет, позволяющий выйти из "бутылки" рутины и прочитать свою "этикетку". Инструкция по управлению собственным позиционированием.
-                            </p>
-                        </div>
-                    </article>
-
-                    <!-- Spec Item 3 -->
-                    <article class="spec-item grid grid-cols-[3rem_1fr] gap-4 sm:gap-6 items-start">
-                        <div class="text-gold font-mono text-4xl leading-none text-right pt-1">3</div>
-                        <div>
-                            <strong class="block mb-2 text-white text-lg">Системный ИИ контекст.</strong>
-                            <p class="text-graySec text-sm sm:text-base leading-relaxed">
-                                Цифровое описание вашей личности для нейросетей. Персонализируйте ИИ и сделайте его своим уникальным помощником, который на 100% прогружен в ваш контекст и знает вас и траекторию вашего развития.
-                            </p>
-                        </div>
-                    </article>
-                </section>
-
-                <!-- Transaction Block (Только текст) -->
-                <section class="transaction-block mt-10 pt-6 border-t border-white/10">
-                    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 sm:gap-4">
-                        <div class="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-3">
-                            <span class="text-gold font-mono text-xl tracking-tight">Формат:</span>
-                            <span class="text-white text-lg font-medium">Личная сессия — Александр Громов</span>
-                        </div>
-                        <div class="text-gold font-mono text-2xl tracking-tight shrink-0">25 000 ₽</div>
-                    </div>
-                </section>
-            </div>
-
-            <!-- Sticky Bottom Area (Кнопка всегда прилеплена к низу) -->
-            <div class="sticky bottom-0 w-full px-6 pb-6 pt-4 sm:px-8 sm:pb-8 sm:pt-6 bg-[#1a1a2e]/80 backdrop-blur-xl border-t border-white/5 z-[60] mt-auto shadow-[0_-10px_30px_rgba(0,0,0,0.3)]">
-                <div id="widget-container" class="relative w-full">
-                    <button id="btn-to-checkout" class="btn-pay w-full bg-gold text-ink py-4 px-6 font-semibold text-lg uppercase tracking-wide transition-colors duration-300 hover:bg-goldHover flex items-center justify-center gap-2 group relative z-20 shadow-[0_0_40px_rgba(201,168,76,0.15)]">
-                        <span>Забронировать Слот</span>
-                        <i data-lucide="arrow-right" class="w-5 h-5 transition-transform group-hover:translate-x-1"></i>
-                    </button>
-                </div>
-            </div>
-
-        </div>
-    </main>
-
-    <!-- ================= MODAL 1: ОПЛАТА (ВИДЖЕТ IDX) ================= -->
-    <div id="booking-modal" class="fixed inset-0 z-[100] flex items-center justify-center bg-[#0a0a10]/80 backdrop-blur-md opacity-0 pointer-events-none transition-all duration-300 p-0 sm:p-6">
-        <div id="booking-modal-content" class="relative w-full h-full sm:h-[85vh] max-w-[600px] bg-[#1a1a2e] sm:rounded-3xl shadow-[0_0_80px_rgba(201,168,76,0.15)] sm:border border-white/10 flex flex-col overflow-hidden transform scale-95 transition-transform duration-300">
-            
-            <div class="flex justify-between items-center p-4 sm:p-5 border-b border-white/10 bg-[#1a1a2e] z-10 shrink-0">
-                <span class="text-white font-sans font-semibold text-lg">Забронировать слот</span>
-                <button id="btn-close-modal" class="text-graySec hover:text-white transition-colors p-1 rounded-md hover:bg-white/5">
-                    <i data-lucide="x" class="w-6 h-6"></i>
-                </button>
-            </div>
-
-            <div id="widget-wrapper" class="flex-grow w-full relative overflow-y-auto bg-white/5">
-                <div id="widget-loader" class="absolute inset-0 flex flex-col items-center justify-center gap-3 transition-opacity duration-500 pointer-events-none z-0">
-                    <i data-lucide="loader-2" class="w-8 h-8 text-gold animate-spin"></i>
-                    <span class="text-graySec text-sm font-mono tracking-widest uppercase">Подключение...</span>
-                </div>
-            </div>
-        </div>
+<header class="hero">
+  <div class="wrap hero-grid">
+   <div>
+    <span class="nick"><span class="inf">∞</span> grmv8</span>
+    <h1>Александр Громов</h1>
+    <p class="lead">Внедряю ИИ в бизнес: собираю отделы из ИИ-агентов, которые пишут тексты, считают, отвечают клиентам и ведут отчёты круглые сутки. За плечами более 20 лет топ-менеджером, из них десять - во главе медиа.</p>
+    <div class="btns">
+      <a class="btn btn-gold" href="https://t.me/grmv8">Написать в Telegram</a>
+      <a class="btn btn-line" href="#napravleniya">Чем могу быть полезен</a>
     </div>
+   </div>
+   <div class="pic">
+    <img src="img/portrait.jpg" alt="Александр Громов" width="900" height="1200">
+    <svg class="sign" viewBox="0 0 400 220" aria-hidden="true">
+    <defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#8a6d2a"/><stop offset=".5" stop-color="#f0d27a"/><stop offset="1" stop-color="#c9a84c"/></linearGradient></defs>
+    <path class="base" d="M380.0,110.0 L379.8,115.4 L379.3,120.8 L378.3,126.1 L377.1,131.3 L375.5,136.3 L373.5,141.2 L371.3,145.9 L368.8,150.4 L366.0,154.6 L363.0,158.5 L359.7,162.2 L356.3,165.5 L352.7,168.6 L348.9,171.4 L345.1,173.8 L341.1,176.0 L337.1,177.9 L333.0,179.4 L328.9,180.7 L324.7,181.7 L320.6,182.4 L316.4,182.9 L312.3,183.2 L308.2,183.2 L304.2,182.9 L300.2,182.5 L296.3,181.9 L292.4,181.1 L288.6,180.1 L284.9,179.0 L281.2,177.7 L277.6,176.3 L274.1,174.8 L270.6,173.1 L267.2,171.4 L263.9,169.5 L260.7,167.5 L257.6,165.5 L254.5,163.4 L251.4,161.2 L248.5,159.0 L245.6,156.7 L242.7,154.3 L239.9,151.9 L237.2,149.5 L234.5,147.0 L231.8,144.5 L229.2,141.9 L226.6,139.4 L224.1,136.8 L221.6,134.2 L219.1,131.5 L216.7,128.9 L214.3,126.2 L211.8,123.5 L209.5,120.8 L207.1,118.1 L204.7,115.4 L202.4,112.7 L200.0,110.0 L197.6,107.3 L195.3,104.6 L192.9,101.9 L190.5,99.2 L188.2,96.5 L185.7,93.8 L183.3,91.1 L180.9,88.5 L178.4,85.8 L175.9,83.2 L173.4,80.6 L170.8,78.1 L168.2,75.5 L165.5,73.0 L162.8,70.5 L160.1,68.1 L157.3,65.7 L154.4,63.3 L151.5,61.0 L148.6,58.8 L145.5,56.6 L142.4,54.5 L139.3,52.5 L136.1,50.5 L132.8,48.6 L129.4,46.9 L125.9,45.2 L122.4,43.7 L118.8,42.3 L115.1,41.0 L111.4,39.9 L107.6,38.9 L103.7,38.1 L99.8,37.5 L95.8,37.1 L91.8,36.8 L87.7,36.8 L83.6,37.1 L79.4,37.6 L75.3,38.3 L71.1,39.3 L67.0,40.6 L62.9,42.1 L58.9,44.0 L54.9,46.2 L51.1,48.6 L47.3,51.4 L43.7,54.5 L40.3,57.8 L37.0,61.5 L34.0,65.4 L31.2,69.6 L28.7,74.1 L26.5,78.8 L24.5,83.7 L22.9,88.7 L21.7,93.9 L20.7,99.2 L20.2,104.6 L20.0,110.0 L20.2,115.4 L20.7,120.8 L21.7,126.1 L22.9,131.3 L24.5,136.3 L26.5,141.2 L28.7,145.9 L31.2,150.4 L34.0,154.6 L37.0,158.5 L40.3,162.2 L43.7,165.5 L47.3,168.6 L51.1,171.4 L54.9,173.8 L58.9,176.0 L62.9,177.9 L67.0,179.4 L71.1,180.7 L75.3,181.7 L79.4,182.4 L83.6,182.9 L87.7,183.2 L91.8,183.2 L95.8,182.9 L99.8,182.5 L103.7,181.9 L107.6,181.1 L111.4,180.1 L115.1,179.0 L118.8,177.7 L122.4,176.3 L125.9,174.8 L129.4,173.1 L132.8,171.4 L136.1,169.5 L139.3,167.5 L142.4,165.5 L145.5,163.4 L148.6,161.2 L151.5,159.0 L154.4,156.7 L157.3,154.3 L160.1,151.9 L162.8,149.5 L165.5,147.0 L168.2,144.5 L170.8,141.9 L173.4,139.4 L175.9,136.8 L178.4,134.2 L180.9,131.5 L183.3,128.9 L185.7,126.2 L188.2,123.5 L190.5,120.8 L192.9,118.1 L195.3,115.4 L197.6,112.7 L200.0,110.0 L202.4,107.3 L204.7,104.6 L207.1,101.9 L209.5,99.2 L211.8,96.5 L214.3,93.8 L216.7,91.1 L219.1,88.5 L221.6,85.8 L224.1,83.2 L226.6,80.6 L229.2,78.1 L231.8,75.5 L234.5,73.0 L237.2,70.5 L239.9,68.1 L242.7,65.7 L245.6,63.3 L248.5,61.0 L251.4,58.8 L254.5,56.6 L257.6,54.5 L260.7,52.5 L263.9,50.5 L267.2,48.6 L270.6,46.9 L274.1,45.2 L277.6,43.7 L281.2,42.3 L284.9,41.0 L288.6,39.9 L292.4,38.9 L296.3,38.1 L300.2,37.5 L304.2,37.1 L308.2,36.8 L312.3,36.8 L316.4,37.1 L320.6,37.6 L324.7,38.3 L328.9,39.3 L333.0,40.6 L337.1,42.1 L341.1,44.0 L345.1,46.2 L348.9,48.6 L352.7,51.4 L356.3,54.5 L359.7,57.8 L363.0,61.5 L366.0,65.4 L368.8,69.6 L371.3,74.1 L373.5,78.8 L375.5,83.7 L377.1,88.7 L378.3,93.9 L379.3,99.2 L379.8,104.6 L380.0,110.0Z"/>
+    <path class="draw" pathLength="1" d="M380.0,110.0 L379.8,115.4 L379.3,120.8 L378.3,126.1 L377.1,131.3 L375.5,136.3 L373.5,141.2 L371.3,145.9 L368.8,150.4 L366.0,154.6 L363.0,158.5 L359.7,162.2 L356.3,165.5 L352.7,168.6 L348.9,171.4 L345.1,173.8 L341.1,176.0 L337.1,177.9 L333.0,179.4 L328.9,180.7 L324.7,181.7 L320.6,182.4 L316.4,182.9 L312.3,183.2 L308.2,183.2 L304.2,182.9 L300.2,182.5 L296.3,181.9 L292.4,181.1 L288.6,180.1 L284.9,179.0 L281.2,177.7 L277.6,176.3 L274.1,174.8 L270.6,173.1 L267.2,171.4 L263.9,169.5 L260.7,167.5 L257.6,165.5 L254.5,163.4 L251.4,161.2 L248.5,159.0 L245.6,156.7 L242.7,154.3 L239.9,151.9 L237.2,149.5 L234.5,147.0 L231.8,144.5 L229.2,141.9 L226.6,139.4 L224.1,136.8 L221.6,134.2 L219.1,131.5 L216.7,128.9 L214.3,126.2 L211.8,123.5 L209.5,120.8 L207.1,118.1 L204.7,115.4 L202.4,112.7 L200.0,110.0 L197.6,107.3 L195.3,104.6 L192.9,101.9 L190.5,99.2 L188.2,96.5 L185.7,93.8 L183.3,91.1 L180.9,88.5 L178.4,85.8 L175.9,83.2 L173.4,80.6 L170.8,78.1 L168.2,75.5 L165.5,73.0 L162.8,70.5 L160.1,68.1 L157.3,65.7 L154.4,63.3 L151.5,61.0 L148.6,58.8 L145.5,56.6 L142.4,54.5 L139.3,52.5 L136.1,50.5 L132.8,48.6 L129.4,46.9 L125.9,45.2 L122.4,43.7 L118.8,42.3 L115.1,41.0 L111.4,39.9 L107.6,38.9 L103.7,38.1 L99.8,37.5 L95.8,37.1 L91.8,36.8 L87.7,36.8 L83.6,37.1 L79.4,37.6 L75.3,38.3 L71.1,39.3 L67.0,40.6 L62.9,42.1 L58.9,44.0 L54.9,46.2 L51.1,48.6 L47.3,51.4 L43.7,54.5 L40.3,57.8 L37.0,61.5 L34.0,65.4 L31.2,69.6 L28.7,74.1 L26.5,78.8 L24.5,83.7 L22.9,88.7 L21.7,93.9 L20.7,99.2 L20.2,104.6 L20.0,110.0 L20.2,115.4 L20.7,120.8 L21.7,126.1 L22.9,131.3 L24.5,136.3 L26.5,141.2 L28.7,145.9 L31.2,150.4 L34.0,154.6 L37.0,158.5 L40.3,162.2 L43.7,165.5 L47.3,168.6 L51.1,171.4 L54.9,173.8 L58.9,176.0 L62.9,177.9 L67.0,179.4 L71.1,180.7 L75.3,181.7 L79.4,182.4 L83.6,182.9 L87.7,183.2 L91.8,183.2 L95.8,182.9 L99.8,182.5 L103.7,181.9 L107.6,181.1 L111.4,180.1 L115.1,179.0 L118.8,177.7 L122.4,176.3 L125.9,174.8 L129.4,173.1 L132.8,171.4 L136.1,169.5 L139.3,167.5 L142.4,165.5 L145.5,163.4 L148.6,161.2 L151.5,159.0 L154.4,156.7 L157.3,154.3 L160.1,151.9 L162.8,149.5 L165.5,147.0 L168.2,144.5 L170.8,141.9 L173.4,139.4 L175.9,136.8 L178.4,134.2 L180.9,131.5 L183.3,128.9 L185.7,126.2 L188.2,123.5 L190.5,120.8 L192.9,118.1 L195.3,115.4 L197.6,112.7 L200.0,110.0 L202.4,107.3 L204.7,104.6 L207.1,101.9 L209.5,99.2 L211.8,96.5 L214.3,93.8 L216.7,91.1 L219.1,88.5 L221.6,85.8 L224.1,83.2 L226.6,80.6 L229.2,78.1 L231.8,75.5 L234.5,73.0 L237.2,70.5 L239.9,68.1 L242.7,65.7 L245.6,63.3 L248.5,61.0 L251.4,58.8 L254.5,56.6 L257.6,54.5 L260.7,52.5 L263.9,50.5 L267.2,48.6 L270.6,46.9 L274.1,45.2 L277.6,43.7 L281.2,42.3 L284.9,41.0 L288.6,39.9 L292.4,38.9 L296.3,38.1 L300.2,37.5 L304.2,37.1 L308.2,36.8 L312.3,36.8 L316.4,37.1 L320.6,37.6 L324.7,38.3 L328.9,39.3 L333.0,40.6 L337.1,42.1 L341.1,44.0 L345.1,46.2 L348.9,48.6 L352.7,51.4 L356.3,54.5 L359.7,57.8 L363.0,61.5 L366.0,65.4 L368.8,69.6 L371.3,74.1 L373.5,78.8 L375.5,83.7 L377.1,88.7 L378.3,93.9 L379.3,99.2 L379.8,104.6 L380.0,110.0Z"/>
+    <circle class="dot" r="4" opacity="0"><set attributeName="opacity" to="1" begin="3.5s"/><animateMotion dur="9s" begin="3.5s" repeatCount="indefinite" path="M380.0,110.0 L379.8,115.4 L379.3,120.8 L378.3,126.1 L377.1,131.3 L375.5,136.3 L373.5,141.2 L371.3,145.9 L368.8,150.4 L366.0,154.6 L363.0,158.5 L359.7,162.2 L356.3,165.5 L352.7,168.6 L348.9,171.4 L345.1,173.8 L341.1,176.0 L337.1,177.9 L333.0,179.4 L328.9,180.7 L324.7,181.7 L320.6,182.4 L316.4,182.9 L312.3,183.2 L308.2,183.2 L304.2,182.9 L300.2,182.5 L296.3,181.9 L292.4,181.1 L288.6,180.1 L284.9,179.0 L281.2,177.7 L277.6,176.3 L274.1,174.8 L270.6,173.1 L267.2,171.4 L263.9,169.5 L260.7,167.5 L257.6,165.5 L254.5,163.4 L251.4,161.2 L248.5,159.0 L245.6,156.7 L242.7,154.3 L239.9,151.9 L237.2,149.5 L234.5,147.0 L231.8,144.5 L229.2,141.9 L226.6,139.4 L224.1,136.8 L221.6,134.2 L219.1,131.5 L216.7,128.9 L214.3,126.2 L211.8,123.5 L209.5,120.8 L207.1,118.1 L204.7,115.4 L202.4,112.7 L200.0,110.0 L197.6,107.3 L195.3,104.6 L192.9,101.9 L190.5,99.2 L188.2,96.5 L185.7,93.8 L183.3,91.1 L180.9,88.5 L178.4,85.8 L175.9,83.2 L173.4,80.6 L170.8,78.1 L168.2,75.5 L165.5,73.0 L162.8,70.5 L160.1,68.1 L157.3,65.7 L154.4,63.3 L151.5,61.0 L148.6,58.8 L145.5,56.6 L142.4,54.5 L139.3,52.5 L136.1,50.5 L132.8,48.6 L129.4,46.9 L125.9,45.2 L122.4,43.7 L118.8,42.3 L115.1,41.0 L111.4,39.9 L107.6,38.9 L103.7,38.1 L99.8,37.5 L95.8,37.1 L91.8,36.8 L87.7,36.8 L83.6,37.1 L79.4,37.6 L75.3,38.3 L71.1,39.3 L67.0,40.6 L62.9,42.1 L58.9,44.0 L54.9,46.2 L51.1,48.6 L47.3,51.4 L43.7,54.5 L40.3,57.8 L37.0,61.5 L34.0,65.4 L31.2,69.6 L28.7,74.1 L26.5,78.8 L24.5,83.7 L22.9,88.7 L21.7,93.9 L20.7,99.2 L20.2,104.6 L20.0,110.0 L20.2,115.4 L20.7,120.8 L21.7,126.1 L22.9,131.3 L24.5,136.3 L26.5,141.2 L28.7,145.9 L31.2,150.4 L34.0,154.6 L37.0,158.5 L40.3,162.2 L43.7,165.5 L47.3,168.6 L51.1,171.4 L54.9,173.8 L58.9,176.0 L62.9,177.9 L67.0,179.4 L71.1,180.7 L75.3,181.7 L79.4,182.4 L83.6,182.9 L87.7,183.2 L91.8,183.2 L95.8,182.9 L99.8,182.5 L103.7,181.9 L107.6,181.1 L111.4,180.1 L115.1,179.0 L118.8,177.7 L122.4,176.3 L125.9,174.8 L129.4,173.1 L132.8,171.4 L136.1,169.5 L139.3,167.5 L142.4,165.5 L145.5,163.4 L148.6,161.2 L151.5,159.0 L154.4,156.7 L157.3,154.3 L160.1,151.9 L162.8,149.5 L165.5,147.0 L168.2,144.5 L170.8,141.9 L173.4,139.4 L175.9,136.8 L178.4,134.2 L180.9,131.5 L183.3,128.9 L185.7,126.2 L188.2,123.5 L190.5,120.8 L192.9,118.1 L195.3,115.4 L197.6,112.7 L200.0,110.0 L202.4,107.3 L204.7,104.6 L207.1,101.9 L209.5,99.2 L211.8,96.5 L214.3,93.8 L216.7,91.1 L219.1,88.5 L221.6,85.8 L224.1,83.2 L226.6,80.6 L229.2,78.1 L231.8,75.5 L234.5,73.0 L237.2,70.5 L239.9,68.1 L242.7,65.7 L245.6,63.3 L248.5,61.0 L251.4,58.8 L254.5,56.6 L257.6,54.5 L260.7,52.5 L263.9,50.5 L267.2,48.6 L270.6,46.9 L274.1,45.2 L277.6,43.7 L281.2,42.3 L284.9,41.0 L288.6,39.9 L292.4,38.9 L296.3,38.1 L300.2,37.5 L304.2,37.1 L308.2,36.8 L312.3,36.8 L316.4,37.1 L320.6,37.6 L324.7,38.3 L328.9,39.3 L333.0,40.6 L337.1,42.1 L341.1,44.0 L345.1,46.2 L348.9,48.6 L352.7,51.4 L356.3,54.5 L359.7,57.8 L363.0,61.5 L366.0,65.4 L368.8,69.6 L371.3,74.1 L373.5,78.8 L375.5,83.7 L377.1,88.7 L378.3,93.9 L379.3,99.2 L379.8,104.6 L380.0,110.0Z"/></circle>
+  </svg>
+   </div>
+  </div>
+</header>
 
-    <!-- ================= MODAL 2: КАЛЕНДАРЬ (PLANERKA) ================= -->
-    <div id="planerka-modal" class="fixed inset-0 z-[110] flex items-center justify-center bg-[#0a0a10]/80 backdrop-blur-md opacity-0 pointer-events-none transition-all duration-300 p-0 sm:p-6">
-        <div id="planerka-modal-content" class="relative w-full h-full sm:h-[90vh] max-w-[800px] bg-[#1a1a2e] sm:rounded-3xl shadow-[0_0_80px_rgba(38,114,201,0.15)] sm:border border-white/10 flex flex-col overflow-hidden transform scale-95 transition-transform duration-300">
-            
-            <div class="flex justify-between items-center p-4 sm:p-5 border-b border-white/10 bg-[#1a1a2e] z-10 shrink-0">
-                <span class="text-white font-sans font-semibold text-lg">Выберите время сессии</span>
-                <button id="btn-close-planerka" class="text-graySec hover:text-white transition-colors p-1 rounded-md hover:bg-white/5">
-                    <i data-lucide="x" class="w-6 h-6"></i>
-                </button>
-            </div>
+<div class="orgs">
+  <div class="wrap">
+    <small>Где работал и учился</small>
+    <span>Иннополис</span><span>РАНХиГС</span><span>WorldSkills</span><span>Академия внешней торговли</span><span>Академия трекеров</span><span>Авторадио</span><span>Европа плюс</span><span>Московский комсомолец</span>
+  </div>
+</div>
 
-            <div id="planerka-wrapper" class="flex-grow w-full relative overflow-y-auto bg-white/5 p-4">
-                <div id="planerka-loader" class="absolute inset-0 flex flex-col items-center justify-center gap-3 transition-opacity duration-500 pointer-events-none z-0">
-                    <i data-lucide="loader-2" class="w-8 h-8 text-gold animate-spin"></i>
-                    <span class="text-graySec text-sm font-mono tracking-widest uppercase">Загрузка календаря...</span>
-                </div>
-                
-                <!-- Planerka Widget Container (Скрыт до загрузки скрипта для плавности) -->
-                <div id="planerka-embed-container" class="opacity-0 transition-opacity duration-500">
-                    <div
-                      class="app-planerka-embed"
-                      data-planerka-embed="default"
-                      data-planerka-url="https://planerka.app/meet"
-                      data-planerka-user="gromov"
-                      data-planerka-event="strategicheskiy-profayling"
-                      data-planerka-bg="transparent"
-                      data-planerka-border="#2672c9"
-                      data-planerka-hide-branding="1"
-                      data-planerka-shadow="light"
-                      style="width: 100%; min-height: 600px;">
-                    </div>
-                </div>
-            </div>
-        </div>
+<main>
+  <section id="kto">
+    <div class="wrap bio">
+      <div>
+        <h2>Кто я</h2>
+        <p>По образованию - математик-программист: прикладная математика и кибернетика, выпуск 2002 года. Потом более 20 лет топ-менеджером в разных отраслях. С 2011 по 2021 год руководил медиа: радио, газеты, сайты.</p>
+        <p>С 2019 по 2021 год - генеральный директор медиахолдинга РИА «Верхневолжье»: 100 сотрудников, шесть редакций, среди них «Московский комсомолец». За два года запустил новый портал и вдвое срезал расходы на серверы. Портал за первые полгода вошёл в топ-8 сайтов региона.</p>
+        <p>До этого четыре года был исполнительным директором медиагруппы «Оазис» - 14 FM-станций, включая «Авторадио» и «Европу плюс», плюс телеканал. Принял компанию с долгом в несколько миллионов рублей. 2018 год она закрыла с прибылью и без долгов.</p>
+        <p>С 2021 года веду программы Университета Иннополис и Академии внешней торговли: модератор, трекер, куратор проектных команд. На «Лидерах производительности» две мои команды из одного потока взяли второе и третье места.</p>
+        <p>С нейросетями работаю каждый день: мою работу держит команда ИИ-агентов. Такие же отделы собираю для других компаний - под их задачи и данные.</p>
+      </div>
+      <ul class="facts">
+        <li><b><i data-n="20">20</i>+ лет</b><span>топ-менеджером в разных отраслях, из них 10 лет - в медиа</span></li>
+        <li><b><i data-n="100">100</i> человек</b><span>и шесть редакций в холдинге под моим руководством</span></li>
+        <li><b><i data-n="14">14</i> FM-станций</b><span>в медиагруппе, которую вывел из долгов в прибыль</span></li>
+        <li><b>grmv8</b><span>один ник в Telegram, WhatsApp, Facebook и почте</span></li>
+      </ul>
     </div>
+  </section>
 
-    <script>
-        lucide.createIcons();
+  <section id="obrazovanie">
+    <div class="wrap">
+      <h2>Образование и признание</h2>
+      <div class="edu">
+        <div>
+          <h3 class="sub">Образование</h3>
+          <ul class="timeline">
+            <li><b>2021</b>Университет Иннополис - Chief Data Officer, руководитель по работе с данными</li>
+            <li><b>2021</b>Академия трекеров - сертификат трекера предпринимателей</li>
+            <li><b>2020</b>РАНХиГС при Президенте РФ - государственное и муниципальное управление</li>
+            <li><b>2010</b>Президентская программа подготовки управленческих кадров - менеджмент организации</li>
+            <li><b>2002</b>ТвГУ - прикладная математика и кибернетика</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="sub">Признание</h3>
+          <ul class="timeline">
+            <li><b>2022</b>Грамоты «Лучшая проектная команда», II и III место - куратор команд, «Лидеры производительности», национальный проект «Производительность труда»</li>
+            <li><b>2022</b>Благодарность Ворлдскиллс Россия - модерация проектной сессии «Навыки будущего в вузах»</li>
+            <li><b>2021-2022</b>Благодарности Университета Иннополис - модератор программ CDO и «Кадры для цифровой экономики»</li>
+            <li><b>2021</b>Благодарность фестиваля «Вообразиград» - мастер-класс «Будущие профессии. PR»</li>
+            <li><b>2019</b>Благодарность за организацию регионального образовательного форума «Медиасмыслы»</li>
+          </ul>
+        </div>
+      </div>
+      <div class="certs">
+        <a style="--rot:-9deg;--dy:14px" href="img/liders-2.jpg"><img src="img/liders-2.jpg" alt="Грамота «Лидеры производительности», II место, 2022" loading="lazy"></a>
+        <a style="--rot:-6deg;--dy:6px" href="img/liders-3.jpg"><img src="img/liders-3.jpg" alt="Грамота «Лидеры производительности», III место, 2022" loading="lazy"></a>
+        <a style="--rot:-3deg;--dy:0px" href="img/innopolis-cdo-2021.jpg"><img src="img/innopolis-cdo-2021.jpg" alt="Благодарности Университета Иннополис, CDO и «Кадры для цифровой экономики», 2021-2022" loading="lazy"></a>
+        <a style="--rot:-1deg;--dy:-4px" href="img/innopolis-ooc-2022.jpg"><img src="img/innopolis-ooc-2022.jpg" alt="Благодарственное письмо Университета Иннополис, 2022" loading="lazy"></a>
+        <a style="--rot:1deg;--dy:-4px" href="img/worldskills-2022.jpg"><img src="img/worldskills-2022.jpg" alt="Благодарность Ворлдскиллс Россия, 2022" loading="lazy"></a>
+        <a style="--rot:3deg;--dy:0px" href="img/tracker-2021.jpg"><img src="img/tracker-2021.jpg" alt="Сертификат трекера, Академия трекеров, 2021" loading="lazy"></a>
+        <a style="--rot:6deg;--dy:6px" href="img/voobrazigrad-2021.jpg"><img src="img/voobrazigrad-2021.jpg" alt="Благодарность за мастер-класс «Будущие профессии. PR», 2021" loading="lazy"></a>
+        <a style="--rot:9deg;--dy:14px" href="img/mediasmysly-2019.jpg"><img src="img/mediasmysly-2019.jpg" alt="Благодарность за форум «Медиасмыслы», 2019" loading="lazy"></a>
+      </div>
+    </div>
+  </section>
 
-        // ================= ЛОГИКА ОПЛАТЫ (МОДАЛКА 1) =================
-        const btnToCheckout = document.getElementById('btn-to-checkout');
-        const bookingModal = document.getElementById('booking-modal');
-        const bookingModalContent = document.getElementById('booking-modal-content');
-        const btnCloseModal = document.getElementById('btn-close-modal');
-        const widgetWrapper = document.getElementById('widget-wrapper');
-        const widgetLoader = document.getElementById('widget-loader');
-        
-        let isWidgetInjected = false;
+  <section id="napravleniya">
+    <div class="wrap">
+      <h2>Чем могу быть полезен</h2>
+      <div class="grid">
+        <a class="card" href="https://t.me/grmv8">
+          <div class="tag">Для бизнеса</div>
+          <h3>ИИ-консалтинг и ИИ-отдел под ключ</h3>
+          <p>Разбираю процессы компании, нахожу, где рутина съедает часы людей, и собираю агентов под эти участки: продажи, контент, поддержка, отчёты.</p>
+          <span class="go">Обсудить задачу →</span>
+        </a>
+        <a class="card" href="/raspakovka/">
+          <div class="tag">Для экспертов</div>
+          <h3>Распаковка смыслов и оцифровка личности</h3>
+          <p>Интервью на 120 минут, отчёт из 12 модулей и ИИ-контекст, после которого нейросеть пишет вашим голосом. 25 000 ₽.</p>
+          <span class="go">Подробнее →</span>
+        </a>
+        <a class="card" href="https://tr6.ru/">
+          <div class="tag">Обучение</div>
+          <h3>TurboReels</h3>
+          <p>Как снимать рилс, которые набирают просмотры с шестью нулями, и собирать их с помощью нейросетей.</p>
+          <span class="go">tr6.ru →</span>
+        </a>
+        <a class="card" href="https://t.me/ai_gromov8">
+          <div class="tag">Читать</div>
+          <h3>Каналы в Telegram</h3>
+          <p>«Громов | Нейросети, Деньги, Рилс» - про ИИ и продукты. «Громов | ПРО Мышление» - про мышление и отношения.</p>
+          <span class="go">Подписаться →</span>
+        </a>
+      </div>
+    </div>
+  </section>
 
-        function preloadWidget() {
-            if (isWidgetInjected) return;
-            isWidgetInjected = true;
-            
-            const widgetScript = document.createElement('script');
-            widgetScript.setAttribute('ao-number', '115270');
-            widgetScript.setAttribute('ao-widget-id', '79NvoGVtb0C72CAtFKqY5g');
-            widgetScript.src = 'https://idx.xl.ru/site/widget/widget.min.js';
-            widgetScript.async = true; 
-            
-            widgetWrapper.appendChild(widgetScript);
-            
-            setTimeout(() => {
-                if (widgetLoader) {
-                    widgetLoader.style.opacity = '0';
-                    setTimeout(() => widgetLoader.remove(), 500);
-                }
-            }, 3000);
-        }
+  <section id="kontakty">
+    <div class="wrap">
+      <h2>Контакты</h2>
+      <p class="one-nick">Ник один - <span class="gold">grmv8</span>: Telegram, WhatsApp, Facebook и почта.</p>
+      <div class="contacts">
+        <a class="contact" href="https://t.me/grmv8"><small>Telegram, лично</small><strong>@grmv8</strong></a>
+        <a class="contact" href="https://t.me/ai_gromov8"><small>Канал про ИИ и рилс</small><strong>@ai_gromov8</strong></a>
+        <a class="contact" href="https://t.me/gromov_dzen"><small>Канал про мышление</small><strong>@gromov_dzen</strong></a>
+        <a class="contact" href="https://www.instagram.com/ai_gromov/"><small>Instagram*</small><strong>@ai_gromov</strong></a>
+        <a class="contact" href="https://wa.me/qr/2PC434GC3PRFO1"><small>WhatsApp</small><strong>@grmv8</strong></a>
+        <a class="contact" href="https://www.facebook.com/grmv8"><small>Facebook*</small><strong>grmv8</strong></a>
+        <a class="contact" href="mailto:grmv8@ya.ru"><small>Почта</small><strong>grmv8@ya.ru</strong></a>
+      </div>
+    </div>
+  </section>
 
-        setTimeout(preloadWidget, 2000);
+  <section id="voprosy">
+    <div class="wrap">
+      <h2>Коротко обо мне</h2>
+      <details>
+        <summary>Кто такой Александр Громов?</summary>
+        <p>Александр Юрьевич Громов - математик-программист и управленец. В 2019-2021 годах генеральный директор медиахолдинга РИА «Верхневолжье» (100 сотрудников, шесть редакций, включая «Московский комсомолец»), до этого исполнительный директор медиагруппы «Оазис» (14 FM-станций). С 2021 года ведёт программы Университета Иннополис и Академии внешней торговли. Сейчас внедряет ИИ в бизнес.</p>
+      </details>
+      <details>
+        <summary>Что значит grmv8?</summary>
+        <p>Это мой ник: «Громов» без гласных и восьмёрка. Положите её набок - получится знак бесконечности. Под этим ником я в Telegram, WhatsApp и Facebook*, почта - grmv8@ya.ru.</p>
+      </details>
+      <details>
+        <summary>С какими задачами к вам приходят?</summary>
+        <p>Бизнес - когда нужно снять рутину с людей: ответы клиентам, контент, отчёты, первичные продажи. Эксперты - когда нужно понять, что и кому продавать, и научить нейросеть писать их голосом.</p>
+      </details>
+      <details>
+        <summary>Как связаться?</summary>
+        <p>Проще всего написать в Telegram: <a class="gold" href="https://t.me/grmv8">t.me/grmv8</a>.</p>
+      </details>
+    </div>
+  </section>
+</main>
 
-        function openModal() {
-            bookingModal.classList.remove('opacity-0', 'pointer-events-none');
-            bookingModalContent.classList.remove('scale-95');
-            bookingModalContent.classList.add('scale-100');
-            preloadWidget();
-        }
+<footer>
+  <div class="wrap">
+    <p>© Александр Громов, grmv8.ru</p>
+    <p>* Instagram и Facebook принадлежат компании Meta Platforms Inc., деятельность которой запрещена на территории РФ.</p>
+  </div>
+</footer>
 
-        function closeModal() {
-            bookingModal.classList.add('opacity-0', 'pointer-events-none');
-            bookingModalContent.classList.remove('scale-100');
-            bookingModalContent.classList.add('scale-95');
-        }
-
-        btnToCheckout.addEventListener('click', (e) => {
-            e.preventDefault();
-            openModal();
-        });
-
-        btnCloseModal.addEventListener('click', closeModal);
-        bookingModal.addEventListener('click', (e) => {
-            if (e.target === bookingModal) closeModal();
-        });
-
-
-        // ================= ЛОГИКА КАЛЕНДАРЯ PLANERKA (МОДАЛКА 2) =================
-        const planerkaModal = document.getElementById('planerka-modal');
-        const planerkaModalContent = document.getElementById('planerka-modal-content');
-        const btnClosePlanerka = document.getElementById('btn-close-planerka');
-        const planerkaLoader = document.getElementById('planerka-loader');
-        const planerkaEmbedContainer = document.getElementById('planerka-embed-container');
-        
-        let isPlanerkaInjected = false;
-
-        // ВАЖНО: Эту функцию нужно вызывать из коллбэка успешной оплаты вашего платежного виджета
-        // Пример: onPaymentSuccess() { window.showPlanerkaWidget(); }
-        window.showPlanerkaWidget = function() {
-            // Закрываем окно оплаты, если оно было открыто
-            closeModal();
-
-            // Открываем окно с календарем
-            planerkaModal.classList.remove('opacity-0', 'pointer-events-none');
-            planerkaModalContent.classList.remove('scale-95');
-            planerkaModalContent.classList.add('scale-100');
-
-            if (!isPlanerkaInjected) {
-                // Подгружаем скрипт планерки динамически, чтобы не нагружать сайт до оплаты
-                const script = document.createElement('script');
-                script.src = 'https://planerka.app/meet/assets/external/embed.js';
-                script.async = true;
-                document.body.appendChild(script);
-                isPlanerkaInjected = true;
-
-                // Плавно скрываем лоадер и показываем виджет
-                setTimeout(() => {
-                    if (planerkaLoader) planerkaLoader.style.opacity = '0';
-                    if (planerkaEmbedContainer) planerkaEmbedContainer.style.opacity = '1';
-                    setTimeout(() => planerkaLoader.remove(), 500);
-                }, 2500);
-            }
-        };
-
-        function closePlanerkaModal() {
-            planerkaModal.classList.add('opacity-0', 'pointer-events-none');
-            planerkaModalContent.classList.remove('scale-100');
-            planerkaModalContent.classList.add('scale-95');
-        }
-
-        btnClosePlanerka.addEventListener('click', closePlanerkaModal);
-        planerkaModal.addEventListener('click', (e) => {
-            if (e.target === planerkaModal) closePlanerkaModal();
-        });
-
-
-        // ================= ИНТЕРАКТИВНЫЙ ФОН (ШАРЫ) =================
-        const canvas = document.getElementById('bg-canvas');
-        const ctx = canvas.getContext('2d');
-        let width, height;
-        let orbs = [];
-
-        function resizeCanvas() {
-            width = window.innerWidth;
-            height = window.innerHeight;
-            canvas.width = width;
-            canvas.height = height;
-        }
-        window.addEventListener('resize', resizeCanvas);
-        resizeCanvas();
-
-        const mouse = { x: width / 2, y: height / 2 };
-        window.addEventListener('mousemove', (e) => {
-            mouse.x = e.clientX;
-            mouse.y = e.clientY;
-        });
-        window.addEventListener('touchmove', (e) => {
-            if(e.touches.length > 0) {
-                mouse.x = e.touches[0].clientX;
-                mouse.y = e.touches[0].clientY;
-            }
-        });
-
-        class Orb {
-            constructor(x, y, radiusFactor, color) {
-                this.x = x;
-                this.y = y;
-                this.radiusFactor = radiusFactor;
-                this.radius = Math.max(width * this.radiusFactor, 250);
-                this.color = color;
-                this.vx = (Math.random() - 0.5) * 1.5;
-                this.vy = (Math.random() - 0.5) * 1.5;
-            }
-            update() {
-                this.radius = Math.max(width * this.radiusFactor, 250);
-                this.x += this.vx;
-                this.y += this.vy;
-
-                if (this.x < -this.radius || this.x > width + this.radius) this.vx *= -1;
-                if (this.y < -this.radius || this.y > height + this.radius) this.vy *= -1;
-
-                const dx = mouse.x - this.x;
-                const dy = mouse.y - this.y;
-                const dist = Math.sqrt(dx * dx + dy * dy);
-                
-                if (dist < 500) {
-                    this.x += dx * 0.015;
-                    this.y += dy * 0.015;
-                }
-
-                this.draw();
-            }
-            draw() {
-                const gradient = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, this.radius);
-                gradient.addColorStop(0, this.color);
-                gradient.addColorStop(1, 'transparent');
-                
-                ctx.beginPath();
-                ctx.fillStyle = gradient;
-                ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-                ctx.fill();
-            }
-        }
-
-        function initOrbs() {
-            orbs = [
-                new Orb(width * 0.2, height * 0.3, 0.4, 'rgba(124, 58, 237, 0.45)'), 
-                new Orb(width * 0.8, height * 0.2, 0.3, 'rgba(37, 99, 235, 0.4)'),   
-                new Orb(width * 0.5, height * 0.8, 0.4, 'rgba(201, 168, 76, 0.25)'), 
-                new Orb(width * 0.8, height * 0.8, 0.3, 'rgba(219, 39, 119, 0.3)')   
-            ];
-        }
-        initOrbs();
-
-        function animateOrbs() {
-            ctx.clearRect(0, 0, width, height);
-            ctx.globalCompositeOperation = 'screen';
-            orbs.forEach(orb => orb.update());
-            requestAnimationFrame(animateOrbs);
-        }
-        animateOrbs();
-    </script>
+<script>
+(function(){
+  var still=matchMedia('(prefers-reduced-motion:reduce)').matches;
+  document.querySelectorAll('main section .wrap > *, .facts li, .card, .contact').forEach(function(el){el.classList.add('rv')});
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){
+    if(!e.isIntersecting)return;
+    e.target.classList.add('on');io.unobserve(e.target);
+    e.target.querySelectorAll('[data-n]').forEach(function(n){
+      if(still)return;var to=+n.dataset.n,t0=null;
+      function step(t){if(!t0)t0=t;var k=Math.min((t-t0)/1400,1);n.textContent=Math.round(to*(1-Math.pow(1-k,3)));if(k<1)requestAnimationFrame(step)}
+      n.textContent='0';requestAnimationFrame(step);
+    });
+  })},{threshold:.15});
+  document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+  document.querySelectorAll('.certs a').forEach(function(a){a.addEventListener('click',function(ev){
+    ev.preventDefault();var d=document.createElement('div');d.className='lb';
+    var im=document.createElement('img');im.src=a.getAttribute('href');im.alt=a.querySelector('img').alt;d.appendChild(im);
+    d.onclick=function(){d.remove()};document.body.appendChild(d);
+  })});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'){var l=document.querySelector('.lb');if(l)l.remove()}});
+})();
+</script>
 </body>
 </html>

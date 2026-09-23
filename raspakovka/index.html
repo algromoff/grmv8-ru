@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    
+    <!-- SEO & Meta -->
+    <title>Распаковка смыслов и оцифровка личности | Александр Громов</title>
+    <meta name="description" content="Глубинное интервью, аналитический отчёт и системный ИИ-промпт. Оцифровка вашей личности за одну сессию.">
+    <link rel="canonical" href="https://grmv8.ru/raspakovka/">
+    <meta name="keywords" content="распаковка смыслов, оцифровка личности, коучинг, ИИ-промпт, стратегия">
+    
+    <!-- OpenGraph (для красивых ссылок в Telegram/VK/FB) -->
+    <meta property="og:title" content="Распаковка смыслов и оцифровка личности">
+    <meta property="og:description" content="Глубинное интервью, аналитический отчёт и системный ИИ-промпт. Оцифровка вашей личности за одну сессию.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://grmv8.ru/og.png">
+    <meta property="og:locale" content="ru_RU">
+
+    <!-- Dynamic Animated Favicon (Infinity <-> 8) -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cstyle%3E@keyframes rot { 0%25, 20%25 { transform: rotate(0deg); } 40%25, 70%25 { transform: rotate(90deg); } 90%25, 100%25 { transform: rotate(0deg); } } .sym { font-family: sans-serif; font-size: 80px; font-weight: bold; fill: %23c9a84c; transform-origin: 50px 50px; animation: rot 4s infinite ease-in-out; }%3C/style%3E%3Crect width='100' height='100' fill='%231a1a2e' rx='20'/%3E%3Ctext x='50' y='76' text-anchor='middle' class='sym'%3E∞%3C/text%3E%3C/svg%3E">
+
+    <!-- Fonts: Manrope, Space Grotesk, Unbounded -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;800&family=Space+Grotesk:wght@500;700&family=Unbounded:wght@400;600;800&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        ink: '#1a1a2e',
+                        gold: '#c9a84c',
+                        goldHover: '#e0bf5e',
+                        graySec: '#a0a0b0'
+                    },
+                    fontFamily: {
+                        sans: ['Manrope', 'sans-serif'],
+                        display: ['Unbounded', 'sans-serif'],
+                        mono: ['Space Grotesk', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'glow': '0 0 40px rgba(201, 168, 76, 0.1)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        body {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #c9a84c;
+            box-shadow: 0 0 0 1px #c9a84c;
+        }
+
+        .bg-depth {
+            background: radial-gradient(circle at center, #22223b 0%, #1a1a2e 100%);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+    </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "Распаковка смыслов и оцифровка личности",
+      "description": "Глубинное интервью, аналитический отчёт и системный ИИ-промпт.",
+      "brand": {
+        "@type": "Brand",
+        "name": "Александр Громов"
+      },
+      "provider": {"@id": "https://grmv8.ru/#person"},
+      "offers": {
+        "@type": "Offer",
+        "price": "25000",
+        "priceCurrency": "RUB",
+        "availability": "https://schema.org/InStock",
+        "url": "https://grmv8.ru/raspakovka/"
+      }
+    }
+    </script>
+</head>
+<body class="bg-[#0a0a10] text-white font-sans h-dvh w-full flex items-center justify-center overflow-hidden relative">
+
+    <!-- Интерактивный фон (Canvas) -->
+    <canvas id="bg-canvas" class="absolute inset-0 z-0 w-full h-full pointer-events-auto"></canvas>
+
+    <!-- Main Wrapper (Стеклянная плашка) -->
+    <main class="main-wrapper w-full max-w-[600px] h-full sm:h-auto sm:max-h-[95vh] overflow-y-auto overflow-x-hidden scrollbar-hide relative z-10 animate-fade-in bg-[#1a1a2e]/40 backdrop-blur-2xl sm:border border-white/10 sm:rounded-3xl shadow-[0_0_80px_rgba(0,0,0,0.6)]">
+        
+        <!-- ================= VIEW 1: PRODUCT SPECS ================= -->
+        <div id="view-product" class="flex flex-col min-h-full transition-all duration-500 ease-in-out opacity-100">
+            
+            <!-- Контентная часть -->
+            <div class="px-6 pt-8 pb-8 sm:px-8 sm:pt-8 flex-grow">
+                <header class="mb-10 mt-4 sm:mt-0">
+                    <h1 class="header-title font-display text-gold text-3xl sm:text-4xl font-semibold text-center leading-tight tracking-tight">
+                        Стратегический профайлинг<br>и оцифровка личности
+                    </h1>
+                </header>
+
+                <section class="product-specs space-y-8">
+                    <!-- Spec Item 1 -->
+                    <article class="spec-item grid grid-cols-[3rem_1fr] gap-4 sm:gap-6 items-start">
+                        <div class="text-gold font-mono text-4xl leading-none text-right pt-1">1</div>
+                        <div>
+                            <strong class="block mb-2 text-white text-lg">Глубинное интервью (120 минут).</strong>
+                            <p class="text-graySec text-sm sm:text-base leading-relaxed">
+                                Декомпозиция вашего опыта. Вытаскиваем фундаментальные активы, слепые зоны, паттерны и ядро вашей экспертности.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- Spec Item 2 -->
+                    <article class="spec-item grid grid-cols-[3rem_1fr] gap-4 sm:gap-6 items-start">
+                        <div class="text-gold font-mono text-4xl leading-none text-right pt-1">2</div>
+                        <div>
+                            <strong class="block mb-2 text-white text-lg">Аналитический отчёт (12 модулей).</strong>
+                            <p class="text-graySec text-sm sm:text-base leading-relaxed">
+                                Увеличительное зеркало ваших смыслов. Отчёт, позволяющий выйти из «бутылки» рутины и прочитать свою «этикетку». Инструкция по управлению собственным позиционированием.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- Spec Item 3 -->
+                    <article class="spec-item grid grid-cols-[3rem_1fr] gap-4 sm:gap-6 items-start">
+                        <div class="text-gold font-mono text-4xl leading-none text-right pt-1">3</div>
+                        <div>
+                            <strong class="block mb-2 text-white text-lg">Системный ИИ-контекст.</strong>
+                            <p class="text-graySec text-sm sm:text-base leading-relaxed">
+                                Цифровое описание вашей личности для нейросетей. Персонализируйте ИИ и сделайте его своим уникальным помощником, который на 100% погружён в ваш контекст и знает вас и траекторию вашего развития.
+                            </p>
+                        </div>
+                    </article>
+                </section>
+
+                <!-- Transaction Block (Только текст) -->
+                <section class="transaction-block mt-10 pt-6 border-t border-white/10">
+                    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 sm:gap-4">
+                        <div class="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-3">
+                            <span class="text-gold font-mono text-xl tracking-tight">Формат:</span>
+                            <span class="text-white text-lg font-medium">Личная сессия - Александр Громов</span>
+                        </div>
+                        <div class="text-gold font-mono text-2xl tracking-tight shrink-0">25 000 ₽</div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Sticky Bottom Area (Кнопка всегда прилеплена к низу) -->
+            <div class="sticky bottom-0 w-full px-6 pb-6 pt-4 sm:px-8 sm:pb-8 sm:pt-6 bg-[#1a1a2e]/80 backdrop-blur-xl border-t border-white/5 z-[60] mt-auto shadow-[0_-10px_30px_rgba(0,0,0,0.3)]">
+                <div id="widget-container" class="relative w-full">
+                    <button id="btn-to-checkout" class="btn-pay w-full bg-gold text-ink py-4 px-6 font-semibold text-lg uppercase tracking-wide transition-colors duration-300 hover:bg-goldHover flex items-center justify-center gap-2 group relative z-20 shadow-[0_0_40px_rgba(201,168,76,0.15)]">
+                        <span>Забронировать слот</span>
+                        <i data-lucide="arrow-right" class="w-5 h-5 transition-transform group-hover:translate-x-1"></i>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- ================= MODAL 1: ОПЛАТА (ВИДЖЕТ IDX) ================= -->
+    <div id="booking-modal" class="fixed inset-0 z-[100] flex items-center justify-center bg-[#0a0a10]/80 backdrop-blur-md opacity-0 pointer-events-none transition-all duration-300 p-0 sm:p-6">
+        <div id="booking-modal-content" class="relative w-full h-full sm:h-[85vh] max-w-[600px] bg-[#1a1a2e] sm:rounded-3xl shadow-[0_0_80px_rgba(201,168,76,0.15)] sm:border border-white/10 flex flex-col overflow-hidden transform scale-95 transition-transform duration-300">
+            
+            <div class="flex justify-between items-center p-4 sm:p-5 border-b border-white/10 bg-[#1a1a2e] z-10 shrink-0">
+                <span class="text-white font-sans font-semibold text-lg">Забронировать слот</span>
+                <button id="btn-close-modal" class="text-graySec hover:text-white transition-colors p-1 rounded-md hover:bg-white/5">
+                    <i data-lucide="x" class="w-6 h-6"></i>
+                </button>
+            </div>
+
+            <div id="widget-wrapper" class="flex-grow w-full relative overflow-y-auto bg-white/5">
+                <div id="widget-loader" class="absolute inset-0 flex flex-col items-center justify-center gap-3 transition-opacity duration-500 pointer-events-none z-0">
+                    <i data-lucide="loader-2" class="w-8 h-8 text-gold animate-spin"></i>
+                    <span class="text-graySec text-sm font-mono tracking-widest uppercase">Подключение...</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= MODAL 2: КАЛЕНДАРЬ (PLANERKA) ================= -->
+    <div id="planerka-modal" class="fixed inset-0 z-[110] flex items-center justify-center bg-[#0a0a10]/80 backdrop-blur-md opacity-0 pointer-events-none transition-all duration-300 p-0 sm:p-6">
+        <div id="planerka-modal-content" class="relative w-full h-full sm:h-[90vh] max-w-[800px] bg-[#1a1a2e] sm:rounded-3xl shadow-[0_0_80px_rgba(38,114,201,0.15)] sm:border border-white/10 flex flex-col overflow-hidden transform scale-95 transition-transform duration-300">
+            
+            <div class="flex justify-between items-center p-4 sm:p-5 border-b border-white/10 bg-[#1a1a2e] z-10 shrink-0">
+                <span class="text-white font-sans font-semibold text-lg">Выберите время сессии</span>
+                <button id="btn-close-planerka" class="text-graySec hover:text-white transition-colors p-1 rounded-md hover:bg-white/5">
+                    <i data-lucide="x" class="w-6 h-6"></i>
+                </button>
+            </div>
+
+            <div id="planerka-wrapper" class="flex-grow w-full relative overflow-y-auto bg-white/5 p-4">
+                <div id="planerka-loader" class="absolute inset-0 flex flex-col items-center justify-center gap-3 transition-opacity duration-500 pointer-events-none z-0">
+                    <i data-lucide="loader-2" class="w-8 h-8 text-gold animate-spin"></i>
+                    <span class="text-graySec text-sm font-mono tracking-widest uppercase">Загрузка календаря...</span>
+                </div>
+                
+                <!-- Planerka Widget Container (Скрыт до загрузки скрипта для плавности) -->
+                <div id="planerka-embed-container" class="opacity-0 transition-opacity duration-500">
+                    <div
+                      class="app-planerka-embed"
+                      data-planerka-embed="default"
+                      data-planerka-url="https://planerka.app/meet"
+                      data-planerka-user="gromov"
+                      data-planerka-event="strategicheskiy-profayling"
+                      data-planerka-bg="transparent"
+                      data-planerka-border="#2672c9"
+                      data-planerka-hide-branding="1"
+                      data-planerka-shadow="light"
+                      style="width: 100%; min-height: 600px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        lucide.createIcons();
+
+        // ================= ЛОГИКА ОПЛАТЫ (МОДАЛКА 1) =================
+        const btnToCheckout = document.getElementById('btn-to-checkout');
+        const bookingModal = document.getElementById('booking-modal');
+        const bookingModalContent = document.getElementById('booking-modal-content');
+        const btnCloseModal = document.getElementById('btn-close-modal');
+        const widgetWrapper = document.getElementById('widget-wrapper');
+        const widgetLoader = document.getElementById('widget-loader');
+        
+        let isWidgetInjected = false;
+
+        function preloadWidget() {
+            if (isWidgetInjected) return;
+            isWidgetInjected = true;
+            
+            const widgetScript = document.createElement('script');
+            widgetScript.setAttribute('ao-number', '115270');
+            widgetScript.setAttribute('ao-widget-id', '79NvoGVtb0C72CAtFKqY5g');
+            widgetScript.src = 'https://idx.xl.ru/site/widget/widget.min.js';
+            widgetScript.async = true; 
+            
+            widgetWrapper.appendChild(widgetScript);
+            
+            setTimeout(() => {
+                if (widgetLoader) {
+                    widgetLoader.style.opacity = '0';
+                    setTimeout(() => widgetLoader.remove(), 500);
+                }
+            }, 3000);
+        }
+
+        setTimeout(preloadWidget, 2000);
+
+        function openModal() {
+            bookingModal.classList.remove('opacity-0', 'pointer-events-none');
+            bookingModalContent.classList.remove('scale-95');
+            bookingModalContent.classList.add('scale-100');
+            preloadWidget();
+        }
+
+        function closeModal() {
+            bookingModal.classList.add('opacity-0', 'pointer-events-none');
+            bookingModalContent.classList.remove('scale-100');
+            bookingModalContent.classList.add('scale-95');
+        }
+
+        btnToCheckout.addEventListener('click', (e) => {
+            e.preventDefault();
+            openModal();
+        });
+
+        btnCloseModal.addEventListener('click', closeModal);
+        bookingModal.addEventListener('click', (e) => {
+            if (e.target === bookingModal) closeModal();
+        });
+
+
+        // ================= ЛОГИКА КАЛЕНДАРЯ PLANERKA (МОДАЛКА 2) =================
+        const planerkaModal = document.getElementById('planerka-modal');
+        const planerkaModalContent = document.getElementById('planerka-modal-content');
+        const btnClosePlanerka = document.getElementById('btn-close-planerka');
+        const planerkaLoader = document.getElementById('planerka-loader');
+        const planerkaEmbedContainer = document.getElementById('planerka-embed-container');
+        
+        let isPlanerkaInjected = false;
+
+        // ВАЖНО: Эту функцию нужно вызывать из коллбэка успешной оплаты вашего платежного виджета
+        // Пример: onPaymentSuccess() { window.showPlanerkaWidget(); }
+        window.showPlanerkaWidget = function() {
+            // Закрываем окно оплаты, если оно было открыто
+            closeModal();
+
+            // Открываем окно с календарем
+            planerkaModal.classList.remove('opacity-0', 'pointer-events-none');
+            planerkaModalContent.classList.remove('scale-95');
+            planerkaModalContent.classList.add('scale-100');
+
+            if (!isPlanerkaInjected) {
+                // Подгружаем скрипт планерки динамически, чтобы не нагружать сайт до оплаты
+                const script = document.createElement('script');
+                script.src = 'https://planerka.app/meet/assets/external/embed.js';
+                script.async = true;
+                document.body.appendChild(script);
+                isPlanerkaInjected = true;
+
+                // Плавно скрываем лоадер и показываем виджет
+                setTimeout(() => {
+                    if (planerkaLoader) planerkaLoader.style.opacity = '0';
+                    if (planerkaEmbedContainer) planerkaEmbedContainer.style.opacity = '1';
+                    setTimeout(() => planerkaLoader.remove(), 500);
+                }, 2500);
+            }
+        };
+
+        function closePlanerkaModal() {
+            planerkaModal.classList.add('opacity-0', 'pointer-events-none');
+            planerkaModalContent.classList.remove('scale-100');
+            planerkaModalContent.classList.add('scale-95');
+        }
+
+        btnClosePlanerka.addEventListener('click', closePlanerkaModal);
+        planerkaModal.addEventListener('click', (e) => {
+            if (e.target === planerkaModal) closePlanerkaModal();
+        });
+
+
+        // ================= ИНТЕРАКТИВНЫЙ ФОН (ШАРЫ) =================
+        const canvas = document.getElementById('bg-canvas');
+        const ctx = canvas.getContext('2d');
+        let width, height;
+        let orbs = [];
+
+        function resizeCanvas() {
+            width = window.innerWidth;
+            height = window.innerHeight;
+            canvas.width = width;
+            canvas.height = height;
+        }
+        window.addEventListener('resize', resizeCanvas);
+        resizeCanvas();
+
+        const mouse = { x: width / 2, y: height / 2 };
+        window.addEventListener('mousemove', (e) => {
+            mouse.x = e.clientX;
+            mouse.y = e.clientY;
+        });
+        window.addEventListener('touchmove', (e) => {
+            if(e.touches.length > 0) {
+                mouse.x = e.touches[0].clientX;
+                mouse.y = e.touches[0].clientY;
+            }
+        });
+
+        class Orb {
+            constructor(x, y, radiusFactor, color) {
+                this.x = x;
+                this.y = y;
+                this.radiusFactor = radiusFactor;
+                this.radius = Math.max(width * this.radiusFactor, 250);
+                this.color = color;
+                this.vx = (Math.random() - 0.5) * 1.5;
+                this.vy = (Math.random() - 0.5) * 1.5;
+            }
+            update() {
+                this.radius = Math.max(width * this.radiusFactor, 250);
+                this.x += this.vx;
+                this.y += this.vy;
+
+                if (this.x < -this.radius || this.x > width + this.radius) this.vx *= -1;
+                if (this.y < -this.radius || this.y > height + this.radius) this.vy *= -1;
+
+                const dx = mouse.x - this.x;
+                const dy = mouse.y - this.y;
+                const dist = Math.sqrt(dx * dx + dy * dy);
+                
+                if (dist < 500) {
+                    this.x += dx * 0.015;
+                    this.y += dy * 0.015;
+                }
+
+                this.draw();
+            }
+            draw() {
+                const gradient = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, this.radius);
+                gradient.addColorStop(0, this.color);
+                gradient.addColorStop(1, 'transparent');
+                
+                ctx.beginPath();
+                ctx.fillStyle = gradient;
+                ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+                ctx.fill();
+            }
+        }
+
+        function initOrbs() {
+            orbs = [
+                new Orb(width * 0.2, height * 0.3, 0.4, 'rgba(124, 58, 237, 0.45)'), 
+                new Orb(width * 0.8, height * 0.2, 0.3, 'rgba(37, 99, 235, 0.4)'),   
+                new Orb(width * 0.5, height * 0.8, 0.4, 'rgba(201, 168, 76, 0.25)'), 
+                new Orb(width * 0.8, height * 0.8, 0.3, 'rgba(219, 39, 119, 0.3)')   
+            ];
+        }
+        initOrbs();
+
+        function animateOrbs() {
+            ctx.clearRect(0, 0, width, height);
+            ctx.globalCompositeOperation = 'screen';
+            orbs.forEach(orb => orb.update());
+            requestAnimationFrame(animateOrbs);
+        }
+        animateOrbs();
+    </script>
+</body>
+</html>
