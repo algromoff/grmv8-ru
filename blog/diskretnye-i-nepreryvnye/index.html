@@ -57,15 +57,19 @@
 <body>
 <div class="prog" aria-hidden="true"></div>
 
-<div class="top">
+<div class="topbar">
   <div class="wrap">
-    <a class="logo" href="/">∞ grmv8</a>
-    <nav class="nav">
+    <a class="tlogo" href="/"><span>∞</span> grmv8</a>
+    <nav class="tnav" id="tnav">
       <a href="/#kto">Обо мне</a>
+      <a href="/#fakty">Факты</a>
+      <a href="/#obrazovanie">Образование</a>
       <a href="/#napravleniya">Чем полезен</a>
-      <a class="on" href="/blog/">Блог</a>
-      <a class="tg" href="https://t.me/grmv8">Написать</a>
+      <a href="/blog/" class="on">Блог</a>
+      <a href="/#kontakty">Контакты</a>
     </nav>
+    <a class="tcta" href="https://t.me/grmv8">Написать</a>
+    <button class="burger" type="button" aria-label="Меню" aria-controls="tnav" aria-expanded="false"><i></i><i></i><i></i></button>
   </div>
 </div>
 
@@ -160,6 +164,13 @@
   </nav>
 </main>
 
+<aside class="rw" aria-label="Осталось читать">
+  <svg class="rw-ring" viewBox="0 0 36 36" aria-hidden="true"><circle class="bg" cx="18" cy="18" r="15"/><circle class="fg" cx="18" cy="18" r="15"/></svg>
+  <span class="rw-time"><b>2</b><span>мин</span></span>
+  <button class="rw-top" type="button" aria-label="Наверх">↑</button>
+  <a class="rw-cta" href="https://t.me/grmv8">Написать</a>
+</aside>
+
 <footer>
   <div class="wrap">
     <p>© Александр Громов, <a href="/">grmv8.ru</a> · <a href="/blog/">Блог</a></p>
@@ -172,8 +183,33 @@
   var prog=document.querySelector('.prog');
   function onScroll(){var h=document.documentElement,m=h.scrollHeight-h.clientHeight;prog.style.transform='scaleX('+(m>0?h.scrollTop/m:0)+')'}
   addEventListener('scroll',onScroll,{passive:true});onScroll();
+  // top navigation
+  var bar=document.querySelector('.topbar'),bg=bar.querySelector('.burger');
+  bg.addEventListener('click',function(){var o=bar.classList.toggle('open');bg.setAttribute('aria-expanded',o)});
+  bar.querySelectorAll('.tnav a').forEach(function(a){a.addEventListener('click',function(){bar.classList.remove('open');bg.setAttribute('aria-expanded','false')})});
+  addEventListener('scroll',function(){bar.classList.toggle('solid',scrollY>40)},{passive:true});
   var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}})},{threshold:.15});
   document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+  // reading widget: minutes left in the article body
+  var rw=document.querySelector('.rw'),art=document.querySelector('.body');
+  if(rw&&art){
+    var words=art.textContent.trim().split(/\s+/).length,mins=Math.max(1,Math.ceil(words/220));
+    var num=rw.querySelector('.rw-time b'),lbl=rw.querySelector('.rw-time span'),fg=rw.querySelector('.fg'),tick=false;
+    function rwUpd(){
+      tick=false;
+      var r=art.getBoundingClientRect(),vh=innerHeight,span=r.height-vh*.5;
+      var pct=Math.min(1,Math.max(0,(vh*.5-r.top)/(span>0?span:1)));
+      var left=Math.ceil(mins*(1-pct)-.05);
+      if(left>0){num.textContent=left;lbl.textContent='мин'}else{num.textContent='';lbl.textContent='дочитано'}
+      fg.style.strokeDashoffset=(94.25*(1-pct)).toFixed(2);
+      rw.classList.toggle('on',r.top<vh*.35);
+      rw.classList.toggle('up',pct>.4);
+      rw.classList.toggle('cta',pct>.85);
+    }
+    addEventListener('scroll',function(){if(!tick){tick=true;requestAnimationFrame(rwUpd)}},{passive:true});
+    addEventListener('resize',rwUpd);rwUpd();
+    rw.querySelector('.rw-top').addEventListener('click',function(){scrollTo({top:0,behavior:'smooth'})});
+  }
   var b=document.querySelector('.copy');
   b.addEventListener('click',function(){
     var u=location.href.split('#')[0];

@@ -259,6 +259,36 @@ footer p{margin:0 0 6px}
 .lb img{max-width:100%;max-height:90vh;border-radius:8px;box-shadow:0 20px 60px rgba(0,0,0,.6)}
 
 @media (prefers-reduced-motion:reduce){.sign .draw{animation:none;stroke-dashoffset:0}.rv{opacity:1;transform:none;transition:none}.sign .dot{display:none}}
+/* top navigation */
+.topbar{position:sticky;top:0;z-index:50;background:rgba(7,11,24,.72);backdrop-filter:blur(14px) saturate(140%);-webkit-backdrop-filter:blur(14px) saturate(140%);border-bottom:1px solid transparent;transition:background .3s,border-color .3s}
+.topbar.solid{background:rgba(7,11,24,.9);border-bottom-color:var(--line)}
+.topbar .wrap{display:flex;align-items:center;gap:22px;min-height:64px}
+.tlogo{font:600 16px Unbounded,sans-serif;color:var(--gold);text-decoration:none;white-space:nowrap}
+.tlogo span{display:inline-block;transition:transform .6s}
+.tlogo:hover span{transform:rotate(180deg)}
+.tnav{display:flex;gap:4px;margin-left:auto}
+.tnav a{position:relative;padding:8px 10px;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;color:var(--muted);transition:color .2s}
+.tnav a::after{content:"";position:absolute;left:10px;right:10px;bottom:2px;height:1px;background:var(--gold);transform:scaleX(0);transform-origin:0 50%;transition:transform .35s}
+.tnav a:hover,.tnav a.on{color:var(--gold)}
+.tnav a:hover::after,.tnav a.on::after{transform:scaleX(1)}
+.tcta{padding:9px 18px;border-radius:999px;background:var(--gold);color:#16130a;font-weight:700;font-size:14px;text-decoration:none;white-space:nowrap;transition:background .2s}
+.tcta:hover{background:var(--gold2)}
+.burger{display:none;width:44px;height:44px;margin-right:-10px;border:0;background:none;cursor:pointer;padding:12px 10px;flex-direction:column;justify-content:space-between}
+.burger i{display:block;height:2px;border-radius:2px;background:var(--text);transition:transform .3s,opacity .3s}
+.topbar.open .burger i:nth-child(1){transform:translateY(8px) rotate(45deg)}
+.topbar.open .burger i:nth-child(2){opacity:0}
+.topbar.open .burger i:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
+@media (max-width:1000px){
+  .burger{display:flex}
+  .tcta{margin-left:auto}
+  .tnav{position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;margin:0;padding:8px 20px 18px;background:rgba(7,11,24,.97);border-bottom:1px solid var(--line);opacity:0;visibility:hidden;transform:translateY(-8px);transition:opacity .25s,transform .25s,visibility .25s}
+  .topbar.open .tnav{opacity:1;visibility:visible;transform:none}
+  .tnav a{padding:14px 0;font-size:14px;border-bottom:1px solid var(--line)}
+  .tnav a:last-child{border-bottom:0}
+  .tnav a::after{display:none}
+}
+section[id]{scroll-margin-top:72px}
+
 /* premium effects */
 .prog{position:fixed;top:0;left:0;right:0;height:2px;z-index:70;background:linear-gradient(90deg,#8a6d2a,#f0d27a,#c9a84c);transform-origin:0 50%;transform:scaleX(0);box-shadow:0 0 12px rgba(240,210,122,.6);pointer-events:none}
 body::after{content:"";position:fixed;inset:0;z-index:60;pointer-events:none;opacity:.07;mix-blend-mode:overlay;background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
@@ -284,6 +314,21 @@ section.seen h2::before{width:72px}
 <body>
 
 <div class="prog" aria-hidden="true"></div>
+<div class="topbar">
+  <div class="wrap">
+    <a class="tlogo" href="/"><span>∞</span> grmv8</a>
+    <nav class="tnav" id="tnav">
+      <a href="#kto">Обо мне</a>
+      <a href="#fakty">Факты</a>
+      <a href="#obrazovanie">Образование</a>
+      <a href="#napravleniya">Чем полезен</a>
+      <a href="/blog/">Блог</a>
+      <a href="#kontakty">Контакты</a>
+    </nav>
+    <a class="tcta" href="https://t.me/grmv8">Написать</a>
+    <button class="burger" type="button" aria-label="Меню" aria-controls="tnav" aria-expanded="false"><i></i><i></i><i></i></button>
+  </div>
+</div>
 <header class="hero">
   <canvas class="dust" aria-hidden="true"></canvas>
   <div class="wrap hero-grid">
@@ -503,6 +548,14 @@ section.seen h2::before{width:72px}
     d.onclick=function(){d.remove()};document.body.appendChild(d);
   })});
   document.addEventListener('keydown',function(e){if(e.key==='Escape'){var l=document.querySelector('.lb');if(l)l.remove()}});
+  // top navigation
+  var bar=document.querySelector('.topbar'),bg=bar.querySelector('.burger');
+  bg.addEventListener('click',function(){var o=bar.classList.toggle('open');bg.setAttribute('aria-expanded',o)});
+  bar.querySelectorAll('.tnav a').forEach(function(a){a.addEventListener('click',function(){bar.classList.remove('open');bg.setAttribute('aria-expanded','false')})});
+  addEventListener('scroll',function(){bar.classList.toggle('solid',scrollY>40)},{passive:true});
+  var links={};bar.querySelectorAll('.tnav a[href^="#"]').forEach(function(a){links[a.getAttribute('href').slice(1)]=a});
+  var spyo=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting&&links[e.target.id]){for(var k in links)links[k].classList.remove('on');links[e.target.id].classList.add('on')}})},{rootMargin:'-45% 0px -50% 0px'});
+  document.querySelectorAll('main section[id]').forEach(function(s){spyo.observe(s)});
   // premium effects
   var prog=document.querySelector('.prog');
   function onScroll(){var h=document.documentElement,m=h.scrollHeight-h.clientHeight;prog.style.transform='scaleX('+(m>0?h.scrollTop/m:0)+')'}
