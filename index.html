@@ -138,6 +138,7 @@ section h2{font-size:clamp(24px,3.6vw,34px);margin-bottom:28px}
 .bio p{margin:0 0 16px}
 .facts{list-style:none;margin:0;padding:0;display:grid;gap:14px}
 .facts li{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px 18px}
+.facts i{font-style:normal}
 .facts b{display:block;font:700 26px Unbounded,sans-serif;color:var(--gold);margin-bottom:2px}
 .facts span{color:var(--muted);font-size:15px}
 
@@ -184,12 +185,50 @@ footer p{margin:0 0 6px}
   .bio,.grid{grid-template-columns:1fr}
   body{font-size:16px}
 }
+
+/* hero sign */
+.hero{position:relative;overflow:hidden}
+.hero .wrap{position:relative;z-index:1}
+.hero-grid{max-width:1180px;display:grid;grid-template-columns:1fr minmax(0,440px);gap:32px;align-items:center}
+.sign{width:100%;pointer-events:none}
+.sign .base{fill:none;stroke:rgba(201,168,76,.12);stroke-width:2}
+.sign .draw{fill:none;stroke:url(#g);stroke-width:3;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:1;animation:draw 3.2s .3s cubic-bezier(.6,0,.2,1) forwards;filter:drop-shadow(0 0 10px rgba(224,191,94,.45))}
+.sign .dot{fill:#fff3c4;filter:drop-shadow(0 0 8px #e0bf5e)}
+@keyframes draw{to{stroke-dashoffset:0}}
+.hero .lead,.who{max-width:600px}
+@media (max-width:980px){.hero-grid{grid-template-columns:1fr}.sign{position:absolute;right:-150px;bottom:-60px;width:440px;opacity:.22}.hero-grid>div{position:relative;z-index:1}}
+
+/* organisations strip */
+.orgs{border-top:1px solid var(--line);padding:26px 0}
+.orgs .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:14px 38px}
+.orgs small{width:100%;text-align:center;color:var(--muted);font-size:13px;letter-spacing:.12em;text-transform:uppercase}
+.orgs span{font:600 clamp(14px,1.8vw,17px) Unbounded,sans-serif;color:rgba(236,236,242,.38);transition:.3s;white-space:nowrap}
+.orgs span:hover{color:var(--gold)}
+
+/* reveal on scroll */
+.rv{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease}
+.rv.on{opacity:1;transform:none}
+
+/* certificates fan */
+.certs{display:flex!important;justify-content:center;padding:30px 0 10px;flex-wrap:nowrap}
+.certs a{flex:0 0 170px;margin-left:-80px;transform:rotate(var(--rot)) translateY(var(--dy));transition:transform .35s ease,margin .35s ease;box-shadow:0 14px 30px rgba(0,0,0,.45);border-radius:10px;position:relative}
+.certs a:first-child{margin-left:0}
+.certs:hover a{margin-left:-60px}
+.certs:hover a:first-child{margin-left:0}
+.certs a:hover{transform:rotate(0) translateY(-18px) scale(1.12);z-index:5}
+.certs a:hover img{transform:none}
+@media (max-width:980px){.certs{flex-wrap:wrap!important;gap:12px}.certs a,.certs a:first-child,.certs:hover a{flex:0 0 calc(50% - 6px);margin:0;transform:none}}
+.lb{position:fixed;inset:0;background:rgba(8,8,14,.92);display:flex;align-items:center;justify-content:center;z-index:50;padding:20px;cursor:zoom-out}
+.lb img{max-width:100%;max-height:90vh;border-radius:8px;box-shadow:0 20px 60px rgba(0,0,0,.6)}
+
+@media (prefers-reduced-motion:reduce){.sign .draw{animation:none;stroke-dashoffset:0}.rv{opacity:1;transform:none;transition:none}.sign .dot{display:none}}
 </style>
 </head>
 <body>
 
 <header class="hero">
-  <div class="wrap">
+  <div class="wrap hero-grid">
+   <div>
     <span class="nick"><span class="inf">∞</span> grmv8</span>
     <div class="who"><img src="photo.jpg" alt="Александр Громов" width="132" height="132"><h1>Александр Громов</h1></div>
     <p class="lead">Внедряю ИИ в бизнес: собираю отделы из нейросетей-агентов, которые пишут тексты, считают, отвечают клиентам и ведут отчёты круглые сутки. До этого 20 лет руководил медиа.</p>
@@ -197,8 +236,22 @@ footer p{margin:0 0 6px}
       <a class="btn btn-gold" href="https://t.me/grmv8">Написать в Telegram</a>
       <a class="btn btn-line" href="#napravleniya">Чем могу быть полезен</a>
     </div>
+   </div>
+  <svg class="sign" viewBox="0 0 400 220" aria-hidden="true">
+    <defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#8a6d2a"/><stop offset=".5" stop-color="#f0d27a"/><stop offset="1" stop-color="#c9a84c"/></linearGradient></defs>
+    <path class="base" d="M380.0,110.0 L379.8,115.4 L379.3,120.8 L378.3,126.1 L377.1,131.3 L375.5,136.3 L373.5,141.2 L371.3,145.9 L368.8,150.4 L366.0,154.6 L363.0,158.5 L359.7,162.2 L356.3,165.5 L352.7,168.6 L348.9,171.4 L345.1,173.8 L341.1,176.0 L337.1,177.9 L333.0,179.4 L328.9,180.7 L324.7,181.7 L320.6,182.4 L316.4,182.9 L312.3,183.2 L308.2,183.2 L304.2,182.9 L300.2,182.5 L296.3,181.9 L292.4,181.1 L288.6,180.1 L284.9,179.0 L281.2,177.7 L277.6,176.3 L274.1,174.8 L270.6,173.1 L267.2,171.4 L263.9,169.5 L260.7,167.5 L257.6,165.5 L254.5,163.4 L251.4,161.2 L248.5,159.0 L245.6,156.7 L242.7,154.3 L239.9,151.9 L237.2,149.5 L234.5,147.0 L231.8,144.5 L229.2,141.9 L226.6,139.4 L224.1,136.8 L221.6,134.2 L219.1,131.5 L216.7,128.9 L214.3,126.2 L211.8,123.5 L209.5,120.8 L207.1,118.1 L204.7,115.4 L202.4,112.7 L200.0,110.0 L197.6,107.3 L195.3,104.6 L192.9,101.9 L190.5,99.2 L188.2,96.5 L185.7,93.8 L183.3,91.1 L180.9,88.5 L178.4,85.8 L175.9,83.2 L173.4,80.6 L170.8,78.1 L168.2,75.5 L165.5,73.0 L162.8,70.5 L160.1,68.1 L157.3,65.7 L154.4,63.3 L151.5,61.0 L148.6,58.8 L145.5,56.6 L142.4,54.5 L139.3,52.5 L136.1,50.5 L132.8,48.6 L129.4,46.9 L125.9,45.2 L122.4,43.7 L118.8,42.3 L115.1,41.0 L111.4,39.9 L107.6,38.9 L103.7,38.1 L99.8,37.5 L95.8,37.1 L91.8,36.8 L87.7,36.8 L83.6,37.1 L79.4,37.6 L75.3,38.3 L71.1,39.3 L67.0,40.6 L62.9,42.1 L58.9,44.0 L54.9,46.2 L51.1,48.6 L47.3,51.4 L43.7,54.5 L40.3,57.8 L37.0,61.5 L34.0,65.4 L31.2,69.6 L28.7,74.1 L26.5,78.8 L24.5,83.7 L22.9,88.7 L21.7,93.9 L20.7,99.2 L20.2,104.6 L20.0,110.0 L20.2,115.4 L20.7,120.8 L21.7,126.1 L22.9,131.3 L24.5,136.3 L26.5,141.2 L28.7,145.9 L31.2,150.4 L34.0,154.6 L37.0,158.5 L40.3,162.2 L43.7,165.5 L47.3,168.6 L51.1,171.4 L54.9,173.8 L58.9,176.0 L62.9,177.9 L67.0,179.4 L71.1,180.7 L75.3,181.7 L79.4,182.4 L83.6,182.9 L87.7,183.2 L91.8,183.2 L95.8,182.9 L99.8,182.5 L103.7,181.9 L107.6,181.1 L111.4,180.1 L115.1,179.0 L118.8,177.7 L122.4,176.3 L125.9,174.8 L129.4,173.1 L132.8,171.4 L136.1,169.5 L139.3,167.5 L142.4,165.5 L145.5,163.4 L148.6,161.2 L151.5,159.0 L154.4,156.7 L157.3,154.3 L160.1,151.9 L162.8,149.5 L165.5,147.0 L168.2,144.5 L170.8,141.9 L173.4,139.4 L175.9,136.8 L178.4,134.2 L180.9,131.5 L183.3,128.9 L185.7,126.2 L188.2,123.5 L190.5,120.8 L192.9,118.1 L195.3,115.4 L197.6,112.7 L200.0,110.0 L202.4,107.3 L204.7,104.6 L207.1,101.9 L209.5,99.2 L211.8,96.5 L214.3,93.8 L216.7,91.1 L219.1,88.5 L221.6,85.8 L224.1,83.2 L226.6,80.6 L229.2,78.1 L231.8,75.5 L234.5,73.0 L237.2,70.5 L239.9,68.1 L242.7,65.7 L245.6,63.3 L248.5,61.0 L251.4,58.8 L254.5,56.6 L257.6,54.5 L260.7,52.5 L263.9,50.5 L267.2,48.6 L270.6,46.9 L274.1,45.2 L277.6,43.7 L281.2,42.3 L284.9,41.0 L288.6,39.9 L292.4,38.9 L296.3,38.1 L300.2,37.5 L304.2,37.1 L308.2,36.8 L312.3,36.8 L316.4,37.1 L320.6,37.6 L324.7,38.3 L328.9,39.3 L333.0,40.6 L337.1,42.1 L341.1,44.0 L345.1,46.2 L348.9,48.6 L352.7,51.4 L356.3,54.5 L359.7,57.8 L363.0,61.5 L366.0,65.4 L368.8,69.6 L371.3,74.1 L373.5,78.8 L375.5,83.7 L377.1,88.7 L378.3,93.9 L379.3,99.2 L379.8,104.6 L380.0,110.0Z"/>
+    <path class="draw" pathLength="1" d="M380.0,110.0 L379.8,115.4 L379.3,120.8 L378.3,126.1 L377.1,131.3 L375.5,136.3 L373.5,141.2 L371.3,145.9 L368.8,150.4 L366.0,154.6 L363.0,158.5 L359.7,162.2 L356.3,165.5 L352.7,168.6 L348.9,171.4 L345.1,173.8 L341.1,176.0 L337.1,177.9 L333.0,179.4 L328.9,180.7 L324.7,181.7 L320.6,182.4 L316.4,182.9 L312.3,183.2 L308.2,183.2 L304.2,182.9 L300.2,182.5 L296.3,181.9 L292.4,181.1 L288.6,180.1 L284.9,179.0 L281.2,177.7 L277.6,176.3 L274.1,174.8 L270.6,173.1 L267.2,171.4 L263.9,169.5 L260.7,167.5 L257.6,165.5 L254.5,163.4 L251.4,161.2 L248.5,159.0 L245.6,156.7 L242.7,154.3 L239.9,151.9 L237.2,149.5 L234.5,147.0 L231.8,144.5 L229.2,141.9 L226.6,139.4 L224.1,136.8 L221.6,134.2 L219.1,131.5 L216.7,128.9 L214.3,126.2 L211.8,123.5 L209.5,120.8 L207.1,118.1 L204.7,115.4 L202.4,112.7 L200.0,110.0 L197.6,107.3 L195.3,104.6 L192.9,101.9 L190.5,99.2 L188.2,96.5 L185.7,93.8 L183.3,91.1 L180.9,88.5 L178.4,85.8 L175.9,83.2 L173.4,80.6 L170.8,78.1 L168.2,75.5 L165.5,73.0 L162.8,70.5 L160.1,68.1 L157.3,65.7 L154.4,63.3 L151.5,61.0 L148.6,58.8 L145.5,56.6 L142.4,54.5 L139.3,52.5 L136.1,50.5 L132.8,48.6 L129.4,46.9 L125.9,45.2 L122.4,43.7 L118.8,42.3 L115.1,41.0 L111.4,39.9 L107.6,38.9 L103.7,38.1 L99.8,37.5 L95.8,37.1 L91.8,36.8 L87.7,36.8 L83.6,37.1 L79.4,37.6 L75.3,38.3 L71.1,39.3 L67.0,40.6 L62.9,42.1 L58.9,44.0 L54.9,46.2 L51.1,48.6 L47.3,51.4 L43.7,54.5 L40.3,57.8 L37.0,61.5 L34.0,65.4 L31.2,69.6 L28.7,74.1 L26.5,78.8 L24.5,83.7 L22.9,88.7 L21.7,93.9 L20.7,99.2 L20.2,104.6 L20.0,110.0 L20.2,115.4 L20.7,120.8 L21.7,126.1 L22.9,131.3 L24.5,136.3 L26.5,141.2 L28.7,145.9 L31.2,150.4 L34.0,154.6 L37.0,158.5 L40.3,162.2 L43.7,165.5 L47.3,168.6 L51.1,171.4 L54.9,173.8 L58.9,176.0 L62.9,177.9 L67.0,179.4 L71.1,180.7 L75.3,181.7 L79.4,182.4 L83.6,182.9 L87.7,183.2 L91.8,183.2 L95.8,182.9 L99.8,182.5 L103.7,181.9 L107.6,181.1 L111.4,180.1 L115.1,179.0 L118.8,177.7 L122.4,176.3 L125.9,174.8 L129.4,173.1 L132.8,171.4 L136.1,169.5 L139.3,167.5 L142.4,165.5 L145.5,163.4 L148.6,161.2 L151.5,159.0 L154.4,156.7 L157.3,154.3 L160.1,151.9 L162.8,149.5 L165.5,147.0 L168.2,144.5 L170.8,141.9 L173.4,139.4 L175.9,136.8 L178.4,134.2 L180.9,131.5 L183.3,128.9 L185.7,126.2 L188.2,123.5 L190.5,120.8 L192.9,118.1 L195.3,115.4 L197.6,112.7 L200.0,110.0 L202.4,107.3 L204.7,104.6 L207.1,101.9 L209.5,99.2 L211.8,96.5 L214.3,93.8 L216.7,91.1 L219.1,88.5 L221.6,85.8 L224.1,83.2 L226.6,80.6 L229.2,78.1 L231.8,75.5 L234.5,73.0 L237.2,70.5 L239.9,68.1 L242.7,65.7 L245.6,63.3 L248.5,61.0 L251.4,58.8 L254.5,56.6 L257.6,54.5 L260.7,52.5 L263.9,50.5 L267.2,48.6 L270.6,46.9 L274.1,45.2 L277.6,43.7 L281.2,42.3 L284.9,41.0 L288.6,39.9 L292.4,38.9 L296.3,38.1 L300.2,37.5 L304.2,37.1 L308.2,36.8 L312.3,36.8 L316.4,37.1 L320.6,37.6 L324.7,38.3 L328.9,39.3 L333.0,40.6 L337.1,42.1 L341.1,44.0 L345.1,46.2 L348.9,48.6 L352.7,51.4 L356.3,54.5 L359.7,57.8 L363.0,61.5 L366.0,65.4 L368.8,69.6 L371.3,74.1 L373.5,78.8 L375.5,83.7 L377.1,88.7 L378.3,93.9 L379.3,99.2 L379.8,104.6 L380.0,110.0Z"/>
+    <circle class="dot" r="4"><animateMotion dur="9s" begin="3.5s" repeatCount="indefinite" path="M380.0,110.0 L379.8,115.4 L379.3,120.8 L378.3,126.1 L377.1,131.3 L375.5,136.3 L373.5,141.2 L371.3,145.9 L368.8,150.4 L366.0,154.6 L363.0,158.5 L359.7,162.2 L356.3,165.5 L352.7,168.6 L348.9,171.4 L345.1,173.8 L341.1,176.0 L337.1,177.9 L333.0,179.4 L328.9,180.7 L324.7,181.7 L320.6,182.4 L316.4,182.9 L312.3,183.2 L308.2,183.2 L304.2,182.9 L300.2,182.5 L296.3,181.9 L292.4,181.1 L288.6,180.1 L284.9,179.0 L281.2,177.7 L277.6,176.3 L274.1,174.8 L270.6,173.1 L267.2,171.4 L263.9,169.5 L260.7,167.5 L257.6,165.5 L254.5,163.4 L251.4,161.2 L248.5,159.0 L245.6,156.7 L242.7,154.3 L239.9,151.9 L237.2,149.5 L234.5,147.0 L231.8,144.5 L229.2,141.9 L226.6,139.4 L224.1,136.8 L221.6,134.2 L219.1,131.5 L216.7,128.9 L214.3,126.2 L211.8,123.5 L209.5,120.8 L207.1,118.1 L204.7,115.4 L202.4,112.7 L200.0,110.0 L197.6,107.3 L195.3,104.6 L192.9,101.9 L190.5,99.2 L188.2,96.5 L185.7,93.8 L183.3,91.1 L180.9,88.5 L178.4,85.8 L175.9,83.2 L173.4,80.6 L170.8,78.1 L168.2,75.5 L165.5,73.0 L162.8,70.5 L160.1,68.1 L157.3,65.7 L154.4,63.3 L151.5,61.0 L148.6,58.8 L145.5,56.6 L142.4,54.5 L139.3,52.5 L136.1,50.5 L132.8,48.6 L129.4,46.9 L125.9,45.2 L122.4,43.7 L118.8,42.3 L115.1,41.0 L111.4,39.9 L107.6,38.9 L103.7,38.1 L99.8,37.5 L95.8,37.1 L91.8,36.8 L87.7,36.8 L83.6,37.1 L79.4,37.6 L75.3,38.3 L71.1,39.3 L67.0,40.6 L62.9,42.1 L58.9,44.0 L54.9,46.2 L51.1,48.6 L47.3,51.4 L43.7,54.5 L40.3,57.8 L37.0,61.5 L34.0,65.4 L31.2,69.6 L28.7,74.1 L26.5,78.8 L24.5,83.7 L22.9,88.7 L21.7,93.9 L20.7,99.2 L20.2,104.6 L20.0,110.0 L20.2,115.4 L20.7,120.8 L21.7,126.1 L22.9,131.3 L24.5,136.3 L26.5,141.2 L28.7,145.9 L31.2,150.4 L34.0,154.6 L37.0,158.5 L40.3,162.2 L43.7,165.5 L47.3,168.6 L51.1,171.4 L54.9,173.8 L58.9,176.0 L62.9,177.9 L67.0,179.4 L71.1,180.7 L75.3,181.7 L79.4,182.4 L83.6,182.9 L87.7,183.2 L91.8,183.2 L95.8,182.9 L99.8,182.5 L103.7,181.9 L107.6,181.1 L111.4,180.1 L115.1,179.0 L118.8,177.7 L122.4,176.3 L125.9,174.8 L129.4,173.1 L132.8,171.4 L136.1,169.5 L139.3,167.5 L142.4,165.5 L145.5,163.4 L148.6,161.2 L151.5,159.0 L154.4,156.7 L157.3,154.3 L160.1,151.9 L162.8,149.5 L165.5,147.0 L168.2,144.5 L170.8,141.9 L173.4,139.4 L175.9,136.8 L178.4,134.2 L180.9,131.5 L183.3,128.9 L185.7,126.2 L188.2,123.5 L190.5,120.8 L192.9,118.1 L195.3,115.4 L197.6,112.7 L200.0,110.0 L202.4,107.3 L204.7,104.6 L207.1,101.9 L209.5,99.2 L211.8,96.5 L214.3,93.8 L216.7,91.1 L219.1,88.5 L221.6,85.8 L224.1,83.2 L226.6,80.6 L229.2,78.1 L231.8,75.5 L234.5,73.0 L237.2,70.5 L239.9,68.1 L242.7,65.7 L245.6,63.3 L248.5,61.0 L251.4,58.8 L254.5,56.6 L257.6,54.5 L260.7,52.5 L263.9,50.5 L267.2,48.6 L270.6,46.9 L274.1,45.2 L277.6,43.7 L281.2,42.3 L284.9,41.0 L288.6,39.9 L292.4,38.9 L296.3,38.1 L300.2,37.5 L304.2,37.1 L308.2,36.8 L312.3,36.8 L316.4,37.1 L320.6,37.6 L324.7,38.3 L328.9,39.3 L333.0,40.6 L337.1,42.1 L341.1,44.0 L345.1,46.2 L348.9,48.6 L352.7,51.4 L356.3,54.5 L359.7,57.8 L363.0,61.5 L366.0,65.4 L368.8,69.6 L371.3,74.1 L373.5,78.8 L375.5,83.7 L377.1,88.7 L378.3,93.9 L379.3,99.2 L379.8,104.6 L380.0,110.0Z"/></circle>
+  </svg>
   </div>
 </header>
+
+<div class="orgs">
+  <div class="wrap">
+    <small>Где работал и учился</small>
+    <span>Иннополис</span><span>РАНХиГС</span><span>WorldSkills</span><span>Академия внешней торговли</span><span>Академия трекеров</span><span>Авторадио</span><span>Европа плюс</span><span>Московский комсомолец</span>
+  </div>
+</div>
 
 <main>
   <section id="kto">
@@ -212,9 +265,9 @@ footer p{margin:0 0 6px}
         <p>Сейчас с нейросетями работаю каждый день. Мой рабочий день держит команда ИИ-агентов, и такие же отделы я собираю для чужого бизнеса - под его задачи и данные.</p>
       </div>
       <ul class="facts">
-        <li><b>20+ лет</b><span>в управлении медиа, рекламой и продажами</span></li>
-        <li><b>100 человек</b><span>и шесть редакций в холдинге под моим руководством</span></li>
-        <li><b>14 FM-станций</b><span>в медиагруппе, которую вывел из долгов в прибыль</span></li>
+        <li><b><i data-n="20">20</i>+ лет</b><span>в управлении медиа, рекламой и продажами</span></li>
+        <li><b><i data-n="100">100</i> человек</b><span>и шесть редакций в холдинге под моим руководством</span></li>
+        <li><b><i data-n="14">14</i> FM-станций</b><span>в медиагруппе, которую вывел из долгов в прибыль</span></li>
         <li><b>grmv8</b><span>один ник в Telegram, WhatsApp, Facebook и почте</span></li>
       </ul>
     </div>
@@ -246,14 +299,14 @@ footer p{margin:0 0 6px}
         </div>
       </div>
       <div class="certs">
-        <a href="img/liders-2.jpg"><img src="img/liders-2.jpg" alt="Грамота «Лидеры производительности», II место, 2022" loading="lazy"></a>
-        <a href="img/liders-3.jpg"><img src="img/liders-3.jpg" alt="Грамота «Лидеры производительности», III место, 2022" loading="lazy"></a>
-        <a href="img/innopolis-cdo-2021.jpg"><img src="img/innopolis-cdo-2021.jpg" alt="Благодарность Университета Иннополис, CDO-2021" loading="lazy"></a>
-        <a href="img/innopolis-ooc-2022.jpg"><img src="img/innopolis-ooc-2022.jpg" alt="Благодарственное письмо Университета Иннополис, 2022" loading="lazy"></a>
-        <a href="img/worldskills-2022.jpg"><img src="img/worldskills-2022.jpg" alt="Благодарность Ворлдскиллс Россия, 2022" loading="lazy"></a>
-        <a href="img/tracker-2021.jpg"><img src="img/tracker-2021.jpg" alt="Сертификат трекера, Академия трекеров, 2021" loading="lazy"></a>
-        <a href="img/voobrazigrad-2021.jpg"><img src="img/voobrazigrad-2021.jpg" alt="Благодарность за мастер-класс «Будущие профессии. PR», 2021" loading="lazy"></a>
-        <a href="img/mediasmysly-2019.jpg"><img src="img/mediasmysly-2019.jpg" alt="Благодарность за форум «Медиасмыслы», 2019" loading="lazy"></a>
+        <a style="--rot:-9deg;--dy:14px" href="img/liders-2.jpg"><img src="img/liders-2.jpg" alt="Грамота «Лидеры производительности», II место, 2022" loading="lazy"></a>
+        <a style="--rot:-6deg;--dy:6px" href="img/liders-3.jpg"><img src="img/liders-3.jpg" alt="Грамота «Лидеры производительности», III место, 2022" loading="lazy"></a>
+        <a style="--rot:-3deg;--dy:0px" href="img/innopolis-cdo-2021.jpg"><img src="img/innopolis-cdo-2021.jpg" alt="Благодарность Университета Иннополис, CDO-2021" loading="lazy"></a>
+        <a style="--rot:-1deg;--dy:-4px" href="img/innopolis-ooc-2022.jpg"><img src="img/innopolis-ooc-2022.jpg" alt="Благодарственное письмо Университета Иннополис, 2022" loading="lazy"></a>
+        <a style="--rot:1deg;--dy:-4px" href="img/worldskills-2022.jpg"><img src="img/worldskills-2022.jpg" alt="Благодарность Ворлдскиллс Россия, 2022" loading="lazy"></a>
+        <a style="--rot:3deg;--dy:0px" href="img/tracker-2021.jpg"><img src="img/tracker-2021.jpg" alt="Сертификат трекера, Академия трекеров, 2021" loading="lazy"></a>
+        <a style="--rot:6deg;--dy:6px" href="img/voobrazigrad-2021.jpg"><img src="img/voobrazigrad-2021.jpg" alt="Благодарность за мастер-класс «Будущие профессии. PR», 2021" loading="lazy"></a>
+        <a style="--rot:9deg;--dy:14px" href="img/mediasmysly-2019.jpg"><img src="img/mediasmysly-2019.jpg" alt="Благодарность за форум «Медиасмыслы», 2019" loading="lazy"></a>
       </div>
     </div>
   </section>
@@ -336,5 +389,27 @@ footer p{margin:0 0 6px}
   </div>
 </footer>
 
+<script>
+(function(){
+  var still=matchMedia('(prefers-reduced-motion:reduce)').matches;
+  document.querySelectorAll('main section .wrap > *, .facts li, .card, .contact').forEach(function(el){el.classList.add('rv')});
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){
+    if(!e.isIntersecting)return;
+    e.target.classList.add('on');io.unobserve(e.target);
+    e.target.querySelectorAll('[data-n]').forEach(function(n){
+      if(still)return;var to=+n.dataset.n,t0=null;
+      function step(t){if(!t0)t0=t;var k=Math.min((t-t0)/1400,1);n.textContent=Math.round(to*(1-Math.pow(1-k,3)));if(k<1)requestAnimationFrame(step)}
+      n.textContent='0';requestAnimationFrame(step);
+    });
+  })},{threshold:.15});
+  document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+  document.querySelectorAll('.certs a').forEach(function(a){a.addEventListener('click',function(ev){
+    ev.preventDefault();var d=document.createElement('div');d.className='lb';
+    var im=document.createElement('img');im.src=a.getAttribute('href');im.alt=a.querySelector('img').alt;d.appendChild(im);
+    d.onclick=function(){d.remove()};document.body.appendChild(d);
+  })});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'){var l=document.querySelector('.lb');if(l)l.remove()}});
+})();
+</script>
 </body>
 </html>
