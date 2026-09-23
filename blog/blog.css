@@ -1,6 +1,6 @@
 :root{
-  --ink:#0a1636; --ink2:#0f1f4a; --card:#11234f; --line:rgba(160,185,255,.13);
-  --gold:#c9a84c; --gold2:#e0bf5e; --text:#eef1f8; --muted:#a7b1cc;
+  --ink:#070b18; --ink2:#0b1224; --card:#0f172e; --line:rgba(150,170,230,.11);
+  --gold:#c9a84c; --gold2:#e0bf5e; --text:#eef1f8; --muted:#9ea6bd;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -12,7 +12,7 @@ h1,h2,h3{font-family:Unbounded,Manrope,sans-serif;font-weight:700;line-height:1.
 .gold{color:var(--gold)}
 
 /* top bar */
-.top{position:sticky;top:0;z-index:40;background:rgba(10,22,54,.82);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.top{position:sticky;top:0;z-index:40;background:rgba(7,11,24,.82);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
 .top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:62px}
 .logo{display:inline-flex;align-items:center;gap:8px;font:600 16px Unbounded,sans-serif;color:var(--gold);text-decoration:none}
 .nav{display:flex;flex-wrap:wrap;gap:6px 24px}
