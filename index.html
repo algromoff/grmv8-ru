@@ -171,6 +171,8 @@ a.card:hover{border-color:rgba(201,168,76,.55);transform:translateY(-2px)}
 /* fun facts */
 .fgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
 .fact{background:linear-gradient(160deg,rgba(201,168,76,.10),rgba(201,168,76,0) 55%),var(--card);border:1px solid var(--line);border-radius:18px;padding:20px 18px;transition:.25s}
+a.fact{display:block;text-decoration:none;color:inherit}
+.story-link a{color:var(--gold)}
 .fact:hover{border-color:rgba(201,168,76,.55);transform:translateY(-3px)}
 .fact b{display:block;font:700 30px Unbounded,sans-serif;color:var(--gold);margin-bottom:8px;letter-spacing:-.01em}
 .fact i{font-style:normal}
@@ -326,6 +328,7 @@ ym(113074093,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true,webv
     <a class="tlogo" href="/"><span>∞</span> grmv8</a>
     <nav class="tnav" id="tnav">
       <a href="#kto">Обо мне</a>
+      <a href="/istoriya/">История</a>
       <a href="#fakty">Факты</a>
       <a href="#obrazovanie">Образование</a>
       <a href="#napravleniya">Чем полезен</a>
@@ -377,6 +380,7 @@ ym(113074093,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true,webv
         <p>До этого четыре года был исполнительным директором медиагруппы «Оазис» - 14 FM-станций, включая «Авторадио» и «Европу плюс», плюс телеканал. Принял компанию с долгом в несколько миллионов рублей. 2018 год она закрыла с прибылью и без долгов.</p>
         <p>С 2021 года веду программы Университета Иннополис и Академии внешней торговли: модератор, трекер, куратор проектных команд. На «Лидерах производительности» две мои команды из одного потока взяли второе и третье места.</p>
         <p>С нейросетями работаю каждый день: мою работу держит команда ИИ-агентов. Такие же отделы собираю для других компаний - под их задачи и данные.</p>
+        <p class="story-link">Как управленец, который двадцать лет не мог уехать дальше отпуска, стал работать с ноутбуком у океана - <a href="/istoriya/">моя история →</a></p>
       </div>
       <ul class="facts">
         <li><b><i data-n="20">20</i>+ лет</b><span>топ-менеджером в разных отраслях, из них 10 лет - в медиа</span></li>
@@ -395,10 +399,10 @@ ym(113074093,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true,webv
         <div class="fact"><b>2011</b><p>открыл швейное производство и свой бренд детской одежды Rutaly - без WB и Ozon</p></div>
         <div class="fact"><b><i data-n="120">120</i></b><p>человек прособеседовали мы с коллегой за один день, когда набирали новую команду</p></div>
         <div class="fact"><b>30 000+</b><p>гостей собирали мероприятия, которые я организовывал</p></div>
-        <div class="fact"><b>-<i data-n="20">20</i> кг</b><p>сбросил и начал жизнь с чистого листа</p></div>
-        <div class="fact"><b>×2</b><p>соорганизатор и участник рекордов России и мира на досках Садху - на гвоздях</p></div>
-        <div class="fact"><b>Бали</b><p>уезжал туда жить «навсегда» - и вернулся в Россию</p></div>
-        <div class="fact"><b>46</b><p>лет - в этом возрасте стал отцом в третий раз</p></div>
+        <a class="fact" href="/istoriya/#minus20"><b>-<i data-n="20">20</i> кг</b><p>сбросил и начал жизнь с чистого листа</p></a>
+        <a class="fact" href="/istoriya/#gvozdi"><b>×2</b><p>соорганизатор и участник рекордов России и мира на досках Садху - на гвоздях</p></a>
+        <a class="fact" href="/istoriya/#bali"><b>Бали</b><p>уезжал туда жить «навсегда» - и вернулся в Россию</p></a>
+        <a class="fact" href="/istoriya/#otec"><b>46</b><p>лет - в этом возрасте стал отцом в третий раз</p></a>
       </div>
     </div>
   </section>
