@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>7 стадий работы с ИИ: от скептика до нейро-феодала - Александр Громов</title>
+<meta name="description" content="Семь уровней работы с нейросетями: скептик, гуглер, создатель, промт-инженер, архитектор, агентер и нейро-феодал с собственным отделом ИИ-агентов. И почему история с извозчиками повторяется.">
+<meta name="author" content="Александр Громов">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://grmv8.ru/blog/nejro-feodal/">
+<meta property="og:title" content="7 стадий работы с ИИ: от скептика до нейро-феодала">
+<meta property="og:description" content="Мир уже разделился: одни считают нейронки баловством, другие собирают из них автономные команды. На какой стадии вы?">
+<meta property="og:image" content="https://grmv8.ru/img/blog/nejro-feodal-og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:site_name" content="Александр Громов - grmv8">
+<meta property="article:published_time" content="2026-09-26">
+<meta property="article:author" content="https://grmv8.ru/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cstyle%3E@keyframes rot { 0%25, 20%25 { transform: rotate(0deg); } 40%25, 70%25 { transform: rotate(90deg); } 90%25, 100%25 { transform: rotate(0deg); } } .sym { font-family: sans-serif; font-size: 80px; font-weight: bold; fill: %23c9a84c; transform-origin: 50px 50px; animation: rot 4s infinite ease-in-out; }%3C/style%3E%3Crect width='100' height='100' fill='%230b1224' rx='20'/%3E%3Ctext x='50' y='76' text-anchor='middle' class='sym'%3E∞%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&family=Piazzolla:opsz,wght@8..30,400&family=Unbounded:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../site.css">
+<script>document.documentElement.classList.add('js');</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "7 стадий работы с ИИ: от скептика до нейро-феодала",
+  "description": "Семь уровней работы с нейросетями: скептик, гуглер, создатель, промт-инженер, архитектор, агентер и нейро-феодал с собственным отделом ИИ-агентов. И почему история с извозчиками повторяется.",
+  "image": "https://grmv8.ru/img/blog/nejro-feodal.jpg",
+  "datePublished": "2026-09-26",
+  "dateModified": "2026-09-26",
+  "inLanguage": "ru-RU",
+  "author": {"@type": "Person", "@id": "https://grmv8.ru/#person", "name": "Александр Громов", "url": "https://grmv8.ru/"},
+  "publisher": {"@type": "Person", "@id": "https://grmv8.ru/#person", "name": "Александр Громов"},
+  "mainEntityOfPage": {"@type": "WebPage", "@id": "https://grmv8.ru/blog/nejro-feodal/"}
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Главная", "item": "https://grmv8.ru/"},
+    {"@type": "ListItem", "position": 2, "name": "Блог", "item": "https://grmv8.ru/blog/"},
+    {"@type": "ListItem", "position": 3, "name": "7 стадий работы с ИИ: от скептика до нейро-феодала", "item": "https://grmv8.ru/blog/nejro-feodal/"}
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">К содержанию</a>
+<div class="bar">
+  <div class="container bar__in">
+    <a class="wordmark" href="/new/" aria-label="grmv8, на главную"><span class="inf">∞</span> grmv8</a>
+    <nav class="bar__nav" id="tnav" aria-label="Разделы">
+      <a href="/new/#kto">Обо мне</a>
+      <a href="/new/istoriya/">История</a>
+      <a href="/new/#fakty">Факты</a>
+      <a href="/new/#obrazovanie">Образование</a>
+      <a href="/new/#napravleniya">Чем полезен</a>
+      <a href="/new/blog/" aria-current="page">Блог</a>
+      <a href="/new/#kontakty">Контакты</a>
+    </nav>
+    <a class="btn btn--quiet bar__cta" href="https://t.me/grmv8">Написать</a>
+    <button class="burger" type="button" aria-controls="tnav" aria-expanded="false">Меню</button>
+  </div>
+</div>
+<main id="main">
+<header class="doc-hero">
+  <div class="container doc-hero__grid doc-hero__grid--post">
+    <nav class="crumbs-wrap" aria-label="Навигационная цепочка"><ol class="crumbs"><li><a href="/new/">Главная</a></li><li><a href="/new/blog/">Блог</a></li><li><span aria-current="page">ИИ</span></li></ol></nav>
+    <h1>7 стадий работы с ИИ: от скептика до нейро-феодала</h1>
+    <figure class="hero-fig"><img src="/img/blog/nejro-feodal.jpg" alt="Семь стадий работы с ИИ: от скептика с телефоном до нейро-феодала на троне среди ИИ-агентов" width="1600" height="900" fetchpriority="high"></figure>
+    <p class="dek">Мир уже разделился. Пока одни считают нейронки баловством, другие собирают из них автономные команды и зарабатывают. Я вижу семь ступеней на этом пути - проверьте, на какой стоите вы.</p>
+    <div class="byline">
+      <img src="/img/portrait.jpg" alt="Александр Громов" width="34" height="34">
+      <b>Александр Громов</b><span>3 минуты чтения</span><time datetime="2026-09-26">26 сентября 2026</time>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+  <div class="doc">
+    <article>
+      <div class="toc" role="region" aria-labelledby="toc-h">
+        <h2 id="toc-h">Вы узнаете</h2>
+        <ol>
+          <li><a href="#razdelilsya">Мир уже разделился</a></li>
+          <li><a href="#stadii">Семь стадий: от скептика до нейро-феодала</a></li>
+          <li><a href="#zastrevayut">Где застревает большинство</a></li>
+          <li><a href="#istoriya">История повторяется: извозчики, компьютеры, соцсети</a></li>
+        </ol>
+      </div>
+      <div class="body">
+        <h2 id="razdelilsya"><span class="ch-n">01</span>Мир уже разделился</h2>
+        <p class="first">Пока одни думают, что нейронки - это игрушка с картинками, другие собирают из них автономные команды и делают кэш.</p>
+        <p>Я уверен: за ближайшие несколько лет ИИ создаст больше миллионеров, чем появилось за те десятилетия, пока в нашу жизнь входили компьютеры, мобильная связь, смартфоны, интернет с соцсетями и сервисами. Скорость другая.</p>
+        <p>Для себя я вижу семь уровней эволюции в работе с ИИ.</p>
+
+        <h2 id="stadii"><span class="ch-n">02</span>Семь стадий: от скептика до нейро-феодала</h2>
+        <p><b>1. Скептик.</b> «Я взрослый человек, к чему мне эти игрушки с картинками?» Про ИИ только слышал, сам не пользуешься. Всю работу тащишь руками.</p>
+        <p><b>2. Продвинутый гуглер.</b> Пользуешься нейронкой как поисковиком: спросил - получил сжатую выжимку. Понял, что это здорово экономит время на поиске.</p>
+        <p><b>3. Создатель.</b> Начинаешь генерировать тексты, картинки, музыку, иногда даже видео. Приходит осознание, что инструмент реально рабочий.</p>
+        <p><b>4. Промт-инженер.</b> Умеешь задать роль, контекст, формат и желаемый результат. ИИ плотно вшит в жизнь, и как раньше вывозил без него - уже не понимаешь.</p>
+        <p><b>5. Архитектор.</b> Работаешь в чатах как профи: настроенные проекты, чёткие цепочки промтов, свои инструкции, детально прописанный контекст. Никакой воды, отлаженная система.</p>
+        <p><b>6. Агентер.</b> Понимаешь, что такое ИИ-агент. Пользуешься Claude или Codex, делегируешь им кучу рутины - и жёстко освобождаешь своё время.</p>
+        <p><b>7. Нейро-феодал.</b> Собрал собственный отдел из автономных ИИ-агентов и управляешь ими как коллективом. Они вайбкодят для твоих клиентов и приносят реальные деньги, пока ты занят стратегией.</p>
+        <div class="note">Как выглядит седьмая стадия в жизни: у меня работает <a href="https://ai.grmv8.ru/">отдел из ИИ-агентов</a> - ассистент, кодер, маркетолог, разборщик почты, у каждого своя зона. Такой же отдел мы собираем и для бизнеса клиентов.</div>
+
+        <h2 id="zastrevayut"><span class="ch-n">03</span>Где застревает большинство</h2>
+        <p>Люди часто застревают на второй или третьей стадии - и думают, что познали технологии.</p>
+        <figure class="quote"><blockquote><p>Настоящая свобода и масштаб лежат на седьмом уровне. Или уже за ним.</p></blockquote><figcaption>Главная мысль</figcaption></figure>
+
+        <h2 id="istoriya"><span class="ch-n">04</span>История повторяется: извозчики, компьютеры, соцсети</h2>
+        <p>В начале XX века извозчики потешались над энтузиастами, которые пытались ездить на неудобных и очень шумных автомобилях. Считали это баловством, которое скоро пройдёт само, а энтузиастов - недалёкими людьми.</p>
+        <p>В 90-х, когда компьютеры начали занимать место в обычной жизни, многие не принимали их всерьёз: так, новая игрушка. Те, кто сделал такую ошибку, быстро оказались на обочине. Люди, освоившие компьютер в первых рядах, стали гораздо эффективнее и забрали их работу.</p>
+        <p>Следующий раз ситуация повторилась ещё заметнее - с интернетом и соцсетями. Они породили множество профессий и позволили большому количеству людей разбогатеть, причём очень быстро. Я, как и многие, воспринимал тогда Instagram* и YouTube как баловство - и упустил прекрасный шанс.</p>
+        <p>С приходом ИИ всё повторяется снова, только на гораздо большей скорости. И я от всей души зову вас не пропустить этот шанс: встать в ряды первых, кто освоит инструмент, и поменять свою жизнь к лучшему.</p>
+
+        <p class="src">Оригинал статьи впервые опубликован как урок спринта «ТурбоРилс» 29 июня 2026 года. Больше заметок - в канале «<a href="https://t.me/gromov_dzen">Громов | ПРО Мышление</a>».</p>
+        <div class="share">Поделиться:
+          <a href="https://t.me/share/url?url=https%3A%2F%2Fgrmv8.ru%2Fblog%2Fnejro-feodal%2F&amp;text=7%20%D1%81%D1%82%D0%B0%D0%B4%D0%B8%D0%B9%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%8B%20%D1%81%20%D0%98%D0%98%3A%20%D0%BE%D1%82%20%D1%81%D0%BA%D0%B5%D0%BF%D1%82%D0%B8%D0%BA%D0%B0%20%D0%B4%D0%BE%20%D0%BD%D0%B5%D0%B9%D1%80%D0%BE-%D1%84%D0%B5%D0%BE%D0%B4%D0%B0%D0%BB%D0%B0" rel="noopener">Telegram</a>
+          <button type="button" class="copy">Скопировать ссылку</button>
+        </div>
+      </div>
+    </article>
+
+    <aside class="side">
+      <div class="scard">
+        <h3>Сдвину с мёртвой точки и помогу встать на рельсы</h3>
+        <p class="scard__who">Антикризис и ИИ для бизнеса</p>
+        <p>Более 20 лет топ-менеджером: 15 - антикризисником, 10 - в медиа.</p>
+        <ul>
+          <li>Найдём, где буксует бизнес</li>
+          <li>Соберём план под ваш ритм</li>
+          <li>Подключим ИИ-агентов</li>
+        </ul>
+        <a class="btn btn--quiet" href="https://t.me/grmv8">Написать в Telegram</a>
+        <p class="hint">Отвечаю лично, ник grmv8</p>
+      </div>
+      <div class="scard">
+        <h3>Распаковка личности</h3>
+        <p class="scard__who">Для экспертов</p>
+        <p>Понять свой ритм, смыслы и голос - и передать их нейросети.</p>
+        <a class="btn btn--quiet" href="/new/raspakovka/">Подробнее</a>
+      </div>
+    </aside>
+  </div>
+</div>
+
+<section class="cta">
+  <div class="container cta__in">
+    <div>
+      <h2>На какой вы стадии?</h2>
+      <p>Напишите мне в Telegram: разберём, какую рутину в вашем бизнесе уже сейчас можно отдать ИИ-агентам и как дойти до собственного ИИ-отдела.</p>
+    </div>
+    <a class="btn btn--primary" href="https://t.me/grmv8">Написать @grmv8</a>
+  </div>
+</section>
+<div class="container">
+  <nav class="pnav" aria-label="Дальше">
+    <a href="/new/blog/"><span>Назад</span><strong>Все статьи блога</strong></a>
+    <a href="/new/"><span>Автор</span><strong>Александр Громов, траблшутер и Ai-тренер</strong></a>
+    <a href="/new/#napravleniya"><span>Работа со мной</span><strong>Чем могу быть полезен</strong></a>
+  </nav>
+</div>
+</main>
+
+<aside class="rw" aria-label="Осталось читать">
+  <svg class="rw-ring" viewBox="0 0 36 36" aria-hidden="true"><circle class="bg" cx="18" cy="18" r="15"/><circle class="fg" cx="18" cy="18" r="15"/></svg>
+  <span class="rw-time"><b>3</b><span>мин</span></span>
+  <button class="rw-top" type="button" aria-label="Наверх">↑</button>
+  <a class="rw-cta" href="https://t.me/grmv8">Написать</a>
+</aside>
+
+<footer class="foot">
+  <div class="container">
+    <p class="foot__mark" aria-hidden="true"><span class="inf">∞</span> grmv8</p>
+    <div class="foot__lines">
+      <p><span>© Александр Громов, <a href="/new/">grmv8.ru</a></span><a href="/new/blog/">Блог</a></p>
+      <p>* Instagram и Facebook принадлежат компании Meta Platforms Inc., деятельность которой запрещена на территории РФ.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // top navigation: disclosure under 66rem
+  var bar=document.querySelector('.bar'),bg=bar.querySelector('.burger');
+  bg.addEventListener('click',function(){var o=bar.classList.toggle('is-open');bg.setAttribute('aria-expanded',o)});
+  bar.querySelectorAll('.bar__nav a').forEach(function(a){a.addEventListener('click',function(){bar.classList.remove('is-open');bg.setAttribute('aria-expanded','false')})});
+  // reading widget: minutes left in the article body
+  var rw=document.querySelector('.rw'),art=document.querySelector('.body');
+  if(rw&&art){
+    var words=art.textContent.trim().split(/\s+/).length,mins=Math.max(1,Math.ceil(words/220));
+    var num=rw.querySelector('.rw-time b'),lbl=rw.querySelector('.rw-time span'),fg=rw.querySelector('.fg'),tick=false;
+    function rwUpd(){
+      tick=false;
+      var r=art.getBoundingClientRect(),vh=innerHeight,span=r.height-vh*.5;
+      var pct=Math.min(1,Math.max(0,(vh*.5-r.top)/(span>0?span:1)));
+      var left=Math.ceil(mins*(1-pct)-.05);
+      if(left>0){num.textContent=left;lbl.textContent='мин'}else{num.textContent='';lbl.textContent='дочитано'}
+      fg.style.strokeDashoffset=(94.25*(1-pct)).toFixed(2);
+      rw.classList.toggle('on',r.top<vh*.35);
+      rw.classList.toggle('up',pct>.4);
+      rw.classList.toggle('cta',pct>.85);
+    }
+    addEventListener('scroll',function(){if(!tick){tick=true;requestAnimationFrame(rwUpd)}},{passive:true});
+    addEventListener('resize',rwUpd);rwUpd();
+    rw.querySelector('.rw-top').addEventListener('click',function(){scrollTo({top:0,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'})});
+  }
+  var b=document.querySelector('.copy');
+  b.addEventListener('click',function(){
+    var u=location.href.split('#')[0];
+    (navigator.clipboard?navigator.clipboard.writeText(u):Promise.reject()).then(function(){b.textContent='Ссылка скопирована'},function(){b.textContent=u});
+  });
+})();
+</script>
+</body>
+</html>

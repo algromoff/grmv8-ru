@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Распаковка смыслов и оцифровка личности | Александр Громов</title>
+<meta name="description" content="Глубинное интервью, аналитический отчёт и системный ИИ-промпт. Оцифровка вашей личности за одну сессию.">
+<meta name="keywords" content="распаковка смыслов, оцифровка личности, коучинг, ИИ-промпт, стратегия">
+<meta property="og:title" content="Распаковка смыслов и оцифровка личности">
+<meta property="og:description" content="Глубинное интервью, аналитический отчёт и системный ИИ-промпт. Оцифровка вашей личности за одну сессию.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://grmv8.ru/og.png">
+<meta property="og:locale" content="ru_RU">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cstyle%3E@keyframes rot { 0%25, 20%25 { transform: rotate(0deg); } 40%25, 70%25 { transform: rotate(90deg); } 90%25, 100%25 { transform: rotate(0deg); } } .sym { font-family: sans-serif; font-size: 80px; font-weight: bold; fill: %23c9a84c; transform-origin: 50px 50px; animation: rot 4s infinite ease-in-out; }%3C/style%3E%3Crect width='100' height='100' fill='%230b1224' rx='20'/%3E%3Ctext x='50' y='76' text-anchor='middle' class='sym'%3E∞%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&family=Piazzolla:opsz,wght@8..30,400&family=Unbounded:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../site.css">
+<script>document.documentElement.classList.add('js');</script>
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "Распаковка смыслов и оцифровка личности",
+      "description": "Глубинное интервью, аналитический отчёт и системный ИИ-промпт.",
+      "brand": {
+        "@type": "Brand",
+        "name": "Александр Громов"
+      },
+      "provider": {"@id": "https://grmv8.ru/#person"},
+      "offers": {
+        "@type": "Offer",
+        "price": "25000",
+        "priceCurrency": "RUB",
+        "availability": "https://schema.org/InStock",
+        "url": "https://grmv8.ru/raspakovka/"
+      }
+    }
+    </script>
+</head>
+<body>
+<main class="offer-page main-wrapper" id="view-product">
+  <div class="container offer">
+    <div>
+      <h1 class="header-title">Стратегический профайлинг<br>и оцифровка личности</h1>
+      <ol class="specs product-specs">
+        <li class="spec-item"><div>
+          <strong>Глубинное интервью (120 минут).</strong>
+          <p>Декомпозиция вашего опыта. Вытаскиваем фундаментальные активы, слепые зоны, паттерны и ядро вашей экспертности.</p>
+        </div></li>
+        <li class="spec-item"><div>
+          <strong>Аналитический отчёт (12 модулей).</strong>
+          <p>Увеличительное зеркало ваших смыслов. Отчёт, позволяющий выйти из «бутылки» рутины и прочитать свою «этикетку». Инструкция по управлению собственным позиционированием.</p>
+        </div></li>
+        <li class="spec-item"><div>
+          <strong>Системный ИИ-контекст.</strong>
+          <p>Цифровое описание вашей личности для нейросетей. Персонализируйте ИИ и сделайте его своим уникальным помощником, который на 100% погружён в ваш контекст и знает вас и траекторию вашего развития.</p>
+        </div></li>
+      </ol>
+    </div>
+
+    <section class="buy transaction-block" aria-label="Бронирование">
+      <div class="buy__row">
+        <span class="buy__label">Формат:</span>
+        <span class="buy__val">Личная сессия - Александр Громов</span>
+      </div>
+      <div class="buy__price">25 000 ₽</div>
+      <div id="widget-container">
+        <button id="btn-to-checkout" class="btn btn--primary btn--wide btn-pay" type="button">Забронировать слот</button>
+      </div>
+    </section>
+  </div>
+</main>
+
+<!-- payment: the IDX widget -->
+<div id="booking-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="booking-title">
+  <div id="booking-modal-content" class="modal__box">
+    <div class="modal__head">
+      <span class="modal__title" id="booking-title">Забронировать слот</span>
+      <button id="btn-close-modal" class="modal__close" type="button" aria-label="Закрыть">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <div id="widget-wrapper" class="modal__body">
+      <div id="widget-loader" class="loader">
+        <span class="spin keep-motion" aria-hidden="true"></span>
+        <span>Подключение...</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- calendar: Planerka -->
+<div id="planerka-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="planerka-title">
+  <div id="planerka-modal-content" class="modal__box modal__box--wide">
+    <div class="modal__head">
+      <span class="modal__title" id="planerka-title">Выберите время сессии</span>
+      <button id="btn-close-planerka" class="modal__close" type="button" aria-label="Закрыть">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <div id="planerka-wrapper" class="modal__body modal__body--pad">
+      <div id="planerka-loader" class="loader">
+        <span class="spin keep-motion" aria-hidden="true"></span>
+        <span>Загрузка календаря...</span>
+      </div>
+      <div id="planerka-embed-container" class="embed-wait">
+        <div
+          class="app-planerka-embed"
+          data-planerka-embed="default"
+          data-planerka-url="https://planerka.app/meet"
+          data-planerka-user="gromov"
+          data-planerka-event="strategicheskiy-profayling"
+          data-planerka-bg="transparent"
+          data-planerka-border="#2672c9"
+          data-planerka-hide-branding="1"
+          data-planerka-shadow="light"
+          style="width: 100%; min-height: 600px;">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // ================= ЛОГИКА ОПЛАТЫ (МОДАЛКА 1) =================
+  const btnToCheckout = document.getElementById('btn-to-checkout');
+  const bookingModal = document.getElementById('booking-modal');
+  const bookingModalContent = document.getElementById('booking-modal-content');
+  const btnCloseModal = document.getElementById('btn-close-modal');
+  const widgetWrapper = document.getElementById('widget-wrapper');
+  const widgetLoader = document.getElementById('widget-loader');
+
+  let isWidgetInjected = false;
+
+  function preloadWidget() {
+    if (isWidgetInjected) return;
+    isWidgetInjected = true;
+
+    const widgetScript = document.createElement('script');
+    widgetScript.setAttribute('ao-number', '115270');
+    widgetScript.setAttribute('ao-widget-id', '79NvoGVtb0C72CAtFKqY5g');
+    widgetScript.src = 'https://idx.xl.ru/site/widget/widget.min.js';
+    widgetScript.async = true;
+
+    widgetWrapper.appendChild(widgetScript);
+
+    setTimeout(() => {
+      if (widgetLoader) {
+        widgetLoader.style.opacity = '0';
+        setTimeout(() => widgetLoader.remove(), 500);
+      }
+    }, 3000);
+  }
+
+  setTimeout(preloadWidget, 2000);
+
+  let lastFocus = null;
+  function showDialog(modal, closeBtn) {
+    lastFocus = document.activeElement;
+    modal.classList.add('is-open');
+    closeBtn.focus();
+  }
+  function hideDialog(modal) {
+    if (!modal.classList.contains('is-open')) return;
+    modal.classList.remove('is-open');
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+
+  function openModal() {
+    showDialog(bookingModal, btnCloseModal);
+    preloadWidget();
+  }
+
+  function closeModal() {
+    hideDialog(bookingModal);
+  }
+
+  btnToCheckout.addEventListener('click', (e) => {
+    e.preventDefault();
+    openModal();
+  });
+
+  btnCloseModal.addEventListener('click', closeModal);
+  bookingModal.addEventListener('click', (e) => {
+    if (e.target === bookingModal) closeModal();
+  });
+
+  // ================= ЛОГИКА КАЛЕНДАРЯ PLANERKA (МОДАЛКА 2) =================
+  const planerkaModal = document.getElementById('planerka-modal');
+  const planerkaModalContent = document.getElementById('planerka-modal-content');
+  const btnClosePlanerka = document.getElementById('btn-close-planerka');
+  const planerkaLoader = document.getElementById('planerka-loader');
+  const planerkaEmbedContainer = document.getElementById('planerka-embed-container');
+
+  let isPlanerkaInjected = false;
+
+  // ВАЖНО: Эту функцию нужно вызывать из коллбэка успешной оплаты вашего платежного виджета
+  // Пример: onPaymentSuccess() { window.showPlanerkaWidget(); }
+  window.showPlanerkaWidget = function() {
+    // Закрываем окно оплаты, если оно было открыто
+    closeModal();
+
+    // Открываем окно с календарем
+    showDialog(planerkaModal, btnClosePlanerka);
+
+    if (!isPlanerkaInjected) {
+      // Подгружаем скрипт планерки динамически, чтобы не нагружать сайт до оплаты
+      const script = document.createElement('script');
+      script.src = 'https://planerka.app/meet/assets/external/embed.js';
+      script.async = true;
+      document.body.appendChild(script);
+      isPlanerkaInjected = true;
+
+      // Плавно скрываем лоадер и показываем виджет
+      setTimeout(() => {
+        if (planerkaLoader) planerkaLoader.style.opacity = '0';
+        if (planerkaEmbedContainer) planerkaEmbedContainer.style.opacity = '1';
+        setTimeout(() => planerkaLoader.remove(), 500);
+      }, 2500);
+    }
+  };
+
+  function closePlanerkaModal() {
+    hideDialog(planerkaModal);
+  }
+
+  btnClosePlanerka.addEventListener('click', closePlanerkaModal);
+  planerkaModal.addEventListener('click', (e) => {
+    if (e.target === planerkaModal) closePlanerkaModal();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key !== 'Escape') return;
+    closePlanerkaModal();
+    closeModal();
+  });
+</script>
+</body>
+</html>
