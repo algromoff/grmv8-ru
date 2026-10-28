@@ -83,7 +83,7 @@ section[id], div[id], p[id] { scroll-margin-top: var(--space-3xl); }
 .hero .lead { margin-top: var(--space-lg); max-width: 54ch; color: var(--color-ink-2); font-size: var(--text-lg); line-height: 1.55; }
 .actions { display: flex; flex-wrap: wrap; gap: var(--space-sm); margin-top: var(--space-xl); }
 .portrait { margin: 0; position: relative; }
-.portrait img { width: 100%; height: auto; aspect-ratio: 3 / 4; max-height: 70vh; object-fit: cover; object-position: 50% 20%; border-radius: var(--radius-card); outline: var(--rule-hair) solid var(--color-rule-2); outline-offset: var(--space-xs); }
+.portrait img { width: 100%; height: auto; aspect-ratio: 3 / 4; max-height: 70vh; object-fit: cover; object-position: 50% 0%; border-radius: var(--radius-card); outline: var(--rule-hair) solid var(--color-rule-2); outline-offset: var(--space-xs); }
 .portrait figcaption { display: flex; gap: var(--space-xs); margin-top: var(--space-md); padding-top: var(--space-sm); font: 500 var(--text-sm)/1.3 var(--font-outlier); color: var(--color-accent); }
 .portrait figcaption .inf { font-size: 1.35em; line-height: 0; }
 
