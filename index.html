@@ -5,9 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Александр Громов (grmv8) - траблшутер и Ai-тренер, внедрение ИИ в бизнес</title>
 <meta name="description" content="Александр Громов, ник grmv8 в Telegram, WhatsApp и Facebook. Траблшутер и Ai-тренер: более 20 лет топ-менеджером, 15 из них антикризисником, 10 - в медиа. Внедряет ИИ-отделы в бизнес и учит работать с нейросетями.">
-<link rel="canonical" href="https://grmv8.ru/">
-<meta name="robots" content="index, follow">
-
 <meta property="og:type" content="profile">
 <meta property="og:url" content="https://grmv8.ru/">
 <meta property="og:title" content="Александр Громов - grmv8">
@@ -20,13 +17,14 @@
 <meta property="profile:last_name" content="Громов">
 <meta property="profile:username" content="grmv8">
 <meta name="twitter:card" content="summary_large_image">
-
+<link rel="canonical" href="https://grmv8.ru/">
+<meta name="robots" content="index, follow">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cstyle%3E@keyframes rot { 0%25, 20%25 { transform: rotate(0deg); } 40%25, 70%25 { transform: rotate(90deg); } 90%25, 100%25 { transform: rotate(0deg); } } .sym { font-family: sans-serif; font-size: 80px; font-weight: bold; fill: %23c9a84c; transform-origin: 50px 50px; animation: rot 4s infinite ease-in-out; }%3C/style%3E%3Crect width='100' height='100' fill='%230b1224' rx='20'/%3E%3Ctext x='50' y='76' text-anchor='middle' class='sym'%3E∞%3C/text%3E%3C/svg%3E">
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&family=Unbounded:wght@500;700&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&family=Piazzolla:opsz,wght@8..30,400&family=Unbounded:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css">
+<script>document.documentElement.classList.add('js');</script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -114,204 +112,6 @@
   ]
 }
 </script>
-
-<style>
-:root{
-  --ink:#070b18; --ink2:#0b1224; --card:#0f172e; --line:rgba(150,170,230,.11);
-  --gold:#c9a84c; --gold2:#e0bf5e; --text:#eef1f8; --muted:#9ea6bd;
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--ink);color:var(--text);font:400 17px/1.6 Manrope,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
-a{color:inherit}
-.wrap{max-width:960px;margin:0 auto;padding:0 20px}
-h1,h2,h3{font-family:Unbounded,Manrope,sans-serif;font-weight:700;line-height:1.15;margin:0}
-.muted{color:var(--muted)}
-.gold{color:var(--gold)}
-
-/* hero */
-.hero{padding:clamp(56px,10vw,120px) 0 64px;background:radial-gradient(1000px 500px at 80% -10%,rgba(201,168,76,.14),transparent 60%),radial-gradient(800px 400px at -10% 110%,rgba(50,80,200,.10),transparent 60%)}
-.nick{display:inline-flex;align-items:center;gap:10px;font:500 15px Unbounded,sans-serif;color:var(--gold);border:1px solid rgba(201,168,76,.35);border-radius:999px;padding:6px 14px}
-.nick .inf{display:inline-block;animation:rot 5s infinite ease-in-out}
-@keyframes rot{0%,25%{transform:rotate(0)}45%,75%{transform:rotate(90deg)}95%,100%{transform:rotate(0)}}
-.who{display:flex;align-items:center;gap:28px;margin:22px 0 18px}
-.who img{width:132px;height:132px;border-radius:50%;object-fit:cover;border:3px solid rgba(201,168,76,.55);flex:none}
-.who h1{margin:0!important}
-@media (max-width:720px){.who{gap:16px}.who img{width:84px;height:84px}}
-.hero h1{font-size:clamp(40px,7vw,80px);margin:22px 0 18px;letter-spacing:-.01em}
-.lead{font-size:clamp(18px,2.4vw,22px);max-width:640px;margin:0 0 30px}
-.btns{display:flex;flex-wrap:wrap;gap:12px}
-.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 22px;border-radius:14px;font-weight:700;text-decoration:none;transition:.2s}
-.btn-gold{background:var(--gold);color:#16130a}
-.btn-gold:hover{background:var(--gold2)}
-.btn-line{border:1px solid var(--line);color:var(--text)}
-.btn-line:hover{border-color:var(--gold);color:var(--gold)}
-
-section{padding:64px 0;border-top:1px solid var(--line)}
-section h2{font-size:clamp(24px,3.6vw,34px);margin-bottom:28px}
-
-/* bio */
-.bio{display:grid;grid-template-columns:1.4fr 1fr;gap:40px;align-items:start}
-.bio p{margin:0 0 16px}
-.facts{list-style:none;margin:0;padding:0;display:grid;gap:14px}
-.facts li{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px 18px}
-.facts i{font-style:normal}
-.facts b{display:block;font:700 26px Unbounded,sans-serif;color:var(--gold);margin-bottom:2px}
-.facts span{color:var(--muted);font-size:15px}
-
-/* directions */
-.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
-.card{display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:26px;text-decoration:none;transition:.2s}
-a.card:hover{border-color:rgba(201,168,76,.55);transform:translateY(-2px)}
-.card h3{font-size:19px;margin-bottom:10px}
-.card p{margin:0 0 16px;color:var(--muted);font-size:16px}
-.card .go{margin-top:auto;color:var(--gold);font-weight:700;font-size:15px}
-.tag{font-size:13px;color:var(--gold);text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px}
-
-/* fun facts */
-.fgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-.fact{background:linear-gradient(160deg,rgba(201,168,76,.10),rgba(201,168,76,0) 55%),var(--card);border:1px solid var(--line);border-radius:18px;padding:20px 18px;transition:.25s}
-a.fact{display:block;text-decoration:none;color:inherit}
-.story-link a{color:var(--gold)}
-.fact:hover{border-color:rgba(201,168,76,.55);transform:translateY(-3px)}
-.fact b{display:block;font:700 30px Unbounded,sans-serif;color:var(--gold);margin-bottom:8px;letter-spacing:-.01em}
-.fact i{font-style:normal}
-.fact p{margin:0;color:var(--muted);font-size:15px;line-height:1.5}
-@media (max-width:980px){.fgrid{grid-template-columns:repeat(2,1fr)}}
-@media (max-width:480px){.fgrid{grid-template-columns:1fr}}
-
-/* education */
-.edu{display:grid;grid-template-columns:1fr 1fr;gap:40px}
-.sub{font-size:17px;color:var(--gold);margin-bottom:14px}
-.timeline{list-style:none;margin:0;padding:0}
-.timeline li{padding:10px 0 10px 104px;position:relative;border-bottom:1px solid var(--line);font-size:16px}
-.timeline b{position:absolute;left:0;top:10px;color:var(--gold);font:700 14px Unbounded,sans-serif}
-.certs{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:36px}
-.certs img{width:100%;aspect-ratio:1.414;object-fit:cover;border-radius:10px;border:1px solid var(--line);display:block;background:#fff;transition:.2s}
-.certs a:hover img{border-color:var(--gold);transform:translateY(-2px)}
-@media (max-width:720px){.edu{grid-template-columns:1fr;gap:28px}.certs{grid-template-columns:repeat(2,1fr)}}
-
-/* blog teaser */
-.post-teaser{display:grid!important;grid-template-columns:minmax(0,1.1fr) 1fr;gap:28px;align-items:center;padding:18px!important}
-.post-teaser img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:14px;display:block}
-.post-teaser h3{font-size:clamp(19px,2.4vw,24px)}
-.blog-all{margin:18px 0 0}
-.blog-all a{color:var(--gold);font-weight:700;text-decoration:none}
-@media (max-width:720px){.post-teaser{grid-template-columns:1fr;gap:16px}}
-
-/* contacts */
-.contacts{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px}
-.contact{display:flex;flex-direction:column;gap:2px;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px 18px;text-decoration:none;transition:.2s}
-.contact:hover{border-color:var(--gold)}
-.contact small{color:var(--muted);font-size:13px}
-.contact strong{font-size:17px}
-.one-nick{font-size:clamp(20px,3vw,26px);margin:0 0 24px}
-
-/* faq */
-details{border-bottom:1px solid var(--line);padding:18px 0}
-summary{cursor:pointer;font-weight:700;font-size:18px;list-style:none}
-summary::-webkit-details-marker{display:none}
-summary::after{content:"+";float:right;color:var(--gold);font-size:22px;line-height:1}
-details[open] summary::after{content:"-"}
-details p{margin:12px 0 0;color:var(--muted)}
-
-footer{padding:36px 0 48px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
-footer p{margin:0 0 6px}
-
-@media (max-width:720px){
-  .bio,.grid{grid-template-columns:1fr}
-  body{font-size:16px}
-}
-
-/* hero sign */
-.hero{position:relative;overflow:hidden}
-.hero .wrap{position:relative;z-index:1}
-.hero-grid{max-width:1180px;display:grid;grid-template-columns:1fr minmax(0,460px);gap:40px;align-items:center}
-.pic{position:relative}
-.pic img{position:relative;z-index:1;display:block;width:100%;height:auto;-webkit-mask-image:linear-gradient(to right,transparent 0,#000 16%,#000 80%,transparent 100%),linear-gradient(to bottom,transparent 0,#000 16%,#000 66%,transparent 100%);-webkit-mask-composite:source-in;mask-image:linear-gradient(to right,transparent 0,#000 16%,#000 80%,transparent 100%),linear-gradient(to bottom,transparent 0,#000 16%,#000 66%,transparent 100%);mask-composite:intersect}
-.sign{position:absolute;left:-22%;top:50%;transform:translateY(-50%);width:144%;z-index:0;pointer-events:none}
-.sign .base{fill:none;stroke:rgba(201,168,76,.12);stroke-width:2}
-.sign .draw{fill:none;stroke:url(#g);stroke-width:3;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:1;animation:draw 3.2s .3s cubic-bezier(.6,0,.2,1) forwards;filter:drop-shadow(0 0 10px rgba(224,191,94,.45))}
-.sign .dot{fill:#fff3c4;filter:drop-shadow(0 0 8px #e0bf5e)}
-@keyframes draw{to{stroke-dashoffset:0}}
-.hero .lead,.who{max-width:600px}
-@media (max-width:980px){.hero-grid{grid-template-columns:1fr}.pic{order:-1;max-width:420px;width:100%;margin:0 auto -30px}.sign{left:-8%;width:116%}}
-
-/* organisations strip */
-.orgs{border-top:1px solid var(--line);padding:26px 0}
-.orgs .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:14px 38px}
-.orgs small{width:100%;text-align:center;color:var(--muted);font-size:13px;letter-spacing:.12em;text-transform:uppercase}
-.orgs span{font:600 clamp(14px,1.8vw,17px) Unbounded,sans-serif;color:rgba(236,236,242,.38);transition:.3s;white-space:nowrap}
-.orgs span:hover{color:var(--gold)}
-
-/* reveal on scroll */
-.rv{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease}
-.rv.on{opacity:1;transform:none}
-
-/* certificates fan */
-.certs{display:flex!important;justify-content:center;padding:30px 0 10px;flex-wrap:nowrap}
-.certs a{flex:0 0 170px;margin-left:-80px;transform:rotate(var(--rot)) translateY(var(--dy));transition:transform .35s ease,margin .35s ease;box-shadow:0 14px 30px rgba(0,0,0,.45);border-radius:10px;position:relative}
-.certs a:first-child{margin-left:0}
-.certs:hover a{margin-left:-60px}
-.certs:hover a:first-child{margin-left:0}
-.certs a:hover{transform:rotate(0) translateY(-18px) scale(1.12);z-index:5}
-.certs a:hover img{transform:none}
-@media (max-width:980px){.certs{flex-wrap:wrap!important;gap:12px}.certs a,.certs a:first-child,.certs:hover a{flex:0 0 calc(50% - 6px);margin:0;transform:none}}
-.lb{position:fixed;inset:0;background:rgba(4,6,14,.92);display:flex;align-items:center;justify-content:center;z-index:50;padding:20px;cursor:zoom-out}
-.lb img{max-width:100%;max-height:90vh;border-radius:8px;box-shadow:0 20px 60px rgba(0,0,0,.6)}
-
-@media (prefers-reduced-motion:reduce){.sign .draw{animation:none;stroke-dashoffset:0}.rv{opacity:1;transform:none;transition:none}.sign .dot{display:none}}
-/* top navigation */
-.topbar{position:sticky;top:0;z-index:50;background:rgba(7,11,24,.72);backdrop-filter:blur(14px) saturate(140%);-webkit-backdrop-filter:blur(14px) saturate(140%);border-bottom:1px solid transparent;transition:background .3s,border-color .3s}
-.topbar.solid{background:rgba(7,11,24,.9);border-bottom-color:var(--line)}
-.topbar .wrap{display:flex;align-items:center;gap:22px;min-height:64px}
-.tlogo{font:600 16px Unbounded,sans-serif;color:var(--gold);text-decoration:none;white-space:nowrap}
-.tlogo span{display:inline-block;transition:transform .6s}
-.tlogo:hover span{transform:rotate(180deg)}
-.tnav{display:flex;gap:4px;margin-left:auto}
-.tnav a{position:relative;padding:8px 10px;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;color:var(--muted);transition:color .2s}
-.tnav a::after{content:"";position:absolute;left:10px;right:10px;bottom:2px;height:1px;background:var(--gold);transform:scaleX(0);transform-origin:0 50%;transition:transform .35s}
-.tnav a:hover,.tnav a.on{color:var(--gold)}
-.tnav a:hover::after,.tnav a.on::after{transform:scaleX(1)}
-.tcta{padding:9px 18px;border-radius:999px;background:var(--gold);color:#16130a;font-weight:700;font-size:14px;text-decoration:none;white-space:nowrap;transition:background .2s}
-.tcta:hover{background:var(--gold2)}
-.burger{display:none;width:44px;height:44px;margin-right:-10px;border:0;background:none;cursor:pointer;padding:12px 10px;flex-direction:column;justify-content:space-between}
-.burger i{display:block;height:2px;border-radius:2px;background:var(--text);transition:transform .3s,opacity .3s}
-.topbar.open .burger i:nth-child(1){transform:translateY(8px) rotate(45deg)}
-.topbar.open .burger i:nth-child(2){opacity:0}
-.topbar.open .burger i:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
-@media (max-width:1000px){
-  .burger{display:flex}
-  .tcta{margin-left:auto}
-  .tnav{position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;margin:0;padding:8px 20px 18px;background:rgba(7,11,24,.97);border-bottom:1px solid var(--line);opacity:0;visibility:hidden;transform:translateY(-8px);transition:opacity .25s,transform .25s,visibility .25s}
-  .topbar.open .tnav{opacity:1;visibility:visible;transform:none}
-  .tnav a{padding:14px 0;font-size:14px;border-bottom:1px solid var(--line)}
-  .tnav a:last-child{border-bottom:0}
-  .tnav a::after{display:none}
-}
-section[id]{scroll-margin-top:72px}
-
-/* premium effects */
-.prog{position:fixed;top:0;left:0;right:0;height:2px;z-index:70;background:linear-gradient(90deg,#8a6d2a,#f0d27a,#c9a84c);transform-origin:0 50%;transform:scaleX(0);box-shadow:0 0 12px rgba(240,210,122,.6);pointer-events:none}
-body::after{content:"";position:fixed;inset:0;z-index:60;pointer-events:none;opacity:.07;mix-blend-mode:overlay;background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
-.hero::before{content:"";position:absolute;width:760px;height:760px;right:-12%;top:-35%;background:radial-gradient(circle,rgba(201,168,76,.16),transparent 62%);animation:drift 18s ease-in-out infinite alternate;pointer-events:none}
-@keyframes drift{to{transform:translate(-140px,90px) scale(1.15)}}
-.dust{position:absolute;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
-.pic{transition:transform .8s cubic-bezier(.2,.7,.2,1)}
-.hero h1.shine{background:linear-gradient(100deg,#eef1f8 0%,#eef1f8 42%,#f6e3a1 50%,#eef1f8 58%,#eef1f8 100%);background-size:250% 100%;background-position:100% 0;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 8s 1.5s ease-in-out infinite}
-@keyframes shine{0%{background-position:100% 0}30%,100%{background-position:0 0}}
-.btn-gold{position:relative;overflow:hidden;box-shadow:0 12px 32px -12px rgba(224,191,94,.6)}
-.btn-gold::after{content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.55),transparent);transform:skewX(-20deg);animation:sweep 5s 2.5s infinite;pointer-events:none}
-@keyframes sweep{0%{left:-60%}28%,100%{left:130%}}
-section h2::before{content:"";display:block;width:0;height:2px;margin-bottom:16px;background:linear-gradient(90deg,var(--gold2),rgba(201,168,76,0));transition:width 1.3s cubic-bezier(.6,0,.2,1) .15s}
-section.seen h2::before{width:72px}
-.spot{position:relative;isolation:isolate}
-.spot::before,.spot::after{content:"";position:absolute;border-radius:inherit;opacity:0;transition:opacity .35s;pointer-events:none}
-.spot::before{inset:0;z-index:-1;background:radial-gradient(380px circle at var(--mx,50%) var(--my,50%),rgba(224,191,94,.13),transparent 45%)}
-.spot::after{inset:-1px;padding:1px;background:radial-gradient(240px circle at var(--mx,50%) var(--my,50%),rgba(240,210,122,.95),transparent 55%);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask:linear-gradient(#000 0 0) content-box exclude,linear-gradient(#000 0 0)}
-.spot:hover::before,.spot:hover::after{opacity:1}
-@media (prefers-reduced-motion:reduce){.hero::before,.hero h1.shine,.btn-gold::after{animation:none}.hero h1.shine{color:var(--text);background:none}.btn-gold::after{display:none}section h2::before{width:72px;transition:none}.dust{display:none}}
-</style>
 <!-- Yandex.Metrika counter -->
 <script>
 (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");
@@ -320,13 +120,11 @@ ym(113074093,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true,webv
 <!-- /Yandex.Metrika counter -->
 </head>
 <body>
-<noscript><div><img src="https://mc.yandex.ru/watch/113074093" style="position:absolute;left:-9999px" alt=""></div></noscript>
-
-<div class="prog" aria-hidden="true"></div>
-<div class="topbar">
-  <div class="wrap">
-    <a class="tlogo" href="/"><span>∞</span> grmv8</a>
-    <nav class="tnav" id="tnav">
+<a class="skip" href="#main">К содержанию</a>
+<div class="bar">
+  <div class="container bar__in">
+    <a class="wordmark" href="/" aria-label="grmv8, на главную"><span class="inf">∞</span> grmv8</a>
+    <nav class="bar__nav" id="tnav" aria-label="Разделы">
       <a href="#kto">Обо мне</a>
       <a href="/istoriya/">История</a>
       <a href="#fakty">Факты</a>
@@ -335,275 +133,227 @@ ym(113074093,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true,webv
       <a href="/blog/">Блог</a>
       <a href="#kontakty">Контакты</a>
     </nav>
-    <a class="tcta" href="https://t.me/grmv8">Написать</a>
-    <button class="burger" type="button" aria-label="Меню" aria-controls="tnav" aria-expanded="false"><i></i><i></i><i></i></button>
+    <a class="btn btn--quiet bar__cta" href="https://t.me/grmv8">Написать</a>
+    <button class="burger" type="button" aria-controls="tnav" aria-expanded="false">Меню</button>
   </div>
 </div>
+
 <header class="hero">
-  <canvas class="dust" aria-hidden="true"></canvas>
-  <div class="wrap hero-grid">
-   <div>
-    <span class="nick"><span class="inf">∞</span> grmv8</span>
-    <h1 class="shine">Александр Громов</h1>
-    <p class="lead">Траблшутер и Ai-тренер: сдвигаю с мёртвой точки и помогаю встать на рельсы. Сегодня - с помощью ИИ-агентов, которые работают на бизнес круглые сутки, и обучения, после которого команда управляется с нейросетями сама. За плечами более 20 лет топ-менеджером: 15 из них - антикризисником, 10 - в медиа и СМИ.</p>
-    <div class="btns">
-      <a class="btn btn-gold" href="https://t.me/grmv8">Написать в Telegram</a>
-      <a class="btn btn-line" href="#napravleniya">Чем могу быть полезен</a>
+  <div class="container hero__grid">
+    <div class="hero__text">
+      <h1>Александр Громов</h1>
+      <p class="lead">Траблшутер и Ai-тренер: сдвигаю с мёртвой точки и помогаю встать на рельсы. Сегодня - с помощью ИИ-агентов, которые работают на бизнес круглые сутки, и обучения, после которого команда управляется с нейросетями сама. За плечами более 20 лет топ-менеджером: 15 из них - антикризисником, 10 - в медиа и СМИ.</p>
+      <div class="actions">
+        <a class="btn btn--primary" href="https://t.me/grmv8">Написать в Telegram</a>
+        <a class="btn btn--quiet" href="#napravleniya">Чем могу быть полезен</a>
+      </div>
     </div>
-   </div>
-   <div class="pic">
-    <img src="img/portrait.jpg" alt="Александр Громов" width="900" height="1200">
-    <svg class="sign" viewBox="0 0 400 220" aria-hidden="true">
-    <defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#8a6d2a"/><stop offset=".5" stop-color="#f0d27a"/><stop offset="1" stop-color="#c9a84c"/></linearGradient></defs>
-    <path class="base" d="M380.0,110.0 L379.8,115.4 L379.3,120.8 L378.3,126.1 L377.1,131.3 L375.5,136.3 L373.5,141.2 L371.3,145.9 L368.8,150.4 L366.0,154.6 L363.0,158.5 L359.7,162.2 L356.3,165.5 L352.7,168.6 L348.9,171.4 L345.1,173.8 L341.1,176.0 L337.1,177.9 L333.0,179.4 L328.9,180.7 L324.7,181.7 L320.6,182.4 L316.4,182.9 L312.3,183.2 L308.2,183.2 L304.2,182.9 L300.2,182.5 L296.3,181.9 L292.4,181.1 L288.6,180.1 L284.9,179.0 L281.2,177.7 L277.6,176.3 L274.1,174.8 L270.6,173.1 L267.2,171.4 L263.9,169.5 L260.7,167.5 L257.6,165.5 L254.5,163.4 L251.4,161.2 L248.5,159.0 L245.6,156.7 L242.7,154.3 L239.9,151.9 L237.2,149.5 L234.5,147.0 L231.8,144.5 L229.2,141.9 L226.6,139.4 L224.1,136.8 L221.6,134.2 L219.1,131.5 L216.7,128.9 L214.3,126.2 L211.8,123.5 L209.5,120.8 L207.1,118.1 L204.7,115.4 L202.4,112.7 L200.0,110.0 L197.6,107.3 L195.3,104.6 L192.9,101.9 L190.5,99.2 L188.2,96.5 L185.7,93.8 L183.3,91.1 L180.9,88.5 L178.4,85.8 L175.9,83.2 L173.4,80.6 L170.8,78.1 L168.2,75.5 L165.5,73.0 L162.8,70.5 L160.1,68.1 L157.3,65.7 L154.4,63.3 L151.5,61.0 L148.6,58.8 L145.5,56.6 L142.4,54.5 L139.3,52.5 L136.1,50.5 L132.8,48.6 L129.4,46.9 L125.9,45.2 L122.4,43.7 L118.8,42.3 L115.1,41.0 L111.4,39.9 L107.6,38.9 L103.7,38.1 L99.8,37.5 L95.8,37.1 L91.8,36.8 L87.7,36.8 L83.6,37.1 L79.4,37.6 L75.3,38.3 L71.1,39.3 L67.0,40.6 L62.9,42.1 L58.9,44.0 L54.9,46.2 L51.1,48.6 L47.3,51.4 L43.7,54.5 L40.3,57.8 L37.0,61.5 L34.0,65.4 L31.2,69.6 L28.7,74.1 L26.5,78.8 L24.5,83.7 L22.9,88.7 L21.7,93.9 L20.7,99.2 L20.2,104.6 L20.0,110.0 L20.2,115.4 L20.7,120.8 L21.7,126.1 L22.9,131.3 L24.5,136.3 L26.5,141.2 L28.7,145.9 L31.2,150.4 L34.0,154.6 L37.0,158.5 L40.3,162.2 L43.7,165.5 L47.3,168.6 L51.1,171.4 L54.9,173.8 L58.9,176.0 L62.9,177.9 L67.0,179.4 L71.1,180.7 L75.3,181.7 L79.4,182.4 L83.6,182.9 L87.7,183.2 L91.8,183.2 L95.8,182.9 L99.8,182.5 L103.7,181.9 L107.6,181.1 L111.4,180.1 L115.1,179.0 L118.8,177.7 L122.4,176.3 L125.9,174.8 L129.4,173.1 L132.8,171.4 L136.1,169.5 L139.3,167.5 L142.4,165.5 L145.5,163.4 L148.6,161.2 L151.5,159.0 L154.4,156.7 L157.3,154.3 L160.1,151.9 L162.8,149.5 L165.5,147.0 L168.2,144.5 L170.8,141.9 L173.4,139.4 L175.9,136.8 L178.4,134.2 L180.9,131.5 L183.3,128.9 L185.7,126.2 L188.2,123.5 L190.5,120.8 L192.9,118.1 L195.3,115.4 L197.6,112.7 L200.0,110.0 L202.4,107.3 L204.7,104.6 L207.1,101.9 L209.5,99.2 L211.8,96.5 L214.3,93.8 L216.7,91.1 L219.1,88.5 L221.6,85.8 L224.1,83.2 L226.6,80.6 L229.2,78.1 L231.8,75.5 L234.5,73.0 L237.2,70.5 L239.9,68.1 L242.7,65.7 L245.6,63.3 L248.5,61.0 L251.4,58.8 L254.5,56.6 L257.6,54.5 L260.7,52.5 L263.9,50.5 L267.2,48.6 L270.6,46.9 L274.1,45.2 L277.6,43.7 L281.2,42.3 L284.9,41.0 L288.6,39.9 L292.4,38.9 L296.3,38.1 L300.2,37.5 L304.2,37.1 L308.2,36.8 L312.3,36.8 L316.4,37.1 L320.6,37.6 L324.7,38.3 L328.9,39.3 L333.0,40.6 L337.1,42.1 L341.1,44.0 L345.1,46.2 L348.9,48.6 L352.7,51.4 L356.3,54.5 L359.7,57.8 L363.0,61.5 L366.0,65.4 L368.8,69.6 L371.3,74.1 L373.5,78.8 L375.5,83.7 L377.1,88.7 L378.3,93.9 L379.3,99.2 L379.8,104.6 L380.0,110.0Z"/>
-    <path class="draw" pathLength="1" d="M380.0,110.0 L379.8,115.4 L379.3,120.8 L378.3,126.1 L377.1,131.3 L375.5,136.3 L373.5,141.2 L371.3,145.9 L368.8,150.4 L366.0,154.6 L363.0,158.5 L359.7,162.2 L356.3,165.5 L352.7,168.6 L348.9,171.4 L345.1,173.8 L341.1,176.0 L337.1,177.9 L333.0,179.4 L328.9,180.7 L324.7,181.7 L320.6,182.4 L316.4,182.9 L312.3,183.2 L308.2,183.2 L304.2,182.9 L300.2,182.5 L296.3,181.9 L292.4,181.1 L288.6,180.1 L284.9,179.0 L281.2,177.7 L277.6,176.3 L274.1,174.8 L270.6,173.1 L267.2,171.4 L263.9,169.5 L260.7,167.5 L257.6,165.5 L254.5,163.4 L251.4,161.2 L248.5,159.0 L245.6,156.7 L242.7,154.3 L239.9,151.9 L237.2,149.5 L234.5,147.0 L231.8,144.5 L229.2,141.9 L226.6,139.4 L224.1,136.8 L221.6,134.2 L219.1,131.5 L216.7,128.9 L214.3,126.2 L211.8,123.5 L209.5,120.8 L207.1,118.1 L204.7,115.4 L202.4,112.7 L200.0,110.0 L197.6,107.3 L195.3,104.6 L192.9,101.9 L190.5,99.2 L188.2,96.5 L185.7,93.8 L183.3,91.1 L180.9,88.5 L178.4,85.8 L175.9,83.2 L173.4,80.6 L170.8,78.1 L168.2,75.5 L165.5,73.0 L162.8,70.5 L160.1,68.1 L157.3,65.7 L154.4,63.3 L151.5,61.0 L148.6,58.8 L145.5,56.6 L142.4,54.5 L139.3,52.5 L136.1,50.5 L132.8,48.6 L129.4,46.9 L125.9,45.2 L122.4,43.7 L118.8,42.3 L115.1,41.0 L111.4,39.9 L107.6,38.9 L103.7,38.1 L99.8,37.5 L95.8,37.1 L91.8,36.8 L87.7,36.8 L83.6,37.1 L79.4,37.6 L75.3,38.3 L71.1,39.3 L67.0,40.6 L62.9,42.1 L58.9,44.0 L54.9,46.2 L51.1,48.6 L47.3,51.4 L43.7,54.5 L40.3,57.8 L37.0,61.5 L34.0,65.4 L31.2,69.6 L28.7,74.1 L26.5,78.8 L24.5,83.7 L22.9,88.7 L21.7,93.9 L20.7,99.2 L20.2,104.6 L20.0,110.0 L20.2,115.4 L20.7,120.8 L21.7,126.1 L22.9,131.3 L24.5,136.3 L26.5,141.2 L28.7,145.9 L31.2,150.4 L34.0,154.6 L37.0,158.5 L40.3,162.2 L43.7,165.5 L47.3,168.6 L51.1,171.4 L54.9,173.8 L58.9,176.0 L62.9,177.9 L67.0,179.4 L71.1,180.7 L75.3,181.7 L79.4,182.4 L83.6,182.9 L87.7,183.2 L91.8,183.2 L95.8,182.9 L99.8,182.5 L103.7,181.9 L107.6,181.1 L111.4,180.1 L115.1,179.0 L118.8,177.7 L122.4,176.3 L125.9,174.8 L129.4,173.1 L132.8,171.4 L136.1,169.5 L139.3,167.5 L142.4,165.5 L145.5,163.4 L148.6,161.2 L151.5,159.0 L154.4,156.7 L157.3,154.3 L160.1,151.9 L162.8,149.5 L165.5,147.0 L168.2,144.5 L170.8,141.9 L173.4,139.4 L175.9,136.8 L178.4,134.2 L180.9,131.5 L183.3,128.9 L185.7,126.2 L188.2,123.5 L190.5,120.8 L192.9,118.1 L195.3,115.4 L197.6,112.7 L200.0,110.0 L202.4,107.3 L204.7,104.6 L207.1,101.9 L209.5,99.2 L211.8,96.5 L214.3,93.8 L216.7,91.1 L219.1,88.5 L221.6,85.8 L224.1,83.2 L226.6,80.6 L229.2,78.1 L231.8,75.5 L234.5,73.0 L237.2,70.5 L239.9,68.1 L242.7,65.7 L245.6,63.3 L248.5,61.0 L251.4,58.8 L254.5,56.6 L257.6,54.5 L260.7,52.5 L263.9,50.5 L267.2,48.6 L270.6,46.9 L274.1,45.2 L277.6,43.7 L281.2,42.3 L284.9,41.0 L288.6,39.9 L292.4,38.9 L296.3,38.1 L300.2,37.5 L304.2,37.1 L308.2,36.8 L312.3,36.8 L316.4,37.1 L320.6,37.6 L324.7,38.3 L328.9,39.3 L333.0,40.6 L337.1,42.1 L341.1,44.0 L345.1,46.2 L348.9,48.6 L352.7,51.4 L356.3,54.5 L359.7,57.8 L363.0,61.5 L366.0,65.4 L368.8,69.6 L371.3,74.1 L373.5,78.8 L375.5,83.7 L377.1,88.7 L378.3,93.9 L379.3,99.2 L379.8,104.6 L380.0,110.0Z"/>
-    <circle class="dot" r="4" opacity="0"><set attributeName="opacity" to="1" begin="3.5s"/><animateMotion dur="9s" begin="3.5s" repeatCount="indefinite" path="M380.0,110.0 L379.8,115.4 L379.3,120.8 L378.3,126.1 L377.1,131.3 L375.5,136.3 L373.5,141.2 L371.3,145.9 L368.8,150.4 L366.0,154.6 L363.0,158.5 L359.7,162.2 L356.3,165.5 L352.7,168.6 L348.9,171.4 L345.1,173.8 L341.1,176.0 L337.1,177.9 L333.0,179.4 L328.9,180.7 L324.7,181.7 L320.6,182.4 L316.4,182.9 L312.3,183.2 L308.2,183.2 L304.2,182.9 L300.2,182.5 L296.3,181.9 L292.4,181.1 L288.6,180.1 L284.9,179.0 L281.2,177.7 L277.6,176.3 L274.1,174.8 L270.6,173.1 L267.2,171.4 L263.9,169.5 L260.7,167.5 L257.6,165.5 L254.5,163.4 L251.4,161.2 L248.5,159.0 L245.6,156.7 L242.7,154.3 L239.9,151.9 L237.2,149.5 L234.5,147.0 L231.8,144.5 L229.2,141.9 L226.6,139.4 L224.1,136.8 L221.6,134.2 L219.1,131.5 L216.7,128.9 L214.3,126.2 L211.8,123.5 L209.5,120.8 L207.1,118.1 L204.7,115.4 L202.4,112.7 L200.0,110.0 L197.6,107.3 L195.3,104.6 L192.9,101.9 L190.5,99.2 L188.2,96.5 L185.7,93.8 L183.3,91.1 L180.9,88.5 L178.4,85.8 L175.9,83.2 L173.4,80.6 L170.8,78.1 L168.2,75.5 L165.5,73.0 L162.8,70.5 L160.1,68.1 L157.3,65.7 L154.4,63.3 L151.5,61.0 L148.6,58.8 L145.5,56.6 L142.4,54.5 L139.3,52.5 L136.1,50.5 L132.8,48.6 L129.4,46.9 L125.9,45.2 L122.4,43.7 L118.8,42.3 L115.1,41.0 L111.4,39.9 L107.6,38.9 L103.7,38.1 L99.8,37.5 L95.8,37.1 L91.8,36.8 L87.7,36.8 L83.6,37.1 L79.4,37.6 L75.3,38.3 L71.1,39.3 L67.0,40.6 L62.9,42.1 L58.9,44.0 L54.9,46.2 L51.1,48.6 L47.3,51.4 L43.7,54.5 L40.3,57.8 L37.0,61.5 L34.0,65.4 L31.2,69.6 L28.7,74.1 L26.5,78.8 L24.5,83.7 L22.9,88.7 L21.7,93.9 L20.7,99.2 L20.2,104.6 L20.0,110.0 L20.2,115.4 L20.7,120.8 L21.7,126.1 L22.9,131.3 L24.5,136.3 L26.5,141.2 L28.7,145.9 L31.2,150.4 L34.0,154.6 L37.0,158.5 L40.3,162.2 L43.7,165.5 L47.3,168.6 L51.1,171.4 L54.9,173.8 L58.9,176.0 L62.9,177.9 L67.0,179.4 L71.1,180.7 L75.3,181.7 L79.4,182.4 L83.6,182.9 L87.7,183.2 L91.8,183.2 L95.8,182.9 L99.8,182.5 L103.7,181.9 L107.6,181.1 L111.4,180.1 L115.1,179.0 L118.8,177.7 L122.4,176.3 L125.9,174.8 L129.4,173.1 L132.8,171.4 L136.1,169.5 L139.3,167.5 L142.4,165.5 L145.5,163.4 L148.6,161.2 L151.5,159.0 L154.4,156.7 L157.3,154.3 L160.1,151.9 L162.8,149.5 L165.5,147.0 L168.2,144.5 L170.8,141.9 L173.4,139.4 L175.9,136.8 L178.4,134.2 L180.9,131.5 L183.3,128.9 L185.7,126.2 L188.2,123.5 L190.5,120.8 L192.9,118.1 L195.3,115.4 L197.6,112.7 L200.0,110.0 L202.4,107.3 L204.7,104.6 L207.1,101.9 L209.5,99.2 L211.8,96.5 L214.3,93.8 L216.7,91.1 L219.1,88.5 L221.6,85.8 L224.1,83.2 L226.6,80.6 L229.2,78.1 L231.8,75.5 L234.5,73.0 L237.2,70.5 L239.9,68.1 L242.7,65.7 L245.6,63.3 L248.5,61.0 L251.4,58.8 L254.5,56.6 L257.6,54.5 L260.7,52.5 L263.9,50.5 L267.2,48.6 L270.6,46.9 L274.1,45.2 L277.6,43.7 L281.2,42.3 L284.9,41.0 L288.6,39.9 L292.4,38.9 L296.3,38.1 L300.2,37.5 L304.2,37.1 L308.2,36.8 L312.3,36.8 L316.4,37.1 L320.6,37.6 L324.7,38.3 L328.9,39.3 L333.0,40.6 L337.1,42.1 L341.1,44.0 L345.1,46.2 L348.9,48.6 L352.7,51.4 L356.3,54.5 L359.7,57.8 L363.0,61.5 L366.0,65.4 L368.8,69.6 L371.3,74.1 L373.5,78.8 L375.5,83.7 L377.1,88.7 L378.3,93.9 L379.3,99.2 L379.8,104.6 L380.0,110.0Z"/></circle>
-  </svg>
-   </div>
+    <figure class="portrait">
+      <img src="/img/portrait.jpg" alt="Александр Громов" width="900" height="1200" fetchpriority="high">
+      <figcaption><span class="inf">∞</span> grmv8</figcaption>
+    </figure>
   </div>
 </header>
 
-<div class="orgs">
-  <div class="wrap">
-    <small>Где работал и учился</small>
-    <span>Иннополис</span><span>РАНХиГС</span><span>WorldSkills</span><span>Академия внешней торговли</span><span>Академия трекеров</span><span>Авторадио</span><span>Европа плюс</span><span>Московский комсомолец</span>
+<section class="orgs" aria-labelledby="orgs-h">
+  <div class="container orgs__in">
+    <h2 id="orgs-h">Где работал и учился</h2>
+    <ul>
+      <li>Иннополис</li><li>РАНХиГС</li><li>WorldSkills</li><li>Академия внешней торговли</li><li>Академия трекеров</li><li>Авторадио</li><li>Европа плюс</li><li>Московский комсомолец</li>
+    </ul>
   </div>
-</div>
+</section>
 
-<main>
-  <section id="kto">
-    <div class="wrap bio">
-      <div>
+<main id="main">
+  <section id="kto" class="sec sec--l">
+    <div class="container kto__grid">
+      <div class="kto__side">
         <h2>Кто я</h2>
+        <ul class="figs">
+          <li><b class="fig">20+<small>лет</small></b><span>топ-менеджером в разных отраслях, из них 10 лет - в медиа и СМИ</span></li>
+          <li><b class="fig">15<small>лет</small></b><span>антикризисник</span></li>
+          <li><b class="fig">14<small>FM-станций</small></b><span>в медиагруппе, которую вывел из долгов в прибыль</span></li>
+          <li><b class="fig">100+<small>сотрудников</small></b><span>в подчинении</span></li>
+        </ul>
+      </div>
+      <div class="prose">
         <p>Более 20 лет топ-менеджером. Пятнадцать из них - антикризисником, десять - в медиа и СМИ. По образованию математик-программист: прикладная математика и кибернетика, ТвГУ, 2002.</p>
         <p>Руководил медиа почти всех форматов: телевидение, радио, газеты, информационные порталы, глянец. Среди них «Московский комсомолец» и «Тверские ведомости». Открывал новые радиостанции и закрывал убыточные, с нуля сделал глянцевый журнал. Разрабатывал и запускал высоконагруженные порталы, перезапускал их, не останавливая ни на день. Выводил инфопорталы в топы регионов.</p>
         <p>Нанимал и обучал людей, собирал отделы продаж и маркетинга. Проводил реорганизацию, за раз сократив больше 100 человек. Открывал филиалы с нуля - и собеседовал больше сотни кандидатов за один день.</p>
         <p>Открывал и свои бизнесы: услуги, швейное производство детской одежды. Торговал на маркетплейсах. Возил людей в бизнес-поездки и по местам силы.</p>
         <p>В Академии внешней торговли курировал проекты программы Минэкономразвития «Лидеры производительности»: две мои команды из одного потока взяли второе и третье места. В Университете Иннополис модерировал обучение на программе Chief Data Officer и повышение квалификации преподавателей вузов по цифровой трансформации.</p>
         <p>Сейчас главный рычаг - ИИ. Мою работу держит команда ИИ-агентов; такие же отделы собираю для компаний под их задачи и данные, а руководителей и экспертов учу работать с нейросетями без посредников.</p>
-        <p class="story-link">Как управленец, который двадцать лет не мог уехать дальше отпуска, стал работать с ноутбуком у океана - <a href="/istoriya/">моя история →</a></p>
+        <p class="story-link">Как управленец, который двадцать лет не мог уехать дальше отпуска, стал работать с ноутбуком у океана - <a href="/istoriya/">моя история</a></p>
       </div>
+    </div>
+  </section>
+
+  <section id="fakty" class="sec band">
+    <div class="container">
+      <div class="head"><h2>Интересные факты</h2></div>
       <ul class="facts">
-        <li><b><i data-n="20">20</i>+ лет</b><span>топ-менеджером в разных отраслях, из них 10 лет - в медиа и СМИ</span></li>
-        <li><b><i data-n="15">15</i> лет</b><span>антикризисник</span></li>
-        <li><b><i data-n="14">14</i> FM-станций</b><span>в медиагруппе, которую вывел из долгов в прибыль</span></li>
-        <li><b><i data-n="100">100</i>+ сотрудников</b><span>в подчинении</span></li>
+        <li><div class="fact"><b class="fig">100+</b><p>человек разом уволил и набрал новую команду, когда перезапускал государственный медиахолдинг</p></div></li>
+        <li><div class="fact"><b class="fig">2011</b><p>открыл швейное производство и свой бренд детской одежды Rutaly - без WB и Ozon</p></div></li>
+        <li><div class="fact"><b class="fig">120</b><p>человек прособеседовали мы с коллегой за один день, когда набирали новую команду</p></div></li>
+        <li><div class="fact"><b class="fig">30 000+</b><p>гостей собирали мероприятия, которые я организовывал</p></div></li>
+        <li><a class="fact" href="/istoriya/#minus20"><b class="fig">-20 кг</b><p>сбросил и начал жизнь с чистого листа</p></a></li>
+        <li><a class="fact" href="/istoriya/#gvozdi"><b class="fig">×2</b><p>соорганизатор и участник рекордов России и мира на досках Садху - на гвоздях</p></a></li>
+        <li><a class="fact" href="/istoriya/#bali"><b class="fig">Бали</b><p>уезжал туда жить «навсегда» - и вернулся в Россию</p></a></li>
+        <li><a class="fact" href="/istoriya/#otec"><b class="fig">46</b><p>лет - в этом возрасте стал отцом в третий раз</p></a></li>
       </ul>
     </div>
   </section>
 
-  <section id="fakty">
-    <div class="wrap">
-      <h2>Интересные факты</h2>
-      <div class="fgrid">
-        <div class="fact"><b><i data-n="100">100</i>+</b><p>человек разом уволил и набрал новую команду, когда перезапускал государственный медиахолдинг</p></div>
-        <div class="fact"><b>2011</b><p>открыл швейное производство и свой бренд детской одежды Rutaly - без WB и Ozon</p></div>
-        <div class="fact"><b><i data-n="120">120</i></b><p>человек прособеседовали мы с коллегой за один день, когда набирали новую команду</p></div>
-        <div class="fact"><b>30 000+</b><p>гостей собирали мероприятия, которые я организовывал</p></div>
-        <a class="fact" href="/istoriya/#minus20"><b>-<i data-n="20">20</i> кг</b><p>сбросил и начал жизнь с чистого листа</p></a>
-        <a class="fact" href="/istoriya/#gvozdi"><b>×2</b><p>соорганизатор и участник рекордов России и мира на досках Садху - на гвоздях</p></a>
-        <a class="fact" href="/istoriya/#bali"><b>Бали</b><p>уезжал туда жить «навсегда» - и вернулся в Россию</p></a>
-        <a class="fact" href="/istoriya/#otec"><b>46</b><p>лет - в этом возрасте стал отцом в третий раз</p></a>
-      </div>
-    </div>
-  </section>
-
-  <section id="obrazovanie">
-    <div class="wrap">
-      <h2>Образование и признание</h2>
+  <section id="obrazovanie" class="sec sec--l">
+    <div class="container">
+      <div class="head"><h2>Образование и признание</h2></div>
       <div class="edu">
         <div>
-          <h3 class="sub">Образование</h3>
+          <h3>Образование</h3>
           <ul class="timeline">
-            <li><b>2021</b>Университет Иннополис - Chief Data Officer, руководитель по работе с данными</li>
-            <li><b>2021</b>Академия трекеров - сертификат трекера предпринимателей</li>
-            <li><b>2020</b>РАНХиГС при Президенте РФ - государственное и муниципальное управление</li>
-            <li><b>2010</b>Президентская программа подготовки управленческих кадров - менеджмент организации</li>
-            <li><b>2002</b>ТвГУ - прикладная математика и кибернетика</li>
+            <li><b>2021</b><span class="tl-text">Университет Иннополис - Chief Data Officer, руководитель по работе с данными</span></li>
+            <li><b>2021</b><span class="tl-text">Академия трекеров - сертификат трекера предпринимателей</span></li>
+            <li><b>2020</b><span class="tl-text">РАНХиГС при Президенте РФ - государственное и муниципальное управление</span></li>
+            <li><b>2010</b><span class="tl-text">Президентская программа подготовки управленческих кадров - менеджмент организации</span></li>
+            <li><b>2002</b><span class="tl-text">ТвГУ - прикладная математика и кибернетика</span></li>
           </ul>
         </div>
         <div>
-          <h3 class="sub">Признание</h3>
+          <h3>Признание</h3>
           <ul class="timeline">
-            <li><b>2022</b>Грамоты «Лучшая проектная команда», II и III место - куратор команд, «Лидеры производительности», национальный проект «Производительность труда»</li>
-            <li><b>2022</b>Благодарность Ворлдскиллс Россия - модерация проектной сессии «Навыки будущего в вузах»</li>
-            <li><b>2021-2022</b>Благодарности Университета Иннополис - модератор программ CDO и «Кадры для цифровой экономики»</li>
-            <li><b>2021</b>Благодарность фестиваля «Вообразиград» - мастер-класс «Будущие профессии. PR»</li>
-            <li><b>2019</b>Благодарность за организацию регионального образовательного форума «Медиасмыслы»</li>
+            <li><b>2022</b><span class="tl-text">Грамоты «Лучшая проектная команда», II и III место - куратор команд, «Лидеры производительности», национальный проект «Производительность труда»</span></li>
+            <li><b>2022</b><span class="tl-text">Благодарность Ворлдскиллс Россия - модерация проектной сессии «Навыки будущего в вузах»</span></li>
+            <li><b>2021-2022</b><span class="tl-text">Благодарности Университета Иннополис - модератор программ CDO и «Кадры для цифровой экономики»</span></li>
+            <li><b>2021</b><span class="tl-text">Благодарность фестиваля «Вообразиград» - мастер-класс «Будущие профессии. PR»</span></li>
+            <li><b>2019</b><span class="tl-text">Благодарность за организацию регионального образовательного форума «Медиасмыслы»</span></li>
           </ul>
         </div>
       </div>
-      <div class="certs">
-        <a style="--rot:-9deg;--dy:14px" href="img/liders-2.jpg"><img src="img/liders-2.jpg" alt="Грамота «Лидеры производительности», II место, 2022" loading="lazy"></a>
-        <a style="--rot:-6deg;--dy:6px" href="img/liders-3.jpg"><img src="img/liders-3.jpg" alt="Грамота «Лидеры производительности», III место, 2022" loading="lazy"></a>
-        <a style="--rot:-3deg;--dy:0px" href="img/innopolis-cdo-2021.jpg"><img src="img/innopolis-cdo-2021.jpg" alt="Благодарности Университета Иннополис, CDO и «Кадры для цифровой экономики», 2021-2022" loading="lazy"></a>
-        <a style="--rot:-1deg;--dy:-4px" href="img/innopolis-ooc-2022.jpg"><img src="img/innopolis-ooc-2022.jpg" alt="Благодарственное письмо Университета Иннополис, 2022" loading="lazy"></a>
-        <a style="--rot:1deg;--dy:-4px" href="img/worldskills-2022.jpg"><img src="img/worldskills-2022.jpg" alt="Благодарность Ворлдскиллс Россия, 2022" loading="lazy"></a>
-        <a style="--rot:3deg;--dy:0px" href="img/tracker-2021.jpg"><img src="img/tracker-2021.jpg" alt="Сертификат трекера, Академия трекеров, 2021" loading="lazy"></a>
-        <a style="--rot:6deg;--dy:6px" href="img/voobrazigrad-2021.jpg"><img src="img/voobrazigrad-2021.jpg" alt="Благодарность за мастер-класс «Будущие профессии. PR», 2021" loading="lazy"></a>
-        <a style="--rot:9deg;--dy:14px" href="img/mediasmysly-2019.jpg"><img src="img/mediasmysly-2019.jpg" alt="Благодарность за форум «Медиасмыслы», 2019" loading="lazy"></a>
-      </div>
+      <ul class="certs">
+        <li><a href="/img/liders-2.jpg"><img src="/img/liders-2.jpg" alt="Грамота «Лидеры производительности», II место, 2022" width="1000" height="706" loading="lazy"></a></li>
+        <li><a href="/img/liders-3.jpg"><img src="/img/liders-3.jpg" alt="Грамота «Лидеры производительности», III место, 2022" width="1000" height="708" loading="lazy"></a></li>
+        <li><a href="/img/innopolis-cdo-2021.jpg"><img src="/img/innopolis-cdo-2021.jpg" alt="Благодарности Университета Иннополис, CDO и «Кадры для цифровой экономики», 2021-2022" width="1000" height="708" loading="lazy"></a></li>
+        <li><a href="/img/innopolis-ooc-2022.jpg"><img src="/img/innopolis-ooc-2022.jpg" alt="Благодарственное письмо Университета Иннополис, 2022" width="1000" height="708" loading="lazy"></a></li>
+        <li><a href="/img/worldskills-2022.jpg"><img src="/img/worldskills-2022.jpg" alt="Благодарность Ворлдскиллс Россия, 2022" width="1000" height="706" loading="lazy"></a></li>
+        <li><a href="/img/tracker-2021.jpg"><img src="/img/tracker-2021.jpg" alt="Сертификат трекера, Академия трекеров, 2021" width="1000" height="706" loading="lazy"></a></li>
+        <li><a href="/img/voobrazigrad-2021.jpg"><img src="/img/voobrazigrad-2021.jpg" alt="Благодарность за мастер-класс «Будущие профессии. PR», 2021" width="1000" height="708" loading="lazy"></a></li>
+        <li><a href="/img/mediasmysly-2019.jpg"><img src="/img/mediasmysly-2019.jpg" alt="Благодарность за форум «Медиасмыслы», 2019" width="1000" height="696" loading="lazy"></a></li>
+      </ul>
     </div>
   </section>
 
-  <section id="napravleniya">
-    <div class="wrap">
-      <h2>Чем могу быть полезен</h2>
-      <div class="grid">
-        <a class="card" href="https://t.me/grmv8">
-          <div class="tag">Для бизнеса</div>
-          <h3>ИИ-консалтинг и ИИ-отдел под ключ</h3>
-          <p>Разбираю процессы компании, нахожу, где рутина съедает часы людей, и собираю агентов под эти участки: продажи, контент, поддержка, отчёты.</p>
-          <span class="go">Обсудить задачу →</span>
-        </a>
-        <a class="card" href="/raspakovka/">
-          <div class="tag">Для экспертов</div>
-          <h3>Распаковка смыслов и оцифровка личности</h3>
-          <p>Интервью на 120 минут, отчёт из 12 модулей и ИИ-контекст, после которого нейросеть пишет вашим голосом. 25 000 ₽.</p>
-          <span class="go">Подробнее →</span>
-        </a>
-        <a class="card" href="https://tr6.ru/">
-          <div class="tag">Обучение</div>
-          <h3>TurboReels</h3>
-          <p>Как снимать рилс, которые набирают просмотры с шестью нулями, и собирать их с помощью нейросетей.</p>
-          <span class="go">tr6.ru →</span>
-        </a>
-        <a class="card" href="https://t.me/ai_gromov8">
-          <div class="tag">Читать</div>
-          <h3>Каналы в Telegram</h3>
-          <p>«Громов | Нейросети, Деньги, Рилс» - про ИИ и продукты. «Громов | ПРО Мышление» - про мышление и отношения.</p>
-          <span class="go">Подписаться →</span>
-        </a>
-      </div>
+  <section id="napravleniya" class="sec rule-top">
+    <div class="container">
+      <div class="head"><h2>Чем могу быть полезен</h2></div>
+      <ul class="dirs">
+        <li><a class="dir" href="https://t.me/grmv8">
+          <div><h3>ИИ-консалтинг и ИИ-отдел под ключ</h3><p class="dir__who">Для бизнеса</p></div>
+          <p class="dir__text">Разбираю процессы компании, нахожу, где рутина съедает часы людей, и собираю агентов под эти участки: продажи, контент, поддержка, отчёты.</p>
+          <span class="dir__go">Обсудить задачу</span>
+        </a></li>
+        <li><a class="dir" href="/raspakovka/">
+          <div><h3>Распаковка смыслов и оцифровка личности</h3><p class="dir__who">Для экспертов</p></div>
+          <p class="dir__text">Интервью на 120 минут, отчёт из 12 модулей и ИИ-контекст, после которого нейросеть пишет вашим голосом. 25 000 ₽.</p>
+          <span class="dir__go">Подробнее</span>
+        </a></li>
+        <li><a class="dir" href="https://tr6.ru/">
+          <div><h3>TurboReels</h3><p class="dir__who">Обучение</p></div>
+          <p class="dir__text">Как снимать рилс, которые набирают просмотры с шестью нулями, и собирать их с помощью нейросетей.</p>
+          <span class="dir__go">tr6.ru</span>
+        </a></li>
+        <li><a class="dir" href="https://t.me/ai_gromov8">
+          <div><h3>Каналы в Telegram</h3><p class="dir__who">Читать</p></div>
+          <p class="dir__text">«Громов | Нейросети, Деньги, Рилс» - про ИИ и продукты. «Громов | ПРО Мышление» - про мышление и отношения.</p>
+          <span class="dir__go">Подписаться</span>
+        </a></li>
+      </ul>
     </div>
   </section>
 
-  <section id="blog">
-    <div class="wrap">
-      <h2>Блог</h2>
-      <a class="card post-teaser" href="/blog/nejro-feodal/">
+  <section id="blog" class="sec sec--l band">
+    <div class="container">
+      <div class="head"><h2>Блог</h2></div>
+      <a class="teaser" href="/blog/nejro-feodal/">
         <img src="/img/blog/nejro-feodal.jpg" alt="Семь стадий работы с ИИ: от скептика с телефоном до нейро-феодала на троне среди ИИ-агентов" width="1600" height="900" loading="lazy">
         <div>
-          <div class="tag">ИИ · 26 сентября 2026</div>
           <h3>7 стадий работы с ИИ: от скептика до нейро-феодала</h3>
+          <p class="meta"><b>ИИ</b><time datetime="2026-09-26">26 сентября 2026</time></p>
           <p>Одни считают нейронки баловством, другие собирают из них автономные команды. На какой стадии вы?</p>
-          <span class="go">Читать статью →</span>
+          <span class="go">Читать статью</span>
         </div>
       </a>
-      <p class="blog-all"><a href="/blog/">Все статьи блога →</a></p>
+      <p class="blog-all"><a href="/blog/">Все статьи блога</a></p>
     </div>
   </section>
 
-  <section id="kontakty">
-    <div class="wrap">
-      <h2>Контакты</h2>
+  <section id="kontakty" class="sec sec--l">
+    <div class="container">
+      <div class="head"><h2>Контакты</h2></div>
       <p class="one-nick">Ник один - <span class="gold">grmv8</span>: Telegram, WhatsApp, Facebook и почта.</p>
-      <div class="contacts">
-        <a class="contact" href="https://t.me/grmv8"><small>Telegram, лично</small><strong>@grmv8</strong></a>
-        <a class="contact" href="https://t.me/ai_gromov8"><small>Канал про ИИ и рилс</small><strong>@ai_gromov8</strong></a>
-        <a class="contact" href="https://t.me/gromov_dzen"><small>Канал про мышление</small><strong>@gromov_dzen</strong></a>
-        <a class="contact" href="https://www.instagram.com/ai_gromov/"><small>Instagram*</small><strong>@ai_gromov</strong></a>
-        <a class="contact" href="https://wa.me/qr/2PC434GC3PRFO1"><small>WhatsApp</small><strong>@grmv8</strong></a>
-        <a class="contact" href="https://www.facebook.com/grmv8"><small>Facebook*</small><strong>grmv8</strong></a>
-        <a class="contact" href="mailto:grmv8@ya.ru"><small>Почта</small><strong>grmv8@ya.ru</strong></a>
-      </div>
+      <ul class="contacts">
+        <li><a class="contact" href="https://t.me/grmv8"><span>Telegram, лично</span><strong>@grmv8</strong></a></li>
+        <li><a class="contact" href="https://t.me/ai_gromov8"><span>Канал про ИИ и рилс</span><strong>@ai_gromov8</strong></a></li>
+        <li><a class="contact" href="https://t.me/gromov_dzen"><span>Канал про мышление</span><strong>@gromov_dzen</strong></a></li>
+        <li><a class="contact" href="https://www.instagram.com/ai_gromov/"><span>Instagram*</span><strong>@ai_gromov</strong></a></li>
+        <li><a class="contact" href="https://wa.me/qr/2PC434GC3PRFO1"><span>WhatsApp</span><strong>@grmv8</strong></a></li>
+        <li><a class="contact" href="https://www.facebook.com/grmv8"><span>Facebook*</span><strong>grmv8</strong></a></li>
+        <li><a class="contact" href="mailto:grmv8@ya.ru"><span>Почта</span><strong>grmv8@ya.ru</strong></a></li>
+      </ul>
     </div>
   </section>
 
-  <section id="voprosy">
-    <div class="wrap">
+  <section id="voprosy" class="sec rule-top">
+    <div class="container faq">
       <h2>Коротко обо мне</h2>
-      <details>
-        <summary>Кто такой Александр Громов?</summary>
-        <p>Александр Юрьевич Громов - траблшутер и Ai-тренер. Более 20 лет топ-менеджером: 15 из них антикризисным управленцем, 10 - в медиа и СМИ (телевидение, радио, газеты, информационные порталы, глянец). В 2019-2021 годах генеральный директор медиахолдинга РИА «Верхневолжье», до этого исполнительный директор медиагруппы «Оазис» (14 FM-станций). Курировал проекты программы Минэкономразвития «Лидеры производительности» в Академии внешней торговли, модерировал программы Университета Иннополис. Сейчас внедряет ИИ-отделы в бизнес и учит руководителей и экспертов работать с нейросетями.</p>
-      </details>
-      <details>
-        <summary>Что значит grmv8?</summary>
-        <p>Это мой ник: «Громов» без гласных и восьмёрка. Положите её набок - получится знак бесконечности. Под этим ником я в Telegram, WhatsApp и Facebook*, почта - grmv8@ya.ru.</p>
-      </details>
-      <details>
-        <summary>С какими задачами к вам приходят?</summary>
-        <p>Бизнес - когда нужно снять рутину с людей: ответы клиентам, контент, отчёты, первичные продажи. Эксперты - когда нужно понять, что и кому продавать, и научить нейросеть писать их голосом.</p>
-      </details>
-      <details>
-        <summary>Как связаться?</summary>
-        <p>Проще всего написать в Telegram: <a class="gold" href="https://t.me/grmv8">t.me/grmv8</a>.</p>
-      </details>
+      <div class="faq__list">
+        <details>
+          <summary>Кто такой Александр Громов?</summary>
+          <p>Александр Юрьевич Громов - траблшутер и Ai-тренер. Более 20 лет топ-менеджером: 15 из них антикризисным управленцем, 10 - в медиа и СМИ (телевидение, радио, газеты, информационные порталы, глянец). В 2019-2021 годах генеральный директор медиахолдинга РИА «Верхневолжье», до этого исполнительный директор медиагруппы «Оазис» (14 FM-станций). Курировал проекты программы Минэкономразвития «Лидеры производительности» в Академии внешней торговли, модерировал программы Университета Иннополис. Сейчас внедряет ИИ-отделы в бизнес и учит руководителей и экспертов работать с нейросетями.</p>
+        </details>
+        <details>
+          <summary>Что значит grmv8?</summary>
+          <p>Это мой ник: «Громов» без гласных и восьмёрка. Положите её набок - получится знак бесконечности. Под этим ником я в Telegram, WhatsApp и Facebook*, почта - grmv8@ya.ru.</p>
+        </details>
+        <details>
+          <summary>С какими задачами к вам приходят?</summary>
+          <p>Бизнес - когда нужно снять рутину с людей: ответы клиентам, контент, отчёты, первичные продажи. Эксперты - когда нужно понять, что и кому продавать, и научить нейросеть писать их голосом.</p>
+        </details>
+        <details>
+          <summary>Как связаться?</summary>
+          <p>Проще всего написать в Telegram: <a class="gold" href="https://t.me/grmv8">t.me/grmv8</a>.</p>
+        </details>
+      </div>
     </div>
   </section>
 </main>
 
-<footer>
-  <div class="wrap">
-    <p>© Александр Громов, grmv8.ru · <a href="/blog/" class="gold">Блог</a></p>
-    <p>* Instagram и Facebook принадлежат компании Meta Platforms Inc., деятельность которой запрещена на территории РФ.</p>
+<footer class="foot">
+  <div class="container">
+    <p class="foot__mark" aria-hidden="true"><span class="inf">∞</span> grmv8</p>
+    <div class="foot__lines">
+      <p><span>© Александр Громов, grmv8.ru</span><a href="/blog/">Блог</a></p>
+      <p>* Instagram и Facebook принадлежат компании Meta Platforms Inc., деятельность которой запрещена на территории РФ.</p>
+    </div>
   </div>
 </footer>
 
+<dialog class="lb" id="lb" aria-label="Грамота">
+  <form method="dialog"><button class="lb__close" type="submit">Закрыть</button></form>
+</dialog>
+
 <script>
 (function(){
-  var still=matchMedia('(prefers-reduced-motion:reduce)').matches;
-  document.querySelectorAll('main section .wrap > *, .facts li, .fact, .card, .contact').forEach(function(el){el.classList.add('rv')});
-  var io=new IntersectionObserver(function(es){es.forEach(function(e){
-    if(!e.isIntersecting)return;
-    e.target.classList.add('on');io.unobserve(e.target);
-    e.target.querySelectorAll('[data-n]').forEach(function(n){
-      if(still)return;var to=+n.dataset.n,t0=null;
-      function step(t){if(!t0)t0=t;var k=Math.min((t-t0)/1400,1);n.textContent=Math.round(to*(1-Math.pow(1-k,3)));if(k<1)requestAnimationFrame(step)}
-      n.textContent='0';requestAnimationFrame(step);
-    });
-  })},{threshold:.15});
-  document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+  // top navigation: disclosure under 66rem
+  var bar=document.querySelector('.bar'),bg=bar.querySelector('.burger');
+  bg.addEventListener('click',function(){var o=bar.classList.toggle('is-open');bg.setAttribute('aria-expanded',o)});
+  bar.querySelectorAll('.bar__nav a').forEach(function(a){a.addEventListener('click',function(){bar.classList.remove('is-open');bg.setAttribute('aria-expanded','false')})});
+  // certificates open full size
+  var lb=document.getElementById('lb'),lbImg=document.createElement('img');lbImg.width=1000;lbImg.height=708;lb.appendChild(lbImg);
   document.querySelectorAll('.certs a').forEach(function(a){a.addEventListener('click',function(ev){
-    ev.preventDefault();var d=document.createElement('div');d.className='lb';
-    var im=document.createElement('img');im.src=a.getAttribute('href');im.alt=a.querySelector('img').alt;d.appendChild(im);
-    d.onclick=function(){d.remove()};document.body.appendChild(d);
+    if(!lb.showModal)return;
+    ev.preventDefault();lbImg.src=a.getAttribute('href');lbImg.alt=a.querySelector('img').alt;lb.showModal();
   })});
-  document.addEventListener('keydown',function(e){if(e.key==='Escape'){var l=document.querySelector('.lb');if(l)l.remove()}});
-  // top navigation
-  var bar=document.querySelector('.topbar'),bg=bar.querySelector('.burger');
-  bg.addEventListener('click',function(){var o=bar.classList.toggle('open');bg.setAttribute('aria-expanded',o)});
-  bar.querySelectorAll('.tnav a').forEach(function(a){a.addEventListener('click',function(){bar.classList.remove('open');bg.setAttribute('aria-expanded','false')})});
-  addEventListener('scroll',function(){bar.classList.toggle('solid',scrollY>40)},{passive:true});
-  var links={};bar.querySelectorAll('.tnav a[href^="#"]').forEach(function(a){links[a.getAttribute('href').slice(1)]=a});
-  var spyo=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting&&links[e.target.id]){for(var k in links)links[k].classList.remove('on');links[e.target.id].classList.add('on')}})},{rootMargin:'-45% 0px -50% 0px'});
-  document.querySelectorAll('main section[id]').forEach(function(s){spyo.observe(s)});
-  // premium effects
-  var prog=document.querySelector('.prog');
-  function onScroll(){var h=document.documentElement,m=h.scrollHeight-h.clientHeight;prog.style.transform='scaleX('+(m>0?h.scrollTop/m:0)+')'}
-  addEventListener('scroll',onScroll,{passive:true});onScroll();
-  var so=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('seen');so.unobserve(e.target)}})},{threshold:.2});
-  document.querySelectorAll('main section').forEach(function(el){so.observe(el)});
-  var fine=matchMedia('(hover:hover) and (pointer:fine)').matches;
-  if(fine){
-    document.querySelectorAll('.card,.fact,.facts li,.contact').forEach(function(el){
-      el.classList.add('spot');
-      el.addEventListener('pointermove',function(e){var r=el.getBoundingClientRect();el.style.setProperty('--mx',(e.clientX-r.left)+'px');el.style.setProperty('--my',(e.clientY-r.top)+'px')});
-    });
-  }
-  var hero=document.querySelector('.hero'),pic=document.querySelector('.pic');
-  if(fine&&!still){
-    hero.addEventListener('pointermove',function(e){var r=hero.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;pic.style.transform='translate('+(x*-18)+'px,'+(y*-12)+'px)'});
-    hero.addEventListener('pointerleave',function(){pic.style.transform=''});
-  }
-  var cv=document.querySelector('.dust');
-  if(cv&&!still){
-    var cx=cv.getContext('2d'),dpr=Math.min(devicePixelRatio||1,2),W,H,ps=[],run=true;
-    function size(){W=hero.clientWidth;H=hero.clientHeight;cv.width=W*dpr;cv.height=H*dpr;cx.setTransform(dpr,0,0,dpr,0,0)}
-    size();addEventListener('resize',size);
-    var n=W<700?22:46;
-    for(var i=0;i<n;i++)ps.push({x:Math.random()*W,y:Math.random()*H,r:.5+Math.random()*1.4,v:.12+Math.random()*.35,a:Math.random()*6.28,w:.004+Math.random()*.012});
-    new IntersectionObserver(function(es){run=es[0].isIntersecting;if(run)requestAnimationFrame(tick)}).observe(hero);
-    function tick(){
-      if(!run)return;cx.clearRect(0,0,W,H);
-      ps.forEach(function(p){
-        p.y-=p.v;p.x+=Math.sin(p.a)*.25;p.a+=p.w;if(p.y<-5){p.y=H+5;p.x=Math.random()*W}
-        var o=.25+.55*Math.abs(Math.sin(p.a*1.7));
-        cx.beginPath();cx.arc(p.x,p.y,p.r,0,6.28);cx.fillStyle='rgba(240,210,122,'+o+')';cx.shadowColor='rgba(240,210,122,.9)';cx.shadowBlur=6;cx.fill();
-      });
-      requestAnimationFrame(tick);
-    }
-  }
+  lb.addEventListener('click',function(e){if(e.target===lb)lb.close()});
 })();
 </script>
 </body>
